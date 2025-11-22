@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import AuroraBackground from "../AuroraBackground";
 import { PropsWithChildren } from "react";
+import SidePanel from "../SidePanel";
 
 export default function MainLayout({ children }: PropsWithChildren) {
   return (
@@ -12,6 +13,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
       justifyContent={"center"}
       position={"relative"}
       py={"min(7vw, 10vh)"}
+      px={"min(2vw, 4vh)"}
     >
       <Box
         overflow={"hidden"}
@@ -26,6 +28,8 @@ export default function MainLayout({ children }: PropsWithChildren) {
       <Box
         zIndex={1}
         height={"100%"}
+        display={"flex"}
+        overflow={"hidden"}
         borderRadius={"2vw"}
         sx={{
           backgroundColor: "background.main",
@@ -33,7 +37,21 @@ export default function MainLayout({ children }: PropsWithChildren) {
           outline: "solid rgba(217, 217, 217, 0.2) 20px",
         }}
       >
-        {children}
+        <SidePanel>
+          <Box
+            flex={1}
+            display="flex"
+            flexDirection="column"
+            position={"relative"}
+            sx={{
+              overflowY: "scroll",
+              scrollbarWidth: 0,
+              "&::-webkit-scrollbar": { display: "none" }, // Chrome, Safari, Edge
+            }}
+          >
+            <Box>{children}</Box>
+          </Box>
+        </SidePanel>
       </Box>
     </Box>
   );

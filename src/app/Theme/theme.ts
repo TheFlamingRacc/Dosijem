@@ -1,6 +1,8 @@
 "use client";
 
+import { AspectRatio } from "@mui/icons-material";
 import { createTheme } from "@mui/material/styles";
+import { transform } from "next/dist/build/swc/generated-native";
 
 export const theme = createTheme({
   breakpoints: {
@@ -36,6 +38,33 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           color: '#FFFFFF',
+        }
+      }
+    },
+    MuiSlider: {
+      styleOverrides: {
+        root: {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          '& .MuiSlider-thumb': {
+            borderRadius: '30%',
+            transform: 'rotate(45deg)',    
+            backgroundColor: 'white',
+            width: 'min(0.8vw, 1.6vh)',
+            height: 'min(0.8vw, 1.6vh)',
+            left: 'auto',
+            '&:hover': {
+              boxShadow: '0 0 0 4px rgba(187, 142, 255, 0.2)'
+            },
+            '&.Mui-focusVisible, &.Mui-active': {
+              boxShadow: '0 0 0 6px rgba(187, 142, 255, 0.3)',
+            },
+          },
+          '& .MuiSlider-rail': {
+            backgroundColor: '#6F6F6F',
+            opacity: '1'
+          }
         }
       }
     }
