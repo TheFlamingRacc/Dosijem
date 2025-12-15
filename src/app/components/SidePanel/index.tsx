@@ -4,18 +4,16 @@ import { Box, Divider } from "@mui/material";
 import LogoButton from "./LogoButton";
 import Navigation from "./Navigation";
 import MusicNavigation from "./MusicNavigation";
-import { PropsWithChildren } from "react";
 
-export default function SidePanel({ children }: PropsWithChildren) {
+export default function SidePanel() {
   return (
-    <Box display={"flex"} maxWidth={"100%"}>
+    <Box display={"flex"} height="auto">
       <Box
-        width={"9.5%"}
         display={"flex"}
         flexDirection={"column"}
         justifyContent={{ md: "normal", lg: "space-between" }}
         gap={{ md: "min(6vw, 3vh)", lg: "none" }}
-        p={{ md: "min(0.5vw, 1vh)", lg: "min(1.3vw, 2.6vh)" }}
+        p={{ md: "min(0.5vw, 1vh)", lg: 3 }}
       >
         <LogoButton />
         <Box>
@@ -39,7 +37,6 @@ export default function SidePanel({ children }: PropsWithChildren) {
       )`,
         }}
       />
-      {children}
     </Box>
   );
 }

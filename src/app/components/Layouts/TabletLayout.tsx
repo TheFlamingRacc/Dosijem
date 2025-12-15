@@ -6,24 +6,21 @@ export default function TabletLayout({ children }: PropsWithChildren) {
   return (
     <Box
       sx={{ backgroundColor: "background.main" }}
-      height={"100vh"}
+      height="100vh"
+      width="100vw"
       display={{ xs: "none", md: "flex", lg: "none" }}
     >
-      <SidePanel>
-        <Box
-          flex={1}
-          display="flex"
-          flexDirection="column"
-          position={"relative"}
-          sx={{
-            overflowY: "scroll",
-            scrollbarWidth: 0,
-            "&::-webkit-scrollbar": { display: "none" },
-          }}
-        >
-          <Box>{children}</Box>
-        </Box>
-      </SidePanel>
+      <SidePanel />
+      <Box
+        width="100%"
+        sx={{
+          overflowY: "scroll",
+          scrollbarWidth: 0,
+          "&::-webkit-scrollbar": { display: "none" },
+        }}
+      >
+        {children}
+      </Box>
     </Box>
   );
 }

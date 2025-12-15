@@ -8,6 +8,7 @@ export default function LogoButton() {
     <IconButton
       onClick={() => router.push(`${pathname.includes("/en") ? "/en" : "/"}`)}
       sx={{
+        width: "73px",
         backgroundColor: "background.default",
         border: "solid 1px #3D3A44",
         transition: "0.3s ease box-shadow",
