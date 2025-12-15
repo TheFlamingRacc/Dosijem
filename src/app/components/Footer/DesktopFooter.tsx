@@ -8,11 +8,17 @@ export default function DesktopFooter() {
       py={6}
       position="relative"
       overflow="hidden"
+      display={{ xs: "none", lg: "block" }}
       borderRadius="min(2.2vw, 4.4vh) min(2.2vw, 4.4vh) 0 0"
       sx={{ backgroundColor: "background.default" }}
     >
-      <Box zIndex={2} display="flex" justifyContent="space-between">
-        <Box display="flex" gap={7}>
+      <Box
+        zIndex={1}
+        position="relative"
+        display="flex"
+        justifyContent="space-between"
+      >
+        <Box display="flex" gap="min(2vw, 4vh)">
           <Stack justifyContent="space-between">
             <Box component="img" src="/DOSIJEM.svg" alt="DOSIJEM" width={150} />
             <Typography color="text.secondary" fontSize="1rem">
@@ -29,8 +35,8 @@ export default function DesktopFooter() {
             </CustomLink>
           </Stack>
         </Box>
-        <Stack justifyContent="space-between">
-          <Box display="flex" justifyContent="space-between">
+        <Stack justifyContent="space-between" alignItems="flex-end">
+          <Box display="flex" justifyContent="space-between" gap={1.5}>
             <CustomLink
               url="https://mail.google.com/mail/?view=cm&fs=1&to=dosijemhelp@gmail.com"
               newTab
@@ -47,6 +53,7 @@ export default function DesktopFooter() {
             alignItems="center"
             display="flex"
             gap="min(0.2vw, 0.4vh)"
+            noWrap
           >
             <Box height="1rem" component="img" src="/dosijem-logo.svg" />
             made in
@@ -57,12 +64,12 @@ export default function DesktopFooter() {
         </Stack>
       </Box>
       <Box
-        zIndex={1}
+        zIndex={0}
         component="img"
-        width="105%"
+        height={110}
         position="absolute"
         src="/footer-bg.svg"
-        bottom="-28%"
+        bottom="-55px"
         left="-2%"
         aria-hidden
         draggable={false}

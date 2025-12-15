@@ -6,6 +6,7 @@ import { theme } from "./Theme/theme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import MainLayout from "./components/Layouts/MainLayout";
 import TabletLayout from "./components/Layouts/TabletLayout";
+import MobileLayout from "./components/Layouts/MobileLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <MainLayout>{children}</MainLayout>
             <TabletLayout>{children}</TabletLayout>
+            <MobileLayout>{children}</MobileLayout>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { PropsWithChildren } from "react";
-import DesktopFooter from "../components/Footer/DesktopFooter";
+import Footer from "../components/Footer";
 
 export default function ContactsLayout({ children }: PropsWithChildren) {
   return (
@@ -15,7 +15,7 @@ export default function ContactsLayout({ children }: PropsWithChildren) {
       >
         {children}
       </Box>
-      <DesktopFooter />
+      <Footer />
     </>
   );
 }

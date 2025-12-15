@@ -30,7 +30,7 @@ export default function CustomLink({
     <Typography
       {...props}
       onClick={handleClick}
-      fontSize="1rem"
+      fontSize={{ xs: "0.625rem", md: "1rem" }}
       fontFamily={"e-UkraineHead"}
       color="text.secondary"
       sx={{
