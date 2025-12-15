@@ -1,55 +1,25 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import CustomLink from "./components/CustomLink";
 
 export default function DesktopFooter() {
   return (
     <Box
-      zIndex={0}
-      sx={{
-        backgroundColor: "background.default",
-        borderRadius: "min(2.2vw, 4.4vh) min(2.2vw, 4.4vh) 0 0",
-        width: "100%",
-        height: "min(11vw, 18vh)",
-        position: "relative",
-        overflow: "hidden",
-        px: "min(1vw, 2vh)",
-        py: "min(2vw, 4vh)",
-        display: "flex",
-      }}
+      px={4}
+      py={6}
+      position="relative"
+      overflow="hidden"
+      borderRadius="min(2.2vw, 4.4vh) min(2.2vw, 4.4vh) 0 0"
+      sx={{ backgroundColor: "background.default" }}
     >
-      <Box
-        zIndex={2}
-        display={"flex"}
-        height={"85%"}
-        width={"100%"}
-        justifyContent={"space-between"}
-      >
-        <Box display={"flex"} gap={"min(3.5vw, 7vh)"}>
-          <Box
-            display={"flex"}
-            justifyContent={"space-between"}
-            alignItems={"flex-start"}
-            flexDirection={"column"}
-          >
-            <Box
-              width={"auto"}
-              height={"40%"}
-              component={"img"}
-              src={"/DOSIJEM.svg"}
-            />
-            <Typography
-              color="text.secondary"
-              fontSize={"clamp(0px, min(1vw, 2vh), 16px)"}
-            >
+      <Box zIndex={2} display="flex" justifyContent="space-between">
+        <Box display="flex" gap={7}>
+          <Stack justifyContent="space-between">
+            <Box component="img" src="/DOSIJEM.svg" alt="DOSIJEM" width={150} />
+            <Typography color="text.secondary" fontSize="1rem">
               © 2025. Всі права захищені.
             </Typography>
-          </Box>
-          <Box
-            display={"flex"}
-            justifyContent={"space-between"}
-            alignItems={"flex-start"}
-            flexDirection={"column"}
-          >
+          </Stack>
+          <Stack>
             <CustomLink url="https://send.monobank.ua/jar/4KSgHrLD2f" newTab>
               БЛАГОБАНКА
             </CustomLink>
@@ -57,14 +27,10 @@ export default function DesktopFooter() {
             <CustomLink url="/privacy&policy">
               ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ
             </CustomLink>
-          </Box>
+          </Stack>
         </Box>
-        <Box
-          display={"flex"}
-          justifyContent={"space-between"}
-          flexDirection={"column"}
-        >
-          <Box display={"flex"} justifyContent={"space-between"}>
+        <Stack justifyContent="space-between">
+          <Box display="flex" justifyContent="space-between">
             <CustomLink
               url="https://mail.google.com/mail/?view=cm&fs=1&to=dosijemhelp@gmail.com"
               newTab
@@ -76,38 +42,30 @@ export default function DesktopFooter() {
             </CustomLink>
           </Box>
           <Typography
-            fontSize={"clamp(0px, min(1vw, 2vh), 16px)"}
+            fontSize="1rem"
             color="text.secondary"
-            alignItems={"center"}
-            display={"flex"}
-            gap={"min(0.2vw, 0.4vh)"}
+            alignItems="center"
+            display="flex"
+            gap="min(0.2vw, 0.4vh)"
           >
-            <Box
-              height={"clamp(0px, min(1vw, 2vh), 16px)"}
-              component={"img"}
-              src={"/dosijem-logo.svg"}
-            />
+            <Box height="1rem" component="img" src="/dosijem-logo.svg" />
             made in
-            <Typography
-              fontSize={"clamp(0px, min(1vw, 2vh), 16px)"}
-              component={"span"}
-              color="primary.main"
-            >
+            <Typography fontSize="1rem" component="span" color="primary.main">
               DOSIJEM
             </Typography>
           </Typography>
-        </Box>
+        </Stack>
       </Box>
       <Box
         zIndex={1}
-        component={"img"}
-        width={"105%"}
-        position={"absolute"}
-        src={"/footer-bg.svg"}
-        sx={{
-          bottom: "-28%",
-          left: "-2%",
-        }}
+        component="img"
+        width="105%"
+        position="absolute"
+        src="/footer-bg.svg"
+        bottom="-28%"
+        left="-2%"
+        aria-hidden
+        draggable={false}
       />
     </Box>
   );

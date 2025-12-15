@@ -1,14 +1,21 @@
 "use client";
 
-import { Typography } from "@mui/material";
+import { Typography, TypographyProps } from "@mui/material";
 import { PropsWithChildren } from "react";
 import { useRouter } from "next/navigation";
+
+type Props = PropsWithChildren &
+  TypographyProps & {
+    url: string;
+    newTab?: boolean;
+  };
 
 export default function CustomLink({
   url,
   newTab = false,
   children,
-}: PropsWithChildren & { url: string; newTab?: boolean }) {
+  ...props
+}: Props) {
   const router = useRouter();
 
   const handleClick = () => {
@@ -21,8 +28,9 @@ export default function CustomLink({
 
   return (
     <Typography
+      {...props}
       onClick={handleClick}
-      fontSize={"clamp(0px, min(1vw, 2vh), 16px)"}
+      fontSize="1rem"
       fontFamily={"e-UkraineHead"}
       color="text.secondary"
       sx={{
