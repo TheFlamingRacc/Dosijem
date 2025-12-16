@@ -3,19 +3,21 @@
 import { IconButton, Box, Typography } from "@mui/material";
 import { useRouter, usePathname } from "next/navigation";
 
+type Props = {
+  isCurrentLocation: boolean;
+  targetSrc: string;
+  src: string;
+  title: string;
+  redirectUrl: string;
+};
+
 export default function CustomIconButton({
   isCurrentLocation,
   targetSrc,
   src,
   title,
   redirectUrl,
-}: {
-  isCurrentLocation: boolean;
-  targetSrc: string;
-  src: string;
-  title: string;
-  redirectUrl: string;
-}) {
+}: Props) {
   const pathname = usePathname();
   const router = useRouter();
   return (
@@ -48,27 +50,27 @@ export default function CustomIconButton({
       }}
     >
       <Box
-        zIndex={"1"}
-        width={"60%"}
-        sx={{ aspectRatio: "1" }}
-        component={"img"}
+        zIndex={1}
+        width="60%"
+        sx={{ aspectRatio: 1 }}
+        component="img"
         src={isCurrentLocation ? targetSrc : src}
       />
       <Box
         className="hoverBlock"
-        position={"absolute"}
-        left={"min(2.5vw, 5vh)"}
-        display={"flex"}
-        alignItems={"center"}
+        position="absolute"
+        left="min(2.5vw, 5vh)"
+        display="flex"
+        alignItems="center"
         sx={{
-          zIndex: "1000",
+          zIndex: 1000,
           pointerEvents: "none",
           opacity: 0,
           transition: "0.5s ease opacity",
         }}
       >
         <Box
-          mx={"clamp(0px, min(1.5vw, 3vh), 12px)"}
+          mx="clamp(0px, min(1.5vw, 3vh), 12px)"
           sx={{
             height: "3px",
             width: "clamp(0px, min(1.5vw, 2vh), 14px)",
@@ -78,7 +80,7 @@ export default function CustomIconButton({
         />
         <Typography
           color="#D2D2D2"
-          fontSize={"clamp(0px, min(2vw, 3vh), 24px)"}
+          fontSize="clamp(0px, min(2vw, 3vh), 24px)"
           sx={{
             position: "relative",
             display: "inline-block",
@@ -86,7 +88,7 @@ export default function CustomIconButton({
             "&::before": {
               content: '""',
               position: "absolute",
-              inset: "-0.25em", // трохи більший відступ навколо тексту
+              inset: "-0.25em",
               borderRadius: "999px",
               opacity: 0.8,
               backgroundColor: (theme) => theme.palette.background.main,

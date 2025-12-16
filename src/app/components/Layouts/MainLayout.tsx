@@ -31,6 +31,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
       >
         <SidePanel />
         <Box
+          width="100%"
           sx={{
             overflowY: "scroll",
             scrollbarWidth: 0,

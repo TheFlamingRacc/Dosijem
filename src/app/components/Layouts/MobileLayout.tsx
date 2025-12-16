@@ -3,7 +3,12 @@ import { PropsWithChildren } from "react";
 
 export default function MobileLayout({ children }: PropsWithChildren) {
   return (
-    <Box width="100%" minHeight="100vh" display={{ sm: "block", md: "none" }}>
+    <Box
+      width="100%"
+      minHeight="100vh"
+      display={{ sm: "block", md: "none" }}
+      sx={{ backgroundColor: "background.main" }}
+    >
       {children}
     </Box>
   );

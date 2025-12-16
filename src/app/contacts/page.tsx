@@ -1,484 +1,164 @@
-"use client";
-
-import { Box, Typography, Divider } from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
+import HeadingBlock from "./components/HeadingBlock";
+import SocialsLink from "./components/SocialsLink";
+import CustomDivider from "./components/CustomDivider";
 
 export default function Contacts() {
   return (
     <>
       <Typography
         color="primary.main"
-        fontSize={{
-          md: "clamp(0px, min(2.7vw, 5.4vh), 25px)",
-          lg: "clamp(0px, min(1.5vw, 3vh), 20px)",
-        }}
+        fontSize={{ xs: "0.875rem", md: "1.25rem" }}
         fontWeight={500}
       >
         Зв'язок з нами
       </Typography>
       <Typography
-        fontSize={{
-          md: "clamp(0px, min(6vw, 11vh), 75px)",
-          lg: "clamp(0px, min(2.8vw, 5.6vh), 50px)",
-        }}
-        fontFamily={"e-UkraineHead"}
+        fontSize={{ xs: "1.5625rem", md: "3.125rem" }}
+        fontFamily="e-UkraineHead"
         fontWeight={700}
+        noWrap
+        sx={{
+          "@media (min-width:600px) and (max-width:660px)": {
+            fontSize: "2.9rem",
+          },
+        }}
       >
         Хочеш поговорити?
       </Typography>
       <Typography
         fontWeight={300}
-        fontSize={{
-          md: "clamp(0px, min(2.7vw, 5.4vh), 25px)",
-          lg: "clamp(0px, min(1.5vw, 3vh), 20px)",
-        }}
+        fontSize={{ xs: "0.9375rem", md: "1.25rem" }}
         color="text.secondary"
-        maxWidth={"750px"}
-        mt={{ md: "min(2vw, 4vh)", lg: "min(1.5vw, 3vh)" }}
-        lineHeight={"110%"}
+        maxWidth="80%"
+        mt={{ xs: 2, md: "min(2vw, 4vh)", lg: "min(1.5vw, 3vh)" }}
+        lineHeight="110%"
       >
         Якщо вам потрібна допомога, є запитання, хочете консультацію щодо ідеї
         або просто написати - скористайтеся наведеними нижче контактами щоб
         зв’язатися з{" "}
         <Typography
-          component={"span"}
+          component="span"
           fontWeight={500}
           color="primary.main"
-          fontSize={{
-            md: "clamp(0px, min(2.7vw, 5.4vh), 25px)",
-            lg: "clamp(0px, min(1.5vw, 3vh), 20px)",
-          }}
+          fontSize="inherit"
         >
           DOSIJEM
         </Typography>
       </Typography>
-      <Box
-        display={"flex"}
-        mt={"min(2.8vw, 5.6vh)"}
-        gap={"min(2vw, 4vh)"}
-        flexDirection={{ xs: "column", lg: "row" }}
+      <Stack
+        mt={{ xs: 4, md: "min(2.8vw, 5.6vh)" }}
+        gap={{ xs: 4, md: "min(2vw, 4vh)" }}
+        flexWrap="wrap"
+        flexDirection={{ xs: "column", md: "row" }}
+        alignItems={{ xs: "center", md: "normal" }}
       >
         <Typography
-          fontFamily={"e-UkraineHead"}
+          fontFamily="e-UkraineHead"
           fontWeight={400}
-          fontSize={{
-            md: "clamp(0px, min(6vw, 11vh), 75px)",
-            lg: "clamp(0px, min(2.8vw, 5.6vh), 50px)",
-          }}
+          fontSize={{ xs: "1.5625rem", md: "3.125rem" }}
           color="primary.main"
-          lineHeight={"100%"}
+          lineHeight="100%"
         >
           Зв'яжися
         </Typography>
-        {/* Block */}
         <Box
-          display={"flex"}
-          justifyContent={{ md: "space-between", lg: "flex-start" }}
-          gap={{ xs: "0", lg: "min(1vw, 2vh)" }}
+          display="flex"
+          width={{ md: "100%", lg: "auto" }}
+          justifyContent={{
+            xs: "space-between",
+            md: "space-between",
+            lg: "flex-start",
+          }}
+          gap={{ xs: "0", md: 0, lg: "min(1vw, 2vh)" }}
+          mr={{ xs: 0, md: "min(4vw, 8vh)", lg: 0 }}
+          sx={{
+            "@media (max-width: 800px)": {
+              flexDirection: "column",
+              gap: 4,
+            },
+          }}
         >
-          <Box
-            display={"flex"}
-            flexDirection={"column"}
-            alignItems={"flex-start"}
-            justifyContent={"space-between"}
-            position={"relative"}
-            height={{
-              md: "clamp(0px, min(22vw, 44vh), 210px)",
-              lg: "min(10.5vw, 21vh)",
-            }}
-            width={{
-              md: "clamp(0px, min(25vw, 50vh), 233px)",
-              lg: "clamp(0px, min(14vw, 28vh), 233px)",
-            }}
+          <HeadingBlock
+            title="Підтримка"
+            description="Клієнт.підтримка"
+            img="/contacts-icon-t.svg"
           >
-            <Box
-              width={{
-                md: "clamp(0px, min(25vw, 50vh), 233px)",
-                lg: "clamp(0px, min(14vw, 28vh), 233px)",
-              }}
-              height={{
-                md: "clamp(0px, min(16vw, 32vh), 110px)",
-                lg: "min(5vw, 10vw)",
-              }}
-              borderRadius={{
-                md: "min(2.5vw, 5vh)",
-                lg: "min(1.3vw, 2.6vh)",
-              }}
-              border={"solid rgba(255, 255, 255, 0.2) 1px"}
-              p={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-              display={"flex"}
-              alignItems={"flex-end"}
-              gap={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-            >
-              <Box
-                height={"100%"}
-                borderRadius={{
-                  md: "min(1.4vw, 2.8vh)",
-                  lg: "min(0.8vw, 1.6vh)",
-                }}
-                display={"flex"}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "center",
-                  aspectRatio: "1",
-                  backgroundColor: "background.default",
-                }}
-              >
-                <Box
-                  height={"80%"}
-                  component={"img"}
-                  src="/contacts-icon-t.svg"
-                  sx={{
-                    aspectRatio: 1,
-                  }}
-                />
-              </Box>
-              <Typography
-                letterSpacing={"-5%"}
-                fontSize={{
-                  md: "clamp(0px, min(1.1vw, 2.2vh), 12px)",
-                  lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                }}
-              >
-                Підтримка
-                <Typography
-                  fontSize={{
-                    md: "clamp(0px, min(1.1vw, 2.2vh), 12px)",
-                    lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                  }}
-                  letterSpacing={"-5%"}
-                >
-                  Клієнт.підтримка
-                </Typography>
-              </Typography>
-              <Box
-                component={"img"}
-                src={"/dosijem-logo.svg"}
-                width={{ md: "min(2.2vw, 4.4vh)", lg: "min(1.5vw, 3vh)" }}
-                position={"absolute"}
-                top={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-                right={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-              />
-            </Box>
-            <Box display={"flex"} justifyContent={"space-between"}>
-              <Typography
-                color="rgba(106, 171, 255, 1)"
-                fontSize={{
-                  md: "clamp(0px, min(2.2vw, 4.4vh), 25px)",
-                  lg: "clamp(0px, min(1.3vw, 2.6vh), 20px)",
-                }}
-                sx={{
-                  cursor: "pointer",
-                  transition: "0.5s ease color",
-                  textDecoration: "underline",
-                  textUnderlineOffset: "6px",
-                  "&:hover": {
-                    color: "rgba(106, 171, 255, 0.5)",
-                  },
-                }}
-              >
+            <Box display="flex" gap={1}>
+              <SocialsLink telegram url="https://t.me/DOSIJEM_channel">
                 Telegram
-              </Typography>
-              <Divider
-                orientation="vertical"
-                sx={{
-                  mx: { md: "min(1.1vw, 2.2vh)", lg: "min(0.6vw, 1.2vh)" },
-                  width: "1px",
-                  height: "100%",
-                  border: "none",
-                  background: (theme) =>
-                    `linear-gradient(
-        to bottom,
-        ${theme.palette.background.main} 0%,
-        #3D3A44 10%,
-        #3D3A44 90%,
-        ${theme.palette.background.main} 100%
-      )`,
-                }}
-              />
-              <Typography
-                color="rgba(123, 106, 255, 1)"
-                fontSize={{
-                  md: "clamp(0px, min(2.2vw, 4.4vh), 25px)",
-                  lg: "clamp(0px, min(1.3vw, 2.6vh), 20px)",
-                }}
-                sx={{
-                  cursor: "pointer",
-                  textDecoration: "underline",
-                  textUnderlineOffset: "6px",
-                  transition: "0.5s ease color",
-                  "&:hover": {
-                    color: "rgba(123, 106, 255, 0.5)",
-                  },
-                }}
+              </SocialsLink>
+              <CustomDivider />
+              <SocialsLink
+                discord
+                url="https://discord.com/channels/@me/1433059393485672580"
               >
                 Discord
-              </Typography>
+              </SocialsLink>
             </Box>
             <Typography
-              fontSize={{
-                md: "clamp(0px, min(1.5vw, 3vh), 12px)",
-                lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-              }}
+              fontFamily="manrope"
+              fontWeight={700}
+              fontSize="0.875rem"
               color="text.secondary"
             >
               або через пошту
             </Typography>
-            <Box
-              alignItems={"center"}
-              display={"flex"}
-              gap={"min(0.2vw, 0.4vh)"}
-            >
+            <Box alignItems="center" display="flex" gap={0.5}>
               <Box
-                sx={{
-                  backgroundColor: "primary.main",
-                  width: "3px",
-                  borderRadius: "3px",
-                  height: "70%",
-                }}
+                width="3px"
+                borderRadius="3px"
+                height="1rem"
+                sx={{ backgroundColor: "primary.main" }}
               />
-              <Typography
-                fontSize={{
-                  md: "clamp(0px, min(1.5vw, 3vh), 12px)",
-                  lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                }}
-              >
-                dosijemhelp@gmail.com
-              </Typography>
+              <Typography fontSize="0.875rem">dosijemhelp@gmail.com</Typography>
             </Box>
-          </Box>
-          {/* Другий блок — Кар'єра */}
-          <Box
-            display={"flex"}
-            flexDirection={"column"}
-            alignItems={"flex-start"}
-            justifyContent={"space-between"}
-            position={"relative"}
-            height={{
-              md: "clamp(0px, min(22vw, 44vh), 210px)",
-              lg: "min(10.5vw, 21vh)",
-            }}
-            width={{
-              md: "clamp(0px, min(25vw, 50vh), 233px)",
-              lg: "clamp(0px, min(14vw, 28vh), 233px)",
-            }}
+          </HeadingBlock>
+          <HeadingBlock
+            img="/career-icon.svg"
+            title="Кар'єра"
+            description="Хочеш у команду?"
           >
-            <Box
-              width={{
-                md: "clamp(0px, min(25vw, 50vh), 233px)",
-                lg: "clamp(0px, min(14vw, 28vh), 233px)",
-              }}
-              height={{
-                md: "clamp(0px, min(16vw, 32vh), 110px)",
-                lg: "min(5vw, 10vw)",
-              }}
-              borderRadius={{
-                md: "min(2.5vw, 5vh)",
-                lg: "min(1.3vw, 2.6vh)",
-              }}
-              border={"solid rgba(255, 255, 255, 0.2) 1px"}
-              p={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-              display={"flex"}
-              alignItems={"flex-end"}
-              gap={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-            >
-              <Box
-                height={"100%"}
-                borderRadius={{
-                  md: "min(1.4vw, 2.8vh)",
-                  lg: "min(0.8vw, 1.6vh)",
-                }}
-                display={"flex"}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "center",
-                  aspectRatio: "1",
-                  backgroundColor: "background.default",
-                }}
-              >
-                <Box
-                  height={{ md: "80%", lg: "70%" }}
-                  component={"img"}
-                  src="/career-icon.svg"
-                  sx={{ aspectRatio: 1 }}
-                />
-              </Box>
-              <Typography
-                letterSpacing={"-5%"}
-                fontSize={{
-                  md: "clamp(0px, min(1.1vw, 2.2vh), 12px)",
-                  lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                }}
-              >
-                Кар'єра
-                <Typography
-                  fontSize={{
-                    md: "clamp(0px, min(1.1vw, 2.2vh), 12px)",
-                    lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                  }}
-                  letterSpacing={"-5%"}
-                  noWrap
-                >
-                  Хочеш у команду?
-                </Typography>
-              </Typography>
-              <Box
-                component={"img"}
-                src={"/dosijem-logo.svg"}
-                width={{ md: "min(2.2vw, 4.4vh)", lg: "min(1.5vw, 3vh)" }}
-                position={"absolute"}
-                top={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-                right={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-              />
-            </Box>
-            <Typography
-              color="rgba(106, 171, 255, 1)"
-              fontSize={{
-                md: "clamp(0px, min(2.2vw, 4.4vh), 25px)",
-                lg: "clamp(0px, min(1.3vw, 2.6vh), 20px)",
-              }}
-              sx={{
-                cursor: "pointer",
-                transition: "0.5s ease color",
-                textDecoration: "underline",
-                textUnderlineOffset: "6px",
-                "&:hover": { color: "rgba(106, 171, 255, 0.5)" },
-              }}
-            >
+            <SocialsLink telegram url="https://t.me/DOSIJEM_Reviews">
               Telegram
-            </Typography>
+            </SocialsLink>
             <Typography
-              fontSize={{
-                md: "clamp(0px, min(1.5vw, 3vh), 12px)",
-                lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-              }}
+              fontFamily="manrope"
+              fontWeight={700}
+              fontSize="0.875rem"
               color="text.secondary"
             >
               або через пошту
             </Typography>
-            <Box
-              alignItems={"center"}
-              display={"flex"}
-              gap={"min(0.2vw, 0.4vh)"}
-            >
+            <Box alignItems="center" display="flex" gap={0.5}>
               <Box
                 sx={{
                   backgroundColor: "primary.main",
                   width: "3px",
                   borderRadius: "3px",
-                  height: "70%",
+                  height: "1rem",
                 }}
               />
-              <Typography
-                fontSize={{
-                  md: "clamp(0px, min(1.5vw, 3vh), 12px)",
-                  lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                }}
-              >
-                hrdosijem@gmail.com
-              </Typography>
+              <Typography fontSize="0.875rem">hrdosijem@gmail.com</Typography>
             </Box>
-          </Box>
-
-          {/* Третій блок — Партнерам */}
-          <Box
-            display={"flex"}
-            flexDirection={"column"}
-            alignItems={"flex-start"}
-            justifyContent={"space-between"}
-            position={"relative"}
-            height={{
-              md: "clamp(0px, min(22vw, 44vh), 210px)",
-              lg: "min(10.5vw, 21vh)",
-            }}
-            width={{
-              md: "clamp(0px, min(25vw, 50vh), 233px)",
-              lg: "clamp(0px, min(14vw, 28vh), 233px)",
-            }}
+          </HeadingBlock>
+          <HeadingBlock
+            img="/partnership-icon.svg"
+            title="Партнерам"
+            description="Давай разом)"
           >
-            <Box
-              position={"relative"}
-              width={{
-                md: "clamp(0px, min(25vw, 50vh), 233px)",
-                lg: "clamp(0px, min(14vw, 28vh), 233px)",
-              }}
-              height={{
-                md: "clamp(0px, min(16vw, 32vh), 110px)",
-                lg: "min(5vw, 10vw)",
-              }}
-              borderRadius={{
-                md: "min(2.5vw, 5vh)",
-                lg: "min(1.3vw, 2.6vh)",
-              }}
-              border={"solid rgba(255, 255, 255, 0.2) 1px"}
-              p={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-              display={"flex"}
-              alignItems={"flex-end"}
-              gap={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-            >
-              <Box
-                height={"100%"}
-                borderRadius={{
-                  md: "min(1.4vw, 2.8vh)",
-                  lg: "min(0.8vw, 1.6vh)",
-                }}
-                display={"flex"}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "center",
-                  aspectRatio: "1",
-                  backgroundColor: "background.default",
-                }}
-              >
-                <Box
-                  height={{ md: "80%", lg: "70%" }}
-                  component={"img"}
-                  src="/partnership-icon.svg"
-                  sx={{ aspectRatio: 1 }}
-                />
-              </Box>
-              <Typography
-                letterSpacing={"-5%"}
-                fontSize={{
-                  md: "clamp(0px, min(1.1vw, 2.2vh), 12px)",
-                  lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                }}
-              >
-                Партнерам
-                <Typography
-                  fontSize={{
-                    md: "clamp(0px, min(1.1vw, 2.2vh), 12px)",
-                    lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                  }}
-                  letterSpacing={"-5%"}
-                >
-                  Давай разом)
-                </Typography>
-              </Typography>
-              <Box
-                component={"img"}
-                src={"/dosijem-logo.svg"}
-                width={{ md: "min(2.2vw, 4.4vh)", lg: "min(1.5vw, 3vh)" }}
-                position={"absolute"}
-                top={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-                right={{ md: "min(1.2vw, 2.4vh)", lg: "min(0.6vw, 1.2vh)" }}
-              />
-            </Box>
-
             <Typography
-              fontSize={{
-                md: "clamp(0px, min(1.5vw, 3vh), 12px)",
-                lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-              }}
+              fontSize="0.875rem"
               color="text.secondary"
-              flexWrap={"wrap"}
+              flexWrap="wrap"
+              fontFamily="manrope"
+              fontWeight={700}
+              maxWidth={"220px"}
             >
               Ми{" "}
               <Typography
-                component={"span"}
-                fontSize={{
-                  md: "clamp(0px, min(1.5vw, 3vh), 12px)",
-                  lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                }}
+                component="span"
+                fontSize="inherit"
                 color="primary.main"
               >
                 завжди
@@ -486,31 +166,20 @@ export default function Contacts() {
               шукаємо блогерів та партнерів для спільного розвитку.
             </Typography>
 
-            <Box
-              alignItems={"center"}
-              display={"flex"}
-              gap={"min(0.2vw, 0.4vh)"}
-            >
+            <Box alignItems="center" display="flex" gap={0.5}>
               <Box
                 sx={{
                   backgroundColor: "primary.main",
                   width: "3px",
                   borderRadius: "3px",
-                  height: "70%",
+                  height: "1rem",
                 }}
               />
-              <Typography
-                fontSize={{
-                  md: "clamp(0px, min(1.5vw, 3vh), 12px)",
-                  lg: "clamp(0px, min(0.8vw, 1.6vh), 12px)",
-                }}
-              >
-                dosijemhelp@gmail.com
-              </Typography>
+              <Typography fontSize="0.875rem">dosijemhelp@gmail.com</Typography>
             </Box>
-          </Box>
+          </HeadingBlock>
         </Box>
-      </Box>
+      </Stack>
     </>
   );
 }

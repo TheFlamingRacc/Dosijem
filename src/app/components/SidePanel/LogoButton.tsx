@@ -8,7 +8,6 @@ export default function LogoButton() {
     <IconButton
       onClick={() => router.push(`${pathname.includes("/en") ? "/en" : "/"}`)}
       sx={{
-        width: "73px",
         backgroundColor: "background.default",
         border: "solid 1px #3D3A44",
         transition: "0.3s ease box-shadow",
@@ -18,12 +17,7 @@ export default function LogoButton() {
         },
       }}
     >
-      <Box
-        component={"img"}
-        src={"/dosijem-logo.svg"}
-        width={"100%"}
-        height={"100%"}
-      />
+      <Box component="img" src="/dosijem-logo.svg" width="100%" height="100%" />
     </IconButton>
   );
 }

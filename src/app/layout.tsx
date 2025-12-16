@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./Theme/theme";
@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Dosijem",
   description: "Dosijem",
@@ -30,7 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ua">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable}`}
+      >
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <MainLayout>{children}</MainLayout>

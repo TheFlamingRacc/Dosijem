@@ -14,24 +14,23 @@ export default function MusicNavigation() {
   const router = useRouter();
 
   const handleLanguage = () => {
-    const parts = pathname.split("/").filter(Boolean); // розбиваємо на частини шляху
+    const parts = pathname.split("/").filter(Boolean);
     const enIndex = parts.indexOf("en");
 
     if (enIndex !== -1) {
-      // Якщо /en є — видаляємо
       parts.splice(enIndex, 1);
     } else {
-      // Якщо /en нема — додаємо в кінець
       parts.push("en");
     }
 
     const newPath = "/" + parts.join("/");
-    router.push(newPath); // без перезавантаження сторінки
+    router.push(newPath);
   };
 
-  const handleVolumeChange = (e: Event, newValue: number) => {
-    setVolume(newValue);
-    localStorage.setItem("volume", `${newValue}`);
+  const handleVolumeChange = (_: Event, value: number | number[]) => {
+    const v = Array.isArray(value) ? value[0] : value;
+    setVolume(v);
+    localStorage.setItem("volume", String(v));
   };
 
   useEffect(() => {
@@ -86,7 +85,7 @@ export default function MusicNavigation() {
         borderRadius={"100vw"}
         sx={{ backgroundColor: "background.default" }}
         mx={"auto"}
-        width={"75%"}
+        width={"85%"}
         height={"auto"}
         display={"flex"}
         position={"relative"}

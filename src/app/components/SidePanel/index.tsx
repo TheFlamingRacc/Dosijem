@@ -1,26 +1,24 @@
 "use client";
 
-import { Box, Divider } from "@mui/material";
+import { Box, Stack, Divider } from "@mui/material";
 import LogoButton from "./LogoButton";
 import Navigation from "./Navigation";
 import MusicNavigation from "./MusicNavigation";
 
 export default function SidePanel() {
   return (
-    <Box display={"flex"} height="auto">
-      <Box
-        display={"flex"}
-        flexDirection={"column"}
+    <Box display="flex" maxHeight="100%" width="9.5%">
+      <Stack
         justifyContent={{ md: "normal", lg: "space-between" }}
-        gap={{ md: "min(6vw, 3vh)", lg: "none" }}
-        p={{ md: "min(0.5vw, 1vh)", lg: 3 }}
+        p={{ md: "min(1vw, 2vh)", lg: 2.5 }}
+        gap={1}
       >
         <LogoButton />
         <Box>
           <Navigation />
           <MusicNavigation />
         </Box>
-      </Box>
+      </Stack>
       <Divider
         orientation="vertical"
         flexItem

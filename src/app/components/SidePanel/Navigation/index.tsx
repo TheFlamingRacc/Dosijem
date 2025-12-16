@@ -1,25 +1,23 @@
 "use client";
 
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import CustomIconButton from "./CustomIconButton";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
   const pathname = usePathname();
   return (
-    <Box
-      borderRadius={"100vw"}
+    <Stack
+      borderRadius="99px"
       sx={{ backgroundColor: "background.default" }}
-      mx={"auto"}
-      width={"75%"}
-      height={"auto"}
-      display={"flex"}
-      position={"relative"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      flexDirection={"column"}
-      p={"min(0.5vw, 1vh)"}
-      gap={"min(0.5vw, 1vh)"}
+      mx="auto"
+      width="85%"
+      height="auto"
+      position="relative"
+      alignItems="center"
+      justifyContent="center"
+      p="min(0.5vw, 1vh)"
+      gap="min(0.5vw, 1vh)"
     >
       <CustomIconButton
         isCurrentLocation={pathname.includes("/plugins")}
@@ -70,6 +68,6 @@ export default function Navigation() {
         title="Сайти"
         redirectUrl="/sites"
       />
-    </Box>
+    </Stack>
   );
 }

@@ -1,7 +1,11 @@
+"use client";
+
 import { Box, Stack, Typography } from "@mui/material";
 import CustomLink from "./components/CustomLink";
+import { usePathname } from "next/navigation";
 
 export default function DesktopFooter() {
+  const isEnglish = usePathname().includes("/en");
   return (
     <Box
       px={4}
@@ -22,16 +26,19 @@ export default function DesktopFooter() {
           <Stack justifyContent="space-between">
             <Box component="img" src="/DOSIJEM.svg" alt="DOSIJEM" width={150} />
             <Typography color="text.secondary" fontSize="1rem">
-              © 2025. Всі права захищені.
+              © 2025. {isEnglish ? "All rights reserved" : "Всі права захищені"}
+              .
             </Typography>
           </Stack>
           <Stack>
             <CustomLink url="https://send.monobank.ua/jar/4KSgHrLD2f" newTab>
-              БЛАГОБАНКА
+              {isEnglish ? "CHARITYBOX" : "БЛАГОБАНКА"}
             </CustomLink>
-            <CustomLink url="/contacts">КОНТАКТИ</CustomLink>
+            <CustomLink url="/contacts">
+              {isEnglish ? "CONTACTS" : "КОНТАКТИ"}
+            </CustomLink>
             <CustomLink url="/privacy&policy">
-              ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ
+              {isEnglish ? "PRIVACY POLICY" : "ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ"}
             </CustomLink>
           </Stack>
         </Box>
