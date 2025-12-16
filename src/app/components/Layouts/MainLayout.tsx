@@ -24,7 +24,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
         overflow="hidden"
         borderRadius="2vw"
         sx={{
-          backgroundColor: "background.main",
+          backgroundColor: "var(--bg-main)",
           aspectRatio: "16/9",
           outline: "solid rgba(217, 217, 217, 0.2) 20px",
         }}

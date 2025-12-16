@@ -91,9 +91,8 @@ export default function CustomIconButton({
               inset: "-0.25em",
               borderRadius: "999px",
               opacity: 0.8,
-              backgroundColor: (theme) => theme.palette.background.main,
-              boxShadow: (theme) =>
-                `0 0 25px 8px ${theme.palette.background.main}`,
+              backgroundColor: "var(--bg-main)",
+              boxShadow: `0 0 25px 8px "var(--bg-main)`,
               zIndex: -1,
             },
           }}

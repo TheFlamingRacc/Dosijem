@@ -11,13 +11,12 @@ export default function CustomDivider() {
         width: "1px",
         height: "2rem",
         border: "none",
-        background: (theme) =>
-          `linear-gradient(
+        background: `linear-gradient(
                       to bottom,
-                      ${theme.palette.background.main} 0%,
+                      "var(--bg-main)" 0%,
                     #3D3A44 10%,
                     #3D3A44 90%,
-                      ${theme.palette.background.main} 100%
+                      "var(--bg-main)" 100%
                       )`,
       }}
     />

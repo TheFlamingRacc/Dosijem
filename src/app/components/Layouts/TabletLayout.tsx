@@ -5,7 +5,7 @@ import { PropsWithChildren } from "react";
 export default function TabletLayout({ children }: PropsWithChildren) {
   return (
     <Box
-      sx={{ backgroundColor: "background.main" }}
+      sx={{ backgroundColor: "var(--bg-main)" }}
       height="100vh"
       width="100vw"
       display={{ xs: "none", md: "flex", lg: "none" }}

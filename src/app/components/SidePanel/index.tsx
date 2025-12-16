@@ -25,13 +25,12 @@ export default function SidePanel() {
         sx={{
           border: "none",
           width: "1px",
-          background: (theme) =>
-            `linear-gradient(
+          background: `linear-gradient(
         to bottom,
-        ${theme.palette.background.main} 0%,
+        "var(--bg-main)" 0%,
         #3D3A44 10%,
         #3D3A44 90%,
-        ${theme.palette.background.main} 100%
+        "var(--bg-main)" 100%
       )`,
         }}
       />

@@ -7,7 +7,7 @@ export default function MobileLayout({ children }: PropsWithChildren) {
       width="100%"
       minHeight="100vh"
       display={{ sm: "block", md: "none" }}
-      sx={{ backgroundColor: "background.main" }}
+      sx={{ backgroundColor: "var(--bg-main)" }}
     >
       {children}
     </Box>
