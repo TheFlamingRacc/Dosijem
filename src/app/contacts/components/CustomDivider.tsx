@@ -12,12 +12,12 @@ export default function CustomDivider() {
         height: "2rem",
         border: "none",
         background: `linear-gradient(
-                      to bottom,
-                      "var(--bg-main)" 0%,
-                    #3D3A44 10%,
-                    #3D3A44 90%,
-                      "var(--bg-main)" 100%
-                      )`,
+          to bottom,
+          var(--bg-main) 0%,
+        #3D3A44 10%,
+        #3D3A44 90%,
+          var(--bg-main) 100%
+        )`
       }}
     />
   );

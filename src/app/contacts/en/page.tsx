@@ -10,6 +10,7 @@ export default function ContactsEn() {
         color="primary.main"
         fontSize={{ xs: "0.875rem", md: "1.25rem" }}
         fontWeight={500}
+        mt={12}
       >
         Contact Us
       </Typography>

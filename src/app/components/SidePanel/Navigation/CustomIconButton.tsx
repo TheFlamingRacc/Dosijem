@@ -2,6 +2,7 @@
 
 import { IconButton, Box, Typography } from "@mui/material";
 import { useRouter, usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 type Props = {
   isCurrentLocation: boolean;
@@ -84,7 +85,7 @@ export default function CustomIconButton({
           sx={{
             position: "relative",
             display: "inline-block",
-            zIndex: 1,
+            zIndex: 2,
             "&::before": {
               content: '""',
               position: "absolute",
