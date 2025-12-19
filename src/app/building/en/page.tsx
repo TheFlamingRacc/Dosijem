@@ -14,14 +14,14 @@ export default function Plugins() {
           radial-gradient(
             circle at bottom center,
             #D9D9D9 0%,
-            #B6865E 100%
+            #E1AAA2 100%
           )
         `,
         }}
       >
         <Box
           component="img"
-          src="/skins-img.svg"
+          src="/buildings-img.svg"
           position="absolute"
           height="80%"
           width="100%"
@@ -49,7 +49,7 @@ export default function Plugins() {
             fontFamily="e-UkraineHead"
             fontWeight={700}
           >
-            Намалюємо для вас ваш власний скін
+            We will bring your ambitious projects to life
           </Typography>
           <Typography
             display={{ xs: "none", md: "block" }}
@@ -57,27 +57,16 @@ export default function Plugins() {
             fontWeight={500}
             color="text.secondary"
           >
-            Над{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              усіма{" "}
+            <Typography component="span" color="#E1AAA2" fontSize="inherit">
+              While working on diverse projects, our builders always give their
+              all{" "}
             </Typography>
-            скінами, які нам довіряють, працюють найкращі дизайнери та арти у{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              DOSIJEM{" "}
+            , fueled by their passion for transforming ideas into stunning
+            builds and maps. When you collaborate with our build team, you can
+            be certain of one thing:{" "}
+            <Typography component="span" color="#E1AAA2" fontSize="inherit">
+              your project is in the hands of true professionals.
             </Typography>
-            вони вміють як ніхто втілювати{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              ваші ідеї{" "}
-            </Typography>
-            та{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              побажання{" "}
-            </Typography>
-            в унікальні скіни, створені{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              саме для вас
-            </Typography>
-            .
           </Typography>
         </Stack>
       </Box>
@@ -96,7 +85,7 @@ export default function Plugins() {
           fontFamily="e-UkraineHead"
           fontWeight={700}
         >
-          Намалюємо для вас ваш власний скін
+          We will bring your ambitious projects to life
         </Typography>
         <Box
           zIndex={3}
@@ -105,27 +94,16 @@ export default function Plugins() {
           sx={{ backgroundColor: "background.default" }}
         >
           <Typography fontSize="16px" fontWeight={500} color="text.secondary">
-            Над{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              усіма{" "}
+            <Typography component="span" color="#E1AAA2" fontSize="inherit">
+              While working on diverse projects, our builders always give their
+              all{" "}
             </Typography>
-            скінами, які нам довіряють, працюють найкращі дизайнери та арти у{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              DOSIJEM{" "}
+            , fueled by their passion for transforming ideas into stunning
+            builds and maps. When you collaborate with our build team, you can
+            be certain of one thing:{" "}
+            <Typography component="span" color="#E1AAA2" fontSize="inherit">
+              your project is in the hands of true professionals.
             </Typography>
-            вони вміють як ніхто втілювати{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              ваші ідеї{" "}
-            </Typography>
-            та{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              побажання{" "}
-            </Typography>
-            в унікальні скіни, створені{" "}
-            <Typography component="span" color="#B6865E" fontSize="inherit">
-              саме для вас
-            </Typography>
-            .
           </Typography>
         </Box>
         <Box
@@ -140,14 +118,14 @@ export default function Plugins() {
           radial-gradient(
             circle at bottom center,
             #D9D9D9 0%,
-            #3F3F4B 100%
+            #E1AAA2 100%
           )
         `,
           }}
         >
           <Box
             component="img"
-            src="/skins-img.svg"
+            src="/buildings-img.svg"
             position="absolute"
             height="70%"
             width="70%"

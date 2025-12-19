@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import StyledMarquee from "../components/StyledMarquee";
 import FormSection from "../components/FormSection";
 
-export default function PluginsLayout({ children }: PropsWithChildren) {
+export default function DesignLayout({ children }: PropsWithChildren) {
   return (
     <>
       <Stack
