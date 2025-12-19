@@ -9,6 +9,7 @@ import AdditionalNavigationBlock from "./components/AdditionalNavigationBlock";
 type Props = StackProps & {
   colors:
     | "default"
+    | "mods"
     | "plugins"
     | "design"
     | "skins"
@@ -24,12 +25,13 @@ export default function MobileNavBar({ colors, ...props }: Props) {
 
   const colorMap = {
     default: "primary.main",
+    servers: "#D9937A",
     plugins: "#D99592",
     design: "#EADDD4",
-    skins: "#B6865E",
     buildings: "#E1AAA2",
-    servers: "#D9937A",
-    websites: "#E1AAA2",
+    websites: "#B18C72",
+    mods: "primary.main",
+    skins: "#B6865E",
   };
 
   const handleLanguage = () => {

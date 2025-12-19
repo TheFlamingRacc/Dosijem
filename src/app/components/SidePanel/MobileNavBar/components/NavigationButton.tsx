@@ -5,12 +5,12 @@ import { usePathname, useRouter } from "next/navigation";
 
 const colorMap = {
   servers: "#D9937A",
-  plugins: "#BB8EFF",
+  plugins: "#D99592",
   design: "#EADDD4",
-  buildings: "#B6865E",
-  sites: "#E1AAA2",
-  mods: "#D9937A",
-  skins: "#B18C72",
+  buildings: "#E1AAA2",
+  sites: "#B18C72",
+  mods: "primary.main",
+  skins: "#B6865E",
 };
 
 const textMap = {
