@@ -142,7 +142,7 @@ export default function Plugins() {
           radial-gradient(
             circle at bottom center,
             #D9D9D9 0%,
-            #3F3F4B 100%
+            #D99592 100%
           )
         `,
           }}
