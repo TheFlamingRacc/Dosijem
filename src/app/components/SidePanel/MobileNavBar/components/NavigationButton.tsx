@@ -28,7 +28,7 @@ const textMap = {
     plugins: "PLUGINS",
     design: "DESIGNS",
     buildings: "BUILDING",
-    sites: "WEBSIRES",
+    sites: "WEBSITES",
     mods: "MODS",
     skins: "SKINS",
   },
