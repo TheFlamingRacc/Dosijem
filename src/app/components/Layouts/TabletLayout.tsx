@@ -5,7 +5,6 @@ import { PropsWithChildren } from "react";
 export default function TabletLayout({ children }: PropsWithChildren) {
   return (
     <Box
-      sx={{ backgroundColor: "var(--bg-main)" }}
       height="100vh"
       width="100vw"
       display={{ xs: "none", md: "flex", lg: "none" }}
@@ -15,8 +14,6 @@ export default function TabletLayout({ children }: PropsWithChildren) {
         width="100%"
         sx={{
           overflowY: "scroll",
-          scrollbarWidth: 0,
-          "&::-webkit-scrollbar": { display: "none" },
         }}
       >
         {children}

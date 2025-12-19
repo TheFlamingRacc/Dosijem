@@ -6,7 +6,7 @@ import SidePanel from "../SidePanel";
 export default function MainLayout({ children }: PropsWithChildren) {
   return (
     <Box
-      width="100vw"
+      width="100%"
       height="100vh"
       display={{ xs: "none", lg: "flex" }}
       alignItems="center"
@@ -34,8 +34,6 @@ export default function MainLayout({ children }: PropsWithChildren) {
           width="100%"
           sx={{
             overflowY: "scroll",
-            scrollbarWidth: 0,
-            "&::-webkit-scrollbar": { display: "none" },
           }}
         >
           {children}

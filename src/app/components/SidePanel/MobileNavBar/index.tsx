@@ -1,12 +1,12 @@
 "use client";
 
-import { Box, Stack, Typography, IconButton } from "@mui/material";
+import { Box, Stack, Typography, IconButton, StackProps } from "@mui/material";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import MainNavigationBlock from "./components/MainNavigationBlock";
 import AdditionalNavigationBlock from "./components/AdditionalNavigationBlock";
 
-type Props = {
+type Props = StackProps & {
   colors:
     | "default"
     | "plugins"
@@ -16,7 +16,7 @@ type Props = {
     | "servers"
     | "websites";
 };
-export default function MobileNavBar({ colors }: Props) {
+export default function MobileNavBar({ colors, ...props }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const router = useRouter();
@@ -57,6 +57,7 @@ export default function MobileNavBar({ colors }: Props) {
         zIndex={1000}
         top={20}
         width="100%"
+        {...props}
       >
         <Box
           width="100%"
@@ -178,12 +179,14 @@ export default function MobileNavBar({ colors }: Props) {
       </Stack>
 
       <Box
+        display={{ xs: "block", md: "none" }}
         onClick={() => setIsOpen(false)}
         className={isOpen ? "fadeIn" : "fadeOut"}
         position="fixed"
         zIndex={999}
         sx={{
           inset: 0,
+          pointerEvents: !isOpen ? "none" : "all",
           backdropFilter: "blur(6px)",
           backgroundColor: "rgba(0,0,0,0.15)",
           transition: "opacity 0.3s ease",

@@ -17,7 +17,7 @@ export default function MainNavigationBlock() {
       borderRadius="23px"
       width="100%"
       p={2.7}
-      sx={{ backgroundColor: "background.default" }}
+      sx={{ backgroundColor: "background.default", userSelect: "none" }}
       spacing={2}
       overflow="hidden"
       position="relative"

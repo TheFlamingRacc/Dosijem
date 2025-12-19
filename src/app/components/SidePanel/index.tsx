@@ -27,7 +27,7 @@ export default function SidePanel() {
     router.push(newPath);
   };
   return (
-    <Box display="flex" maxHeight="100%" width="9.5%">
+    <Box display={{ xs: "none", md: "flex" }} maxHeight="100%" width="9.5%">
       <Stack
         justifyContent={{ md: "normal", lg: "space-between" }}
         p={{ md: "min(1vw, 2vh)", lg: 2.5 }}

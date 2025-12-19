@@ -77,6 +77,7 @@ export default function CustomIconButton({
             width: "clamp(0px, min(1.5vw, 2vh), 14px)",
             borderRadius: "200px",
             backgroundColor: "primary.main",
+            zIndex: 4,
           }}
         />
         <Typography
@@ -85,15 +86,14 @@ export default function CustomIconButton({
           sx={{
             position: "relative",
             display: "inline-block",
-            zIndex: 2,
+            zIndex: 3,
             "&::before": {
               content: '""',
               position: "absolute",
-              inset: "-0.25em",
-              borderRadius: "999px",
-              opacity: 0.8,
+              inset: "-1rem",
               backgroundColor: "var(--bg-main)",
-              boxShadow: `0 0 25px 8px "var(--bg-main)`,
+              filter: "blur(15px)",
+              opacity: 1,
               zIndex: -1,
             },
           }}
