@@ -48,7 +48,7 @@ export default function Navigation() {
         redirectUrl="/skins"
       />
       <CustomIconButton
-        isCurrentLocation={pathname.includes("/bulding")}
+        isCurrentLocation={pathname.includes("/building")}
         src="/building-icon.svg"
         targetSrc="/building-icon-t.svg"
         title="Білдинг"
