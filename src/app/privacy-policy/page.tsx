@@ -193,7 +193,7 @@ export default function PrivacyPolicy() {
       <Text>
         Щоб дізнатися більше про використання нами файлів cookie та інших
         технологій відстеження, ознайомтеся з нашою 
-        <SpanLink url="/cookie-policy">
+        <SpanLink url="/cookies-policy">
           Політикою використання файлів cookie
         </SpanLink>
         .

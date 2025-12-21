@@ -5,7 +5,7 @@ import Text from "../components/Text";
 import SectionHeader from "../components/SectionHeader";
 import UlText from "../components/UlText";
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicyEn() {
   return (
     <Stack spacing={{ xs: 2, md: 3, lg: 4 }} mt={{ xs: 8, md: 0 }}>
       <Stack pb={{ xs: 4, md: 0 }} spacing={{ md: 2, lg: 0 }}>
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
           url="https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32016R0679&%3Btid=%5Badsimpletextid%5d"
         >
           General Data Protection Regulation (EU) 2016/679
-        </SpanLink>
+        </SpanLink>{" "}
         as well as to provide clear, detailed, and easy-to-read information
         about Company’s privacy practices and to explain what information we
         collect, how we collect, store, transfer and use information, as well as
@@ -189,7 +189,7 @@ export default function PrivacyPolicy() {
       <Text>
         For more details on our use of cookies and other tracking technologies,
         please read our 
-        <SpanLink url="/cookie-policy">Cookies Policy</SpanLink>.
+        <SpanLink url="/cookies-policy/en">Cookies Policy</SpanLink>.
       </Text>
       <Text>
         <Span>
