@@ -37,7 +37,7 @@ export default function DesktopFooter() {
             <CustomLink url="/contacts">
               {isEnglish ? "CONTACTS" : "КОНТАКТИ"}
             </CustomLink>
-            <CustomLink url="/privacy&policy">
+            <CustomLink url="/privacy-policy">
               {isEnglish ? "PRIVACY POLICY" : "ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ"}
             </CustomLink>
           </Stack>
