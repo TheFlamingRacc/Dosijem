@@ -98,7 +98,7 @@ export default function CustomIconButton({ variant }: Props) {
         component="img"
         src={`${iconData.img}${isCurrentLocation ? "-t" : ""}.svg`}
       />
-      <Box
+      {/* <Box
         className="hoverBlock"
         position="absolute"
         left="min(2.5vw, 5vh)"
@@ -141,7 +141,7 @@ export default function CustomIconButton({ variant }: Props) {
         >
           {isEn ? iconData.titleEn : iconData.title}
         </Typography>
-      </Box>
+      </Box> */}
     </IconButton>
   );
 }
