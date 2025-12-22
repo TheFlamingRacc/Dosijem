@@ -68,7 +68,14 @@ export default function Marquee({
       }}
     >
       <Box ref={marqueeRef} className="track">
-        <Box display="flex" gap={`${gap}px`}>
+        <Box
+          display="flex"
+          gap={`${gap}px`}
+          sx={{
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+          }}
+        >
           {children}
         </Box>
       </Box>

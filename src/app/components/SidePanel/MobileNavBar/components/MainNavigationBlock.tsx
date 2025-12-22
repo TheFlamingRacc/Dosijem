@@ -5,11 +5,11 @@ const locations: [
   "servers",
   "plugins",
   "design",
-  "buildings",
+  "building",
   "sites",
   "mods",
   "skins"
-] = ["servers", "plugins", "design", "buildings", "sites", "mods", "skins"];
+] = ["servers", "plugins", "design", "building", "sites", "mods", "skins"];
 
 export default function MainNavigationBlock() {
   return (
@@ -17,7 +17,12 @@ export default function MainNavigationBlock() {
       borderRadius="23px"
       width="100%"
       p={2.7}
-      sx={{ backgroundColor: "background.default", userSelect: "none" }}
+      sx={{
+        backgroundColor: "background.default",
+        userSelect: "none",
+        opacity: 0,
+        animation: "FadeSlideInTop 0.5s ease forwards",
+      }}
       spacing={2}
       overflow="hidden"
       position="relative"

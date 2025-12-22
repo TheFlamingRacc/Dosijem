@@ -9,7 +9,13 @@ export default function AdditionalNavigationBlock() {
       borderRadius="23px"
       width="100%"
       p={2.7}
-      sx={{ backgroundColor: "background.default" }}
+      sx={{
+        backgroundColor: "background.default",
+        userSelect: "none",
+        opacity: 0,
+        animation: "FadeSlideInTop 0.5s ease forwards",
+        animationDelay: "0.2s",
+      }}
       spacing={1}
     >
       <AdditionalNavigationLink component="home" />

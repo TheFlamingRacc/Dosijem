@@ -7,7 +7,7 @@ const colorMap = {
   servers: "#D9937A",
   plugins: "#D99592",
   design: "#EADDD4",
-  buildings: "#E1AAA2",
+  building: "#E1AAA2",
   sites: "#B18C72",
   mods: "primary.main",
   skins: "#B6865E",
@@ -18,7 +18,7 @@ const textMap = {
     servers: "СЕРВЕРА",
     plugins: "ПЛАГІНИ",
     design: "ДИЗАЙН",
-    buildings: "БІЛДИНГ",
+    building: "БІЛДИНГ",
     sites: "САЙТИ",
     mods: "МОДИ",
     skins: "СКІНИ",
@@ -27,7 +27,7 @@ const textMap = {
     servers: "SERVERS",
     plugins: "PLUGINS",
     design: "DESIGNS",
-    buildings: "BUILDING",
+    building: "BUILDING",
     sites: "WEBSITES",
     mods: "MODS",
     skins: "SKINS",
@@ -39,7 +39,7 @@ type Props = {
     | "servers"
     | "plugins"
     | "design"
-    | "buildings"
+    | "building"
     | "sites"
     | "mods"
     | "skins";

@@ -17,6 +17,8 @@ export default function Plugins() {
             #D99592 100%
           )
         `,
+          opacity: 0,
+          animation: "FadeIn 1s ease forwards",
         }}
       >
         <Box
@@ -29,6 +31,9 @@ export default function Plugins() {
           left="50%"
           sx={{
             transform: "translate(-50%, -50%)",
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+            animationDelay: "0.3s",
           }}
         />
         <Stack
@@ -42,12 +47,19 @@ export default function Plugins() {
             backdropFilter: "blur(5px)",
             WebkitBackdropFilter: "blur(5px)",
             backgroundColor: "rgba(30, 29, 29, 0.5)",
+            transform: "translateX(-100%)",
+            animation: "SlideIn 1s ease forwards",
           }}
         >
           <Typography
             fontSize="30px"
             fontFamily="e-UkraineHead"
             fontWeight={700}
+            sx={{
+              opacity: 0,
+              animation: "FadeSlideIn 1s ease forwards",
+              animationDelay: "0.7s",
+            }}
           >
             Втілимо ваш плагін у реальність
           </Typography>
@@ -56,6 +68,11 @@ export default function Plugins() {
             fontSize="16px"
             fontWeight={500}
             color="text.secondary"
+            sx={{
+              opacity: 0,
+              animation: "FadeSlideIn 1s ease forwards",
+              animationDelay: "0.9s",
+            }}
           >
             Коли ви надсилаєте нам заявку, ми{" "}
             <Typography component="span" color="#D99592" fontSize="inherit">
@@ -96,6 +113,10 @@ export default function Plugins() {
           fontSize="28px"
           fontFamily="e-UkraineHead"
           fontWeight={700}
+          sx={{
+            opacity: 0,
+            animation: "FadeSlideIn 1s ease forwards",
+          }}
         >
           Втілимо ваш плагін у реальність
         </Typography>
@@ -105,7 +126,16 @@ export default function Plugins() {
           p={3}
           sx={{ backgroundColor: "background.default" }}
         >
-          <Typography fontSize="16px" fontWeight={500} color="text.secondary">
+          <Typography
+            fontSize="16px"
+            fontWeight={500}
+            color="text.secondary"
+            sx={{
+              opacity: 0,
+              animation: "FadeIn 1s ease forwards",
+              animationDelay: "0.2s",
+            }}
+          >
             Коли ви надсилаєте нам заявку, ми{" "}
             <Typography component="span" color="#D99592" fontSize="inherit">
               уважно{" "}

@@ -16,7 +16,15 @@ export default function SendSection({ onSubmit }: Props) {
   return (
     <Box display="flex" flex={1} gap={1} pt="35px">
       <Stack spacing={2.8}>
-        <Box display="flex" alignItems="center">
+        <Box
+          display="flex"
+          alignItems="center"
+          sx={{
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+            animationDelay: "0.6s",
+          }}
+        >
           <Typography fontSize="0.75rem" color="#C2C2C2">
             {isEnglish
               ? "I aknowledge that I have read the "
@@ -76,6 +84,13 @@ export default function SendSection({ onSubmit }: Props) {
             fontWeight: 500,
             fontSize: "1.25rem",
             color: "#09021C",
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+            animationDelay: "0.8s",
+            "&.Mui-disabled": {
+              backgroundColor: "#2A243A",
+              color: "#49474F",
+            },
           }}
         >
           {isEnglish ? "Send" : "Надіслати"}

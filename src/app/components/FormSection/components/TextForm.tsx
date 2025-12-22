@@ -19,6 +19,11 @@ export default function TextForm({ value, setValue }: Props) {
         fontFamily={"e-UkraineHead"}
         fontWeight={500}
         color="white"
+        sx={{
+          opacity: 0,
+          animation: "FadeIn 1s ease forwards",
+          animationDelay: "0.4s",
+        }}
       >
         {isEnglish ? "Message " : "Повідомлення "}
         <Typography component="span" color="text.secondary" fontSize="0.75rem">
@@ -45,6 +50,9 @@ export default function TextForm({ value, setValue }: Props) {
             },
             borderRadius: "25px",
           },
+          opacity: 0,
+          animation: "FadeIn 1s ease forwards",
+          animationDelay: "0.6s",
         }}
       />
     </Stack>

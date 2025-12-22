@@ -50,6 +50,8 @@ export default function FormSection() {
         "@media (max-width: 850px)": {
           flexDirection: "column",
         },
+        opacity: 0,
+        animation: "FadeIn 1s ease forwards",
       }}
     >
       <ContactsForm

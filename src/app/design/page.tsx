@@ -29,6 +29,9 @@ export default function Design() {
           left="50%"
           sx={{
             transform: "translate(-50%, -50%)",
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+            animationDelay: "0.3s",
           }}
         />
         <Stack
@@ -42,12 +45,19 @@ export default function Design() {
             backdropFilter: "blur(5px)",
             WebkitBackdropFilter: "blur(5px)",
             backgroundColor: "rgba(30, 29, 29, 0.5)",
+            transform: "translateX(-100%)",
+            animation: "SlideIn 1s ease forwards",
           }}
         >
           <Typography
             fontSize="30px"
             fontFamily="e-UkraineHead"
             fontWeight={700}
+            sx={{
+              opacity: 0,
+              animation: "FadeSlideIn 1s ease forwards",
+              animationDelay: "0.7s",
+            }}
           >
             Створимо унікальний дизайн для вашого сервера
           </Typography>
@@ -56,6 +66,11 @@ export default function Design() {
             fontSize="16px"
             fontWeight={500}
             color="text.secondary"
+            sx={{
+              opacity: 0,
+              animation: "FadeSlideIn 1s ease forwards",
+              animationDelay: "0.9s",
+            }}
           >
             <Typography component="span" color="#EADDD4" fontSize="inherit">
               DOSIJEM{" "}
@@ -90,6 +105,10 @@ export default function Design() {
           fontSize="28px"
           fontFamily="e-UkraineHead"
           fontWeight={700}
+          sx={{
+            opacity: 0,
+            animation: "FadeSlideIn 1s ease forwards",
+          }}
         >
           Створимо унікальний дизайн для вашого сервера
         </Typography>
@@ -99,7 +118,16 @@ export default function Design() {
           p={3}
           sx={{ backgroundColor: "background.default" }}
         >
-          <Typography fontSize="16px" fontWeight={500} color="text.secondary">
+          <Typography
+            fontSize="16px"
+            fontWeight={500}
+            color="text.secondary"
+            sx={{
+              opacity: 0,
+              animation: "FadeIn 1s ease forwards",
+              animationDelay: "0.2s",
+            }}
+          >
             <Typography component="span" color="#EADDD4" fontSize="inherit">
               DOSIJEM{" "}
             </Typography>
@@ -133,6 +161,8 @@ export default function Design() {
             #B39E8D 100%
           )
         `,
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
           }}
         >
           <Box

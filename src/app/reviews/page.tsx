@@ -36,6 +36,8 @@ export default function Reviews() {
     drop-shadow(0 0 30px var(--bg-main))
     drop-shadow(0 0 30px var(--bg-main))
   `,
+          opacity: 0,
+          animation: "FadeSlideInReviews 1s ease forwards",
         }}
       >
         Це наша сфера{" "}
@@ -61,6 +63,10 @@ export default function Reviews() {
         fontWeight={700}
         top={100}
         left={20}
+        sx={{
+          opacity: 0,
+          animation: "FadeSlideIn 1s ease forwards",
+        }}
       >
         Відгуки
       </Typography>
@@ -72,6 +78,11 @@ export default function Reviews() {
         fontWeight={700}
         fontFamily="e-UkraineHead"
         fontSize="1.3rem"
+        sx={{
+          opacity: 0,
+          animation: "FadeSlideIn 1s ease forwards",
+          animationDelay: "0.2s",
+        }}
       >
         Це наша сфера{" "}
         <Typography
@@ -90,6 +101,11 @@ export default function Reviews() {
         left={20}
         fontSize="0.9rem"
         color="#C2C2C2"
+        sx={{
+          opacity: 0,
+          animation: "FadeSlideIn 1s ease forwards",
+          animationDelay: "0.4s",
+        }}
       >
         Усі відгуки беруться з <TelegramLink />
         -каналу з відгуками клієнтів

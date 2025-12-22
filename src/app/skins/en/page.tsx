@@ -17,6 +17,8 @@ export default function SkinsEn() {
             #B6865E 100%
           )
         `,
+          opacity: 0,
+          animation: "FadeIn 1s ease forwards",
         }}
       >
         <Box
@@ -29,6 +31,9 @@ export default function SkinsEn() {
           left="50%"
           sx={{
             transform: "translate(-50%, -50%)",
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+            animationDelay: "0.3s",
           }}
         />
         <Stack
@@ -42,12 +47,19 @@ export default function SkinsEn() {
             backdropFilter: "blur(5px)",
             WebkitBackdropFilter: "blur(5px)",
             backgroundColor: "rgba(30, 29, 29, 0.5)",
+            transform: "translateX(-100%)",
+            animation: "SlideIn 1s ease forwards",
           }}
         >
           <Typography
             fontSize="30px"
             fontFamily="e-UkraineHead"
             fontWeight={700}
+            sx={{
+              opacity: 0,
+              animation: "FadeSlideIn 1s ease forwards",
+              animationDelay: "0.7s",
+            }}
           >
             We'll create a custom skin just for you
           </Typography>
@@ -56,6 +68,11 @@ export default function SkinsEn() {
             fontSize="16px"
             fontWeight={500}
             color="text.secondary"
+            sx={{
+              opacity: 0,
+              animation: "FadeSlideIn 1s ease forwards",
+              animationDelay: "0.9s",
+            }}
           >
             <Typography component="span" color="#B6865E" fontSize="inherit">
               All the skins entrusted to us{" "}
@@ -83,6 +100,10 @@ export default function SkinsEn() {
           fontSize="28px"
           fontFamily="e-UkraineHead"
           fontWeight={700}
+          sx={{
+            opacity: 0,
+            animation: "FadeSlideIn 1s ease forwards",
+          }}
         >
           We'll create a custom skin just for you
         </Typography>
@@ -92,7 +113,16 @@ export default function SkinsEn() {
           p={3}
           sx={{ backgroundColor: "background.default" }}
         >
-          <Typography fontSize="16px" fontWeight={500} color="text.secondary">
+          <Typography
+            fontSize="16px"
+            fontWeight={500}
+            color="text.secondary"
+            sx={{
+              opacity: 0,
+              animation: "FadeIn 1s ease forwards",
+              animationDelay: "0.2s",
+            }}
+          >
             <Typography component="span" color="#B6865E" fontSize="inherit">
               All the skins entrusted to us{" "}
             </Typography>

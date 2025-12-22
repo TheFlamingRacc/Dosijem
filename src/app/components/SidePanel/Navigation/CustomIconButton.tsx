@@ -2,30 +2,71 @@
 
 import { IconButton, Box, Typography } from "@mui/material";
 import { useRouter, usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
 
-type Props = {
-  isCurrentLocation: boolean;
-  targetSrc: string;
-  src: string;
-  title: string;
-  redirectUrl: string;
+const variantsData = {
+  plugins: {
+    img: "./plugins-icon",
+    title: "Плагіни",
+    titleEn: "Plugins",
+    url: "/plugins",
+  },
+  mods: {
+    img: "./mods-icon",
+    title: "Моди",
+    titleEn: "Mods",
+    url: "/mods",
+  },
+  design: {
+    img: "./design-icon",
+    title: "Дизайн",
+    titleEn: "Design",
+    url: "/design",
+  },
+  skins: {
+    img: "./skins-icon",
+    title: "Скіни",
+    titleEn: "Skins",
+    url: "/skins",
+  },
+  building: {
+    img: "./building-icon",
+    title: "Білдинг",
+    titleEn: "Building",
+    url: "/building",
+  },
+  servers: {
+    img: "./servers-icon",
+    title: "Сервери",
+    titleEn: "Servers",
+    url: "/servers",
+  },
+  sites: {
+    img: "./sites-icon",
+    title: "Сайти",
+    titleEn: "Websites",
+    url: "/sites",
+  },
 };
 
-export default function CustomIconButton({
-  isCurrentLocation,
-  targetSrc,
-  src,
-  title,
-  redirectUrl,
-}: Props) {
+type Variant = keyof typeof variantsData;
+
+type Props = {
+  variant: Variant;
+};
+
+export default function CustomIconButton({ variant }: Props) {
   const pathname = usePathname();
   const router = useRouter();
+
+  const isEn = pathname.includes("/en");
+
+  const iconData = variantsData[variant];
+
+  const isCurrentLocation = pathname.includes(iconData.url);
+
   return (
     <IconButton
-      onClick={() =>
-        router.push(`${redirectUrl}${pathname.includes("/en") ? "/en" : ""}`)
-      }
+      onClick={() => router.push(`${iconData.url}${isEn ? "/en" : ""}`)}
       sx={{
         position: "relative",
         aspectRatio: "1/1",
@@ -55,7 +96,7 @@ export default function CustomIconButton({
         width="60%"
         sx={{ aspectRatio: 1 }}
         component="img"
-        src={isCurrentLocation ? targetSrc : src}
+        src={`${iconData.img}${isCurrentLocation ? "-t" : ""}.svg`}
       />
       <Box
         className="hoverBlock"
@@ -98,7 +139,7 @@ export default function CustomIconButton({
             },
           }}
         >
-          {title}
+          {isEn ? iconData.titleEn : iconData.title}
         </Typography>
       </Box>
     </IconButton>

@@ -39,6 +39,11 @@ export default function ContactsForm({
         fontFamily={"e-UkraineHead"}
         fontWeight={500}
         color="white"
+        sx={{
+          opacity: 0,
+          animation: "FadeIn 1s ease forwards",
+          animationDelay: "0.2s",
+        }}
       >
         {isEnglish ? "Contacts" : "Контакти"}
       </Typography>
@@ -47,7 +52,12 @@ export default function ContactsForm({
         justifyContent="space-between"
         borderRadius="25px"
         p={{ xs: 4, md: 3, lg: "min(min(2vw, 4vh), 30px)" }}
-        sx={{ backgroundColor: "background.paper" }}
+        sx={{
+          backgroundColor: "background.paper",
+          opacity: 0,
+          animation: "FadeIn 1s ease forwards",
+          animationDelay: "0.4s",
+        }}
         spacing={1.5}
       >
         <TextField
