@@ -7,7 +7,11 @@ import UlText from "./components/UlText";
 
 export default function PrivacyPolicy() {
   return (
-    <Stack spacing={{ xs: 2, md: 3, lg: 4 }} mt={{ xs: 8, md: 0 }}>
+    <Stack
+      spacing={{ xs: 2, md: 3, lg: 4 }}
+      mt={{ xs: 8, md: 0 }}
+      sx={{ opacity: 0, animation: "FadeIn 1s ease forwards" }}
+    >
       <Stack pb={{ xs: 4, md: 0 }} spacing={{ md: 2, lg: 0 }}>
         <Typography
           fontFamily="e-UkraineHead"
