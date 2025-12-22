@@ -15,7 +15,9 @@ export default function DesignLayout({ children }: PropsWithChildren) {
         px={{ xs: 0, md: 2 }}
         pb={2}
       >
-        <MobileNavBar px={2} colors="design" />
+        <Box position="sticky" top={20} zIndex={100} px={{ xs: 2, md: 0 }}>
+          <MobileNavBar colors="design" />
+        </Box>
         {children}
 
         <StyledMarquee color="#EADDD4" text="DESIGN" />

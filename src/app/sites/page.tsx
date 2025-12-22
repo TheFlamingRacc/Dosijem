@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 
-export default function Plugins() {
+export default function Sites() {
   return (
     <>
       <Box

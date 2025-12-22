@@ -15,9 +15,10 @@ export default function PluginsLayout({ children }: PropsWithChildren) {
         px={{ xs: 0, md: 2 }}
         pb={2}
       >
-        <MobileNavBar px={2} colors="plugins" />
+        <Box position="sticky" top={20} zIndex={100} px={{ xs: 2, md: 0 }}>
+          <MobileNavBar colors="plugins" />
+        </Box>
         {children}
-
         <StyledMarquee color="#D99592" text="PLUGINS" />
         <FormSection />
       </Stack>

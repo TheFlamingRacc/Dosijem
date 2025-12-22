@@ -15,9 +15,10 @@ export default function ModsLayout({ children }: PropsWithChildren) {
         px={{ xs: 0, md: 2 }}
         pb={2}
       >
-        <MobileNavBar px={2} colors="mods" />
+        <Box position="sticky" top={20} zIndex={100} px={{ xs: 2, md: 0 }}>
+          <MobileNavBar colors="mods" />
+        </Box>
         {children}
-
         <StyledMarquee color="primary.main" text="MODS" />
         <FormSection />
       </Stack>

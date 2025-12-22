@@ -11,11 +11,13 @@ export default function ServersLayout({ children }: PropsWithChildren) {
       <Stack
         spacing={2}
         minHeight="100%"
-        minWidth="100%"
+        maxWidth="100vw"
         px={{ xs: 0, md: 2 }}
         pb={2}
       >
-        <MobileNavBar px={2} colors="servers" />
+        <Box position="sticky" top={20} zIndex={100} px={{ xs: 2, md: 0 }}>
+          <MobileNavBar colors="servers" />
+        </Box>
         {children}
 
         <StyledMarquee color="#D9937A" text="SERVERS" />

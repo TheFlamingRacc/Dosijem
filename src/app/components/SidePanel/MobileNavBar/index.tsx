@@ -1,12 +1,12 @@
 "use client";
 
-import { Box, Stack, Typography, IconButton, StackProps } from "@mui/material";
+import { Box, Stack, Typography, IconButton } from "@mui/material";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import MainNavigationBlock from "./components/MainNavigationBlock";
 import AdditionalNavigationBlock from "./components/AdditionalNavigationBlock";
 
-type Props = StackProps & {
+type Props = {
   colors:
     | "default"
     | "mods"
@@ -17,7 +17,7 @@ type Props = StackProps & {
     | "servers"
     | "websites";
 };
-export default function MobileNavBar({ colors, ...props }: Props) {
+export default function MobileNavBar({ colors }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const router = useRouter();
@@ -59,7 +59,6 @@ export default function MobileNavBar({ colors, ...props }: Props) {
         zIndex={1000}
         top={20}
         width="100%"
-        {...props}
       >
         <Box
           width="100%"

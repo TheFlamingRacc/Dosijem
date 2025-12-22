@@ -37,7 +37,7 @@ export default function Marquee({
 
     marquee.style.setProperty("--marquee-distance", `${distance}px`);
     marquee.style.setProperty("--marquee-duration", `${duration}s`);
-   
+
     marquee.style.setProperty("--marquee-gap", `${gap}px`);
   }, [gap]);
 
@@ -49,6 +49,7 @@ export default function Marquee({
         alignItems: "center",
         fontSize: "inherit",
         fontFamily: "inherit",
+        overflowX: "hidden",
 
         "& .track": {
           display: "flex",

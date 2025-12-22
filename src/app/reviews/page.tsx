@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import DomeGallery from "./components/DomeGallery";
 import TelegramLink from "./components/TelegramLink";
 
-export default function Feedbacks() {
+export default function Reviews() {
   return (
     <Box width="100%" height={{ xs: "100vh", md: "100%" }} position="relative">
       <DomeGallery

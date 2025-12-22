@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import StyledMarquee from "../components/StyledMarquee";
 import FormSection from "../components/FormSection";
 
-export default function PluginsLayout({ children }: PropsWithChildren) {
+export default function SitesLayout({ children }: PropsWithChildren) {
   return (
     <>
       <Stack
@@ -15,9 +15,10 @@ export default function PluginsLayout({ children }: PropsWithChildren) {
         px={{ xs: 0, md: 2 }}
         pb={2}
       >
-        <MobileNavBar px={2} colors="websites" />
+        <Box position="sticky" top={20} zIndex={100} px={{ xs: 2, md: 0 }}>
+          <MobileNavBar colors="websites" />
+        </Box>
         {children}
-
         <StyledMarquee color="#B18C72" text="WEBSITES" />
         <FormSection />
       </Stack>
