@@ -61,11 +61,11 @@ a {
 @keyframes FadeSlideIn {
   from {
     opacity: 0;
-    bottom: -10px;
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    bottom: 0;
+    transform: translateY(0);
   }
 }
 

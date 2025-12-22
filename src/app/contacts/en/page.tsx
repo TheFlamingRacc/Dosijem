@@ -11,6 +11,10 @@ export default function ContactsEn() {
         fontSize={{ xs: "0.875rem", md: "1.25rem" }}
         fontWeight={500}
         mt={12}
+        sx={{
+          opacity: 0,
+          animation: "FadeSlideIn 1s ease forwards",
+        }}
       >
         Contact Us
       </Typography>
@@ -23,6 +27,9 @@ export default function ContactsEn() {
           "@media (min-width:600px) and (max-width:660px)": {
             fontSize: "2.9rem",
           },
+          opacity: 0,
+          animation: "FadeSlideIn 1s ease forwards",
+          animationDelay: "0.2s",
         }}
       >
         Do you want to talk?
@@ -34,6 +41,11 @@ export default function ContactsEn() {
         maxWidth="80%"
         mt={{ xs: 2, md: "min(2vw, 4vh)", lg: "min(1.5vw, 3vh)" }}
         lineHeight="110%"
+        sx={{
+          opacity: 0,
+          animation: "FadeSlideIn 1s ease forwards",
+          animationDelay: "0.4s",
+        }}
       >
         If you need help, have any questions, want a consultation about your
         idea, or just want to write to us, use the contact information below to
@@ -60,6 +72,11 @@ export default function ContactsEn() {
           fontSize={{ xs: "1.5625rem", md: "3.125rem" }}
           color="primary.main"
           lineHeight="100%"
+          sx={{
+            opacity: 0,
+            animation: "FadeSlideIn 1s ease forwards",
+            animationDelay: "0.6s",
+          }}
         >
           Contacts
         </Typography>
@@ -78,6 +95,9 @@ export default function ContactsEn() {
               flexDirection: "column",
               gap: 4,
             },
+            opacity: 0,
+            animation: "FadeSlideIn 1s ease forwards",
+            animationDelay: "0.8s",
           }}
         >
           <HeadingBlock
