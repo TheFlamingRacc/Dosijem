@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import { PropsWithChildren } from "react";
 import Footer from "../components/Footer";
 import MobileNavBar from "../components/SidePanel/MobileNavBar";
@@ -6,9 +6,7 @@ import MobileNavBar from "../components/SidePanel/MobileNavBar";
 export default function ContactsLayout({ children }: PropsWithChildren) {
   return (
     <>
-      <Box
-        display={"flex"}
-        flexDirection={"column"}
+      <Stack
         minHeight="100%"
         minWidth="100%"
         pl={{
@@ -21,7 +19,7 @@ export default function ContactsLayout({ children }: PropsWithChildren) {
       >
         <MobileNavBar colors="default" />
         {children}
-      </Box>
+      </Stack>
       <Footer />
     </>
   );

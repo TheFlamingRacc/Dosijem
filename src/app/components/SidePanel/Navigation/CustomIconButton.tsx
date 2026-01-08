@@ -96,7 +96,7 @@ export default function CustomIconButton({ variant }: Props) {
         width="60%"
         sx={{ aspectRatio: 1 }}
         component="img"
-        src={`${iconData.img}${isCurrentLocation ? "-t" : ""}.svg`}
+        src={`/${iconData.img}${isCurrentLocation ? "-t" : ""}.svg`}
       />
       {/* <Box
         className="hoverBlock"

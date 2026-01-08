@@ -307,3 +307,14 @@ main.sphere-main {
 .sphere-root .enlarge-closing img {
   filter: var(--image-filter, none);
 }
+
+@keyframes DotIn {
+  from {
+    opacity: 0;
+    transform: translateX(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

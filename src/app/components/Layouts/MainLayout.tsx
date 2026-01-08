@@ -19,8 +19,8 @@ export default function MainLayout({ children }: PropsWithChildren) {
       <Box
         zIndex={1}
         display="flex"
-        maxHeight="min(calc(100vh - 50px), 750px)"
-        maxWidth="calc(100vw - 50px)"
+        maxHeight="min(calc(100vh - 50px), 950px)"
+        maxWidth="min(calc(100vw - 50px), 1692px)"
         overflow="hidden"
         borderRadius="2vw"
         sx={{
