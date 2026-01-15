@@ -1,6 +1,6 @@
-import { PropsWithChildren } from "react";
 import { Box, Typography, Stack } from "@mui/material";
 import { ServicesProps } from "..";
+import SplitText from "../../SplitText";
 
 export default function MainLayout({
   children,
@@ -57,18 +57,9 @@ export default function MainLayout({
           animation: "SlideIn 1s ease forwards",
         }}
       >
-        <Typography
-          fontSize="30px"
-          fontFamily="e-UkraineHead"
-          fontWeight={700}
-          sx={{
-            opacity: 0,
-            animation: "FadeSlideIn 1s ease forwards",
-            animationDelay: "0.7s",
-          }}
-        >
+        <SplitText fontSize="30px" fontFamily="e-UkraineHead" fontWeight={700}>
           {title}
-        </Typography>
+        </SplitText>
         <Typography
           display={{ xs: "none", md: "block" }}
           fontSize="1rem"

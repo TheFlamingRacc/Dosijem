@@ -1,5 +1,6 @@
 import { ServicesProps } from "..";
 import { Stack, Typography, Box } from "@mui/material";
+import SplitText from "../../SplitText";
 
 export default function MobileLayout({
   children,
@@ -17,18 +18,14 @@ export default function MobileLayout({
       spacing={3}
       zIndex={3}
     >
-      <Typography
+      <SplitText
         zIndex={3}
         fontSize="28px"
         fontFamily="e-UkraineHead"
         fontWeight={700}
-        sx={{
-          opacity: 0,
-          animation: "FadeSlideIn 1s ease forwards",
-        }}
       >
         {title}
-      </Typography>
+      </SplitText>
       <Box
         zIndex={3}
         borderRadius="23px"

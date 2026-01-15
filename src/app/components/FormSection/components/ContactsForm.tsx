@@ -36,7 +36,7 @@ export default function ContactsForm({
     <Stack flex={1} spacing={1}>
       <Typography
         fontSize="1.25rem"
-        fontFamily={"e-UkraineHead"}
+        fontFamily="e-UkraineHead"
         fontWeight={500}
         color="white"
         sx={{
@@ -72,7 +72,7 @@ export default function ContactsForm({
             },
           }}
           sx={{
-            "& .MuiInputLabel-root": { color: "#fff" },
+            "& .MuiInputLabel-root": { color: "#fff", fontWeight: 500 },
             "& .MuiInputLabel-root.Mui-focused": { color: "#fff" },
             "& .MuiInputLabel-root.Mui-error": {
               color: "#fff",
@@ -93,7 +93,11 @@ export default function ContactsForm({
               <Typography component="span">
                 {isEnglish ? "Telegram or Discord " : "Telegram або Discord "}
               </Typography>
-              <Typography color="text.secondary" component="span">
+              <Typography
+                color="text.secondary"
+                fontWeight={500}
+                component="span"
+              >
                 {isEnglish ? "(optional)" : "(не обов'язково)"}
               </Typography>
             </>
@@ -104,7 +108,7 @@ export default function ContactsForm({
             },
           }}
           sx={{
-            "& .MuiInputLabel-root": { color: "#fff" },
+            "& .MuiInputLabel-root": { color: "#fff", fontWeight: 500 },
             "& .MuiInputLabel-root.Mui-focused": { color: "#fff" },
             "& .MuiInputLabel-root.Mui-error": {
               color: "#fff",
@@ -120,7 +124,7 @@ export default function ContactsForm({
           error={emailError}
           value={emailValue}
           onChange={(e) => setEmailValue(e.target.value)}
-          label={"E-mail"}
+          label="E-mail"
           variant="standard"
           slotProps={{
             inputLabel: {
@@ -128,7 +132,7 @@ export default function ContactsForm({
             },
           }}
           sx={{
-            "& .MuiInputLabel-root": { color: "#fff" },
+            "& .MuiInputLabel-root": { color: "#fff", fontWeight: 500 },
             "& .MuiInputLabel-root.Mui-focused": { color: "#fff" },
             "& .MuiInputLabel-root.Mui-error": {
               color: "#fff",

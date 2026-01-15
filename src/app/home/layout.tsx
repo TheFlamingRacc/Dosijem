@@ -7,7 +7,7 @@ export default function HomeLayout({ children }: PropsWithChildren) {
   return (
     <>
       <Box
-        height={{ xs: "100vh", md: "100vh", lg: '100%' }}
+        height={{ xs: "100vh", md: "100vh", lg: "100%" }}
         minWidth="100%"
         position="relative"
         pt={{ xs: 0, md: "min(130px, 13.5vw)", lg: "min(120px, 6vw)" }}
@@ -29,6 +29,11 @@ export default function HomeLayout({ children }: PropsWithChildren) {
           right={{ xs: 46, md: 70, lg: "26%" }}
           top={{ xs: 60, md: 0 }}
           zIndex={1}
+          sx={{
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+            animationDelay: "0.5s",
+          }}
         />
         <Box
           component="img"
@@ -39,6 +44,11 @@ export default function HomeLayout({ children }: PropsWithChildren) {
           right={20}
           top={0}
           zIndex={1}
+          sx={{
+            opacity: 0,
+            animation: "FadeSlideInRight 0.7s ease forwards",
+            animationDelay: "0.6s",
+          }}
         />
       </Box>
       <Footer />

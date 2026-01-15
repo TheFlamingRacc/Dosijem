@@ -1,29 +1,20 @@
 "use client";
 
-import { Button } from "@mui/material";
 import { useRouter, usePathname } from "next/navigation";
+import { Button } from "@mui/material";
 
-type Props =
-  | { reviews: true; about?: never }
-  | { about: true; reviews?: never };
-
-export default function ShowMoreButton(props: Props) {
+export default function JoinOurTeamButton() {
   const router = useRouter();
   const pathname = usePathname();
-  const isReviews = "reviews" in props;
+  const isEn = pathname.includes("/en");
   return (
     <Button
-      onClick={() =>
-        router.push(
-          `${isReviews ? "/reviews" : "/about"}${
-            pathname.includes("/en") ? "/en" : ""
-          }`
-        )
-      }
-      fullWidth
+    fullWidth
+      onClick={() => router.push(`/contacts${isEn ? "/en" : ""}`)}
       sx={{
         height: "43px",
         fontFamily: "e-Ukraine",
+        fontWeight: 500,
         fontSize: "1rem",
         color: "#736E80",
         borderRadius: "13px",
@@ -34,7 +25,7 @@ export default function ShowMoreButton(props: Props) {
         },
       }}
     >
-      {pathname.includes("/en") ? "SEE MORE" : "Дивитися більше"}
+      {isEn ? "Join our team" : "Хочу у команду"}
     </Button>
   );
 }

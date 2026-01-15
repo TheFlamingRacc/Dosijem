@@ -35,7 +35,7 @@ export default function ContactsEn() {
         Do you want to talk?
       </Typography>
       <Typography
-        fontWeight={300}
+        fontWeight={500}
         fontSize={{ xs: "0.9375rem", md: "1.25rem" }}
         color="text.secondary"
         maxWidth="80%"

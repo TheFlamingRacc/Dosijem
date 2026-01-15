@@ -1,5 +1,5 @@
 import Marquee from "./Marquee";
-import { Box, BoxProps, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 type Props = {
   color: string;

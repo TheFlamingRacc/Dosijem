@@ -16,7 +16,7 @@ export default function TextForm({ value, setValue }: Props) {
     <Stack spacing={1} flex={1}>
       <Typography
         fontSize="1.25rem"
-        fontFamily={"e-UkraineHead"}
+        fontFamily="e-UkraineHead"
         fontWeight={500}
         color="white"
         sx={{
@@ -26,7 +26,12 @@ export default function TextForm({ value, setValue }: Props) {
         }}
       >
         {isEnglish ? "Message " : "Повідомлення "}
-        <Typography component="span" color="text.secondary" fontSize="0.75rem">
+        <Typography
+          component="span"
+          fontWeight="inherit"
+          color="text.secondary"
+          fontSize="0.75rem"
+        >
           {isEnglish ? "(optional)" : "(не обов'язково)"}
         </Typography>
       </Typography>

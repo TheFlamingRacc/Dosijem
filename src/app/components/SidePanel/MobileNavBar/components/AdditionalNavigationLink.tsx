@@ -4,19 +4,19 @@ import { Box, Typography } from "@mui/material";
 import { useRouter, usePathname } from "next/navigation";
 
 type Props = {
-  component: "home" | "feedbacks" | "contacts" | "charitybox";
+  component: "about" | "reviews" | "contacts" | "charitybox";
 };
 
 const titles = {
   ua: {
-    home: "ПРО НАС",
-    feedbacks: "ВІДГУКИ",
+    about: "ПРО НАС",
+    reviews: "ВІДГУКИ",
     contacts: "КОНТАКТИ",
     charitybox: "БЛАГОБАНКА",
   },
   en: {
-    home: "ABOUT US",
-    feedbacks: "FEEDBACKS",
+    about: "ABOUT US",
+    reviews: "FEEDBACKS",
     contacts: "CONTACTS",
     charitybox: "CHARITYBOX",
   },

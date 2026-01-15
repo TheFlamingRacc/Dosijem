@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Rate from "./Rate";
 import ShowMoreButton from "./ShowMoreButton";
+import SplitText from "@/app/components/SplitText";
 
 type ReviewData = {
   userName: string;
@@ -34,7 +35,7 @@ const mockData: ReviewData[] = [
   },
 ];
 
-const AUTO_DELAY = 5000;
+const AUTO_DELAY = 10000;
 
 const variants = {
   enter: (direction: number) => ({
@@ -91,12 +92,17 @@ export default function ReviewsAboutUs() {
 
   return (
     <Stack gap={2}>
-      <Typography fontSize="1rem" fontFamily="e-UkraineHead" color="#A8A3B3">
+      <SplitText fontSize="1rem" fontFamily="e-UkraineHead" color="#A8A3B3">
         {pathname.includes("/en") ? "REVIEWS ABOUT US" : "ВІДГУКИ ПРО НАС"}
-      </Typography>
+      </SplitText>
 
       <Stack
-        sx={{ backgroundColor: "background.default" }}
+        sx={{
+          backgroundColor: "background.default",
+          opacity: 0,
+          animation: "FadeIn 1s ease forwards",
+          animationDelay: "0.2s",
+        }}
         borderRadius="23px"
         gap={1}
         p={1}
@@ -108,7 +114,13 @@ export default function ReviewsAboutUs() {
           height={144}
           width={{ xs: "100%", md: 333 }}
           borderRadius="25px"
-          sx={{ backgroundColor: "background.paper", overflow: "hidden" }}
+          sx={{
+            backgroundColor: "background.paper",
+            overflow: "hidden",
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+            animationDelay: "0.4s",
+          }}
         >
           <Box display="flex" alignItems="center" gap={3}>
             <Typography
@@ -162,8 +174,15 @@ export default function ReviewsAboutUs() {
             ))}
           </Box>
         </Stack>
-
-        <ShowMoreButton reviews />
+        <Box
+          sx={{
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
+            animationDelay: "0.6s",
+          }}
+        >
+          <ShowMoreButton reviews />
+        </Box>
       </Stack>
     </Stack>
   );

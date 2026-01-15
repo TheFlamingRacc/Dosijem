@@ -125,7 +125,12 @@ export default function CountUp({
 
   return (
     <span
-      style={{ fontFamily: "inherit", fontSize: "inherit", color: "inherit" }}
+      style={{
+        fontFamily: "inherit",
+        fontSize: "inherit",
+        color: "inherit",
+        fontWeight: "inherit",
+      }}
       ref={ref}
     />
   );

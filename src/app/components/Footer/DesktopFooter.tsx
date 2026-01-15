@@ -25,7 +25,7 @@ export default function DesktopFooter() {
         <Box display="flex" gap="min(2vw, 4vh)">
           <Stack justifyContent="space-between">
             <Box component="img" src="/DOSIJEM.svg" alt="DOSIJEM" width={150} />
-            <Typography color="text.secondary" fontSize="1rem">
+            <Typography color="text.secondary" fontSize="1rem" fontWeight={500}>
               © 2025. {isEnglish ? "All rights reserved" : "Всі права захищені"}
               .
             </Typography>
@@ -61,10 +61,16 @@ export default function DesktopFooter() {
             display="flex"
             gap="min(0.2vw, 0.4vh)"
             noWrap
+            fontWeight={500}
           >
             <Box height="1rem" component="img" src="/dosijem-logo.svg" />
             made in
-            <Typography fontSize="1rem" component="span" color="primary.main">
+            <Typography
+              fontWeight={500}
+              fontSize="1rem"
+              component="span"
+              color="primary.main"
+            >
               DOSIJEM
             </Typography>
           </Typography>

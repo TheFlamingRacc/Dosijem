@@ -26,7 +26,11 @@ export default function MobileFooter() {
       >
         <Stack spacing={1}>
           <Box component="img" src="/DOSIJEM.svg" alt="DOSIJEM" width={94} />
-          <Typography color="text.secondary" fontSize="0.4375rem">
+          <Typography
+            color="text.secondary"
+            fontSize="0.4375rem"
+            fontWeight={500}
+          >
             © 2025. {isEnglish ? "All rights reserved" : "Всі права захищені"}.
           </Typography>
         </Stack>
@@ -44,6 +48,7 @@ export default function MobileFooter() {
           </Box>
           <Typography
             fontSize="0.4375rem"
+            fontWeight={500}
             color="text.secondary"
             alignItems="center"
             display="flex"
@@ -56,6 +61,7 @@ export default function MobileFooter() {
               fontSize="0.4375rem"
               component="span"
               color="primary.main"
+              fontWeight={500}
             >
               DOSIJEM
             </Typography>

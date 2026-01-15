@@ -25,13 +25,14 @@ export default function SendSection({ onSubmit }: Props) {
             animationDelay: "0.6s",
           }}
         >
-          <Typography fontSize="0.75rem" color="#C2C2C2">
+          <Typography fontSize="0.75rem" color="#C2C2C2" fontWeight={500}>
             {isEnglish
               ? "I aknowledge that I have read the "
               : "Я засвідчую, що ознайомлений(-а) з "}
             <Typography
               fontSize="inherit"
-              component={"span"}
+              component="span"
+              fontWeight="inherit"
               color="primary.dark"
               onClick={() =>
                 router.push(`/privacy-policy${isEnglish ? "/en" : ""}`)

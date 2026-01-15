@@ -18,8 +18,8 @@ export default function AdditionalNavigationBlock() {
       }}
       spacing={1}
     >
-      <AdditionalNavigationLink component="home" />
-      <AdditionalNavigationLink component="feedbacks" />
+      <AdditionalNavigationLink component="about" />
+      <AdditionalNavigationLink component="reviews" />
       <AdditionalNavigationLink component="contacts" />
       <AdditionalNavigationLink component="charitybox" />
     </Stack>

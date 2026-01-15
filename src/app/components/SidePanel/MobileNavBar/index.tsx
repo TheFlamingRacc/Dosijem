@@ -74,7 +74,15 @@ export default function MobileNavBar({ colors }: Props) {
           }}
         >
           <Box display="flex" gap={1.5} alignItems="center">
-            <Box component="img" src="/DOSIJEM.svg" height="13px" />
+            <Box
+              onClick={() =>
+                router.push(`/home${pathname.includes("/en") ? "/en" : ""}`)
+              }
+              component="img"
+              src="/DOSIJEM.svg"
+              height="13px"
+              sx={{ cursor: "pointer" }}
+            />
             <Box
               width={17}
               position="relative"

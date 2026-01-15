@@ -27,7 +27,7 @@ export default function TabletFooter() {
       >
         <Stack justifyContent="space-between">
           <Box component="img" src="/DOSIJEM.svg" alt="DOSIJEM" width={150} />
-          <Typography color="text.secondary" fontSize="1rem">
+          <Typography color="text.secondary" fontSize="1rem" fontWeight={500}>
             © 2025. {isEnglish ? "All rights reserved" : "Всі права захищені"}.
           </Typography>
         </Stack>
@@ -61,10 +61,16 @@ export default function TabletFooter() {
             display="flex"
             gap="0.2rem"
             noWrap
+            fontWeight={500}
           >
             <Box height="1rem" component="img" src="/dosijem-logo.svg" />
             made in
-            <Typography fontSize="1rem" component="span" color="primary.main">
+            <Typography
+              fontSize="1rem"
+              component="span"
+              color="primary.main"
+              fontWeight={500}
+            >
               DOSIJEM
             </Typography>
           </Typography>

@@ -3,6 +3,7 @@ import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import ShowMoreButton from "./components/ShowMoreButton";
 import ReviewsAboutUs from "./components/ReviewsAboutUs";
 import CountUp from "./components/CountUp";
+import SplitText from "../components/SplitText";
 
 export default function Home() {
   return (
@@ -18,54 +19,72 @@ export default function Home() {
         height={{ xs: "calc(100% - 60px)", md: "100%" }}
       >
         <Stack spacing={{ xs: 2, md: 4, lg: "min(40px, 2vw)" }}>
-          <Box
-            display={{ xs: "block", md: "none" }}
-            component="img"
-            src="/dosijem-icon.svg"
-            width={51}
-            height={51}
-          />
-          <Typography
-            fontFamily="e-UkraineHead"
-            fontSize="1.25rem"
-            color="white"
-          >
-            Твоя ідея{" "}
-            <Typography
-              component="span"
-              color="primary.dark"
-              fontSize="inherit"
-              fontFamily="inherit"
-            >
-              реальна
-            </Typography>
-            <Typography
-              component="span"
-              display={{ xs: "none", md: "inline" }}
-              fontSize="inherit"
-              fontFamily="inherit"
-              color="inherit"
-            >
-              {" "}
-              разом з
-            </Typography>
-            <Typography
-              component="span"
+          <Box overflow="hidden">
+            <Box
               display={{ xs: "block", md: "none" }}
-              fontSize="inherit"
-              fontFamily="inherit"
-              color="inherit"
+              component="img"
+              src="/dosijem-icon.svg"
+              width={51}
+              height={51}
+              sx={{
+                transform: "translateY(100%)",
+                animation: "SlideInTop 0.5s ease forwards",
+              }}
+            />
+          </Box>
+          <Box overflow="hidden">
+            <Typography
+              fontFamily="e-UkraineHead"
+              fontSize="1.25rem"
+              color="white"
+              sx={{
+                transform: "translateY(100%)",
+                animation: "SlideInTop 0.7s ease forwards",
+              }}
             >
-              разом з НАМИ
+              Твоя ідея{" "}
+              <Typography
+                component="span"
+                color="primary.dark"
+                fontSize="inherit"
+                fontFamily="inherit"
+              >
+                реальна
+              </Typography>
+              <Typography
+                component="span"
+                display={{ xs: "none", md: "inline" }}
+                fontSize="inherit"
+                fontFamily="inherit"
+                color="inherit"
+              >
+                {" "}
+                разом з
+              </Typography>
+              <Typography
+                component="span"
+                display={{ xs: "block", md: "none" }}
+                fontSize="inherit"
+                fontFamily="inherit"
+                color="inherit"
+              >
+                разом з НАМИ
+              </Typography>
             </Typography>
-          </Typography>
-
-          <Box
-            component="img"
-            src="/DOSIJEM.svg"
-            display={{ xs: "none", md: "block" }}
-            width={{ md: 391, lg: "min(570px, 40vw)" }}
-          />
+          </Box>
+          <Box overflow="hidden">
+            <Box
+              component="img"
+              src="/DOSIJEM.svg"
+              display={{ xs: "none", md: "block" }}
+              width={{ md: 391, lg: "min(570px, 40vw)" }}
+              sx={{
+                transform: "translateY(100%)",
+                animation: "SlideInTop 0.7s ease forwards",
+                animationDelay: "0.2s",
+              }}
+            />
+          </Box>
           <Button
             color="primary"
             variant="contained"
@@ -80,7 +99,11 @@ export default function Home() {
               transition: "all 0.4s ease",
               "&:hover": {
                 transform: "scale(1.05)",
+                backgroundColor: "primary.main",
               },
+              opacity: 0,
+              animation: "FadeIn 1s ease forwards",
+              animationDelay: "0.7s",
             }}
             startIcon={
               <Box
@@ -101,15 +124,20 @@ export default function Home() {
         <Box flexWrap="wrap" display="flex" gap={2.7} mt="auto">
           <ReviewsAboutUs />
           <Stack gap={2} display={{ xs: "none", md: "flex" }}>
-            <Typography
+            <SplitText
               fontSize="1rem"
               fontFamily="e-UkraineHead"
               color="#A8A3B3"
             >
               ПРО НАС
-            </Typography>
+            </SplitText>
             <Stack
-              sx={{ backgroundColor: "background.default" }}
+              sx={{
+                backgroundColor: "background.default",
+                opacity: 0,
+                animation: "FadeIn 1s ease forwards",
+                animationDelay: "0.2s",
+              }}
               borderRadius="23px"
               spacing={1}
               p={1}
@@ -121,6 +149,11 @@ export default function Home() {
                   spacing={0.4}
                   height="100%"
                   overflow="hidden"
+                  sx={{
+                    opacity: 0,
+                    animation: "FadeIn 1s ease forwards",
+                    animationDelay: "0.4s",
+                  }}
                 >
                   <Box
                     display="flex"
@@ -153,6 +186,9 @@ export default function Home() {
                     justifyContent="center"
                     sx={{
                       backgroundColor: "background.paper",
+                      opacity: 0,
+                      animation: "FadeIn 1s ease forwards",
+                      animationDelay: "0.6s",
                     }}
                   >
                     <Typography color="#A5A1AF" fontSize="0.75rem">
@@ -198,6 +234,9 @@ export default function Home() {
                     justifyContent="center"
                     sx={{
                       backgroundColor: "background.paper",
+                      opacity: 0,
+                      animation: "FadeIn 1s ease forwards",
+                      animationDelay: "0.6s",
                     }}
                   >
                     <Typography color="#A5A1AF" fontSize="0.75rem">
@@ -206,7 +245,15 @@ export default function Home() {
                   </Box>
                 </Stack>
               </Box>
-              <ShowMoreButton about />
+              <Box
+                sx={{
+                  opacity: 0,
+                  animation: "FadeIn 1s ease forwards",
+                  animationDelay: "0.8s",
+                }}
+              >
+                <ShowMoreButton about />
+              </Box>
             </Stack>
           </Stack>
         </Box>
