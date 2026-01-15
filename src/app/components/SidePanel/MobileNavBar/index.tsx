@@ -201,6 +201,19 @@ export default function MobileNavBar({ colors }: Props) {
           transition: "opacity 0.3s ease",
         }}
       />
+      <Box
+        position="fixed"
+        height={60}
+        width="100%"
+        top={0}
+        left={0}
+        zIndex={998}
+        display={{ xs: "block", md: "none" }}
+        sx={{
+          backdropFilter: "blur(6px)",
+          backgroundColor: "rgba(0,0,0,0.15)",
+        }}
+      />
     </>
   );
 }

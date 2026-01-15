@@ -18,7 +18,7 @@ export default function Tapes() {
       <Stack
         direction="row"
         justifyContent={"center"}
-        zIndex={1002}
+        zIndex={901}
         divider={
           <Box
             width={{ xs: "9px", md: "14px", lg: "18.5px" }}
@@ -71,7 +71,7 @@ export default function Tapes() {
       <Stack
         direction="row"
         justifyContent="center"
-        zIndex={1001}
+        zIndex={900}
         divider={
           <Box
             flexShrink={0}
