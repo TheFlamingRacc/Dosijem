@@ -1,7 +1,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import ShowMoreButton from "../components/ShowMoreButton";
-import ReviewsAboutUs from "../components/ReviewsAboutUs";
+import ReviewsAboutUs from "../components/ReviewsAboutUsClient";
 import CountUp from "../components/CountUp";
 import SplitText from "@/app/components/SplitText";
 

@@ -9,31 +9,10 @@ import ShowMoreButton from "./ShowMoreButton";
 import SplitText from "@/app/components/SplitText";
 
 type ReviewData = {
-  userName: string;
+  username: string;
   rate: 5 | 4 | 3 | 2 | 1;
   reviewText: string;
 };
-
-const mockData: ReviewData[] = [
-  {
-    userName: "Mr Rukojob",
-    rate: 5,
-    reviewText:
-      "Пхаха визнаю дешево не завжди означає погану якість. Мені все зайшло, дякую вам)",
-  },
-  {
-    userName: "Mr JobIsDone",
-    rate: 4,
-    reviewText:
-      "Пхаха окак дешево не завжди означає погану якість. Мені все зайшло, дякую вам)",
-  },
-  {
-    userName: "Abobysssss",
-    rate: 3,
-    reviewText:
-      "Пхаха, ніщетааа дешево не завжди означає погану якість. Мені все зайшло, дякую вам)",
-  },
-];
 
 const AUTO_DELAY = 10000;
 
@@ -52,7 +31,11 @@ const variants = {
   }),
 };
 
-export default function ReviewsAboutUs() {
+type Props = {
+  reviews: ReviewData[];
+};
+
+export default function ReviewsAboutUs({ reviews }: Props) {
   const pathname = usePathname();
 
   const [index, setIndex] = useState(0);
@@ -66,10 +49,10 @@ export default function ReviewsAboutUs() {
       timerRef.current = null;
     }
   };
-
   const goNext = () => {
+    if (!reviews.length) return;
     setDirection(1);
-    setIndex((prev) => (prev + 1) % mockData.length);
+    setIndex((prev) => (prev + 1) % reviews.length);
   };
 
   const startTimer = () => {
@@ -84,11 +67,12 @@ export default function ReviewsAboutUs() {
   };
 
   useEffect(() => {
+    if (!reviews.length) return;
     startTimer();
     return clearTimer;
-  }, [index]);
+  }, [index, reviews.length]);
 
-  const review = mockData[index];
+  const review = reviews[index];
 
   return (
     <Stack gap={2}>
@@ -124,14 +108,14 @@ export default function ReviewsAboutUs() {
         >
           <Box display="flex" alignItems="center" gap={3}>
             <Typography
-              key={review.userName}
+              key={review.username}
               fontFamily="e-UkraineHead"
               sx={{
                 opacity: 0,
                 animation: "FadeIn 2s ease forwards",
               }}
             >
-              {review.userName}
+              {review.username}
             </Typography>
             <Rate key={review.rate} rate={review.rate} />
           </Box>
@@ -145,7 +129,16 @@ export default function ReviewsAboutUs() {
               exit="exit"
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <Typography color="#C2C2C2" mt={1}>
+              <Typography
+                color="#C2C2C2"
+                mt={1}
+                sx={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: 3,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                }}
+              >
                 {review.reviewText}
               </Typography>
             </motion.div>
@@ -158,7 +151,7 @@ export default function ReviewsAboutUs() {
             bottom={14}
             right={14}
           >
-            {mockData.map((_, i) => (
+            {reviews.map((_, i) => (
               <Box
                 key={i}
                 height={5}

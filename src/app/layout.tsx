@@ -25,8 +25,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Dosijem",
-  description: "Dosijem",
+  title: "DOSIJEM",
+  description:
+    "DOSIJEM - цифрова студія повного циклу, що створює технологічні та ігрові рішення для онлайн-проєктів Minecraft ком’юніті і не тільки. Ми перетворюємо ідеї на стабільні, масштабовані продукти - від концепції до запуску та розвитку...",
 };
 
 export default function RootLayout({

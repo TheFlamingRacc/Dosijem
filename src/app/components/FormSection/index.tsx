@@ -4,11 +4,35 @@ import { Box } from "@mui/material";
 import ContactsForm from "./components/ContactsForm";
 import TextForm from "./components/TextForm";
 import SendSection from "./components/SendSection";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function FormSection() {
+  const pathname = usePathname();
+  const isEn = pathname.includes("/en");
+  const pageType = (() => {
+    switch (pathname.split("/")[1]) {
+      case "plugins":
+        return "plugin";
+      case "mods":
+        return "mod";
+      case "design":
+        return "design_server";
+      case "skins":
+        return "skin";
+      case "building":
+        return "build";
+      case "servers":
+        return "server";
+      case "sites":
+        return "site";
+      default:
+        return "unknown";
+    }
+  })();
+
   const [nicknameField, setNicknameField] = useState("");
   const [socialsField, setSocialsField] = useState("");
   const [emailField, setEmailField] = useState("");
@@ -17,8 +41,8 @@ export default function FormSection() {
   const [nicknameError, setNicknameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
 
-  const onSubmit = () => {
-    const isNicknameValid = nicknameField.trim().length > 0;
+  const onSubmit = async () => {
+    const isNicknameValid = nicknameField.trim().length > 6;
     const isEmailValid = emailRegex.test(emailField);
 
     setNicknameError(!isNicknameValid);
@@ -28,12 +52,27 @@ export default function FormSection() {
       return;
     }
 
-    console.log("done");
+    const res = await fetch("http://45.13.236.245:25591/api/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nickname: nicknameField,
+        email: emailField,
+        socials: socialsField,
+        message: messageField,
+        type: pageType,
+        lang: isEn ? "en" : "ua",
+      }),
+    });
 
-    setNicknameField("");
-    setSocialsField("");
-    setEmailField("");
-    setMessageField("");
+    if (res.ok) {
+      setNicknameField("");
+      setSocialsField("");
+      setEmailField("");
+      setMessageField("");
+    }
   };
 
   return (
