@@ -2,7 +2,12 @@ import { Box, Typography } from "@mui/material";
 import DomeGallery from "./components/DomeGallery";
 import TelegramLink from "./components/TelegramLink";
 
-async function getReviews(): Promise<string[]> {
+type ReviewImg = {
+  id: number;
+  reviewImageUrl: string;
+};
+
+async function getReviews(): Promise<ReviewImg[]> {
   const res = await fetch("http://45.13.236.245:25591/api/reviews", {
     next: { revalidate: 300 },
   });
@@ -16,13 +21,17 @@ async function getReviews(): Promise<string[]> {
 
 export default async function Reviews() {
   const images = await getReviews();
+  console.log(images);
   return (
     <Box width="100%" height={{ xs: "100vh", md: "100%" }} position="relative">
       <DomeGallery
         maxVerticalRotationDeg={0}
         fit={0.6}
         grayscale={false}
-        images={["/dosijem-logo.svg", ...images]}
+        images={[
+          "/dosijem-logo.svg",
+          ...images.map((img) => img.reviewImageUrl),
+        ]}
         minRadius={400}
         maxRadius={600}
       />
