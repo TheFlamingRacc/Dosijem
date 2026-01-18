@@ -1,6 +1,6 @@
 "use client";
 
-import { IconButton, Box, Typography } from "@mui/material";
+import { IconButton, Box } from "@mui/material";
 import { useRouter, usePathname } from "next/navigation";
 
 const variantsData = {

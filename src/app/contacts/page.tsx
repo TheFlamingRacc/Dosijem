@@ -16,7 +16,7 @@ export default function Contacts() {
           animation: "FadeSlideIn 1s ease forwards",
         }}
       >
-        Зв'язок з нами
+        Зв&apos;язок з нами
       </Typography>
       <Typography
         fontSize={{ xs: "1.5625rem", md: "3.125rem" }}
@@ -78,7 +78,7 @@ export default function Contacts() {
             animationDelay: "0.6s",
           }}
         >
-          Зв'яжися
+          Зв&apos;яжися
         </Typography>
         <Box
           display="flex"

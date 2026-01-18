@@ -1,5 +1,5 @@
 import ServicesLayout from "@/app/components/ServicesLayout";
-import { Box, Stack, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 export default function PluginsEn() {
   return (

@@ -319,7 +319,7 @@ export default function AboutEn() {
           >
             <SidesCard number={1} accent title="CONNECTION" icon="/brain.svg">
               <PrimarySpan>Analyzing your ideas</PrimarySpan>, understanding the
-              audience's needs, and helping to make the product
+              audience&apos;s needs, and helping to make the product
               <PrimarySpan> convenient and well thought-out</PrimarySpan>.
             </SidesCard>
 
@@ -335,12 +335,12 @@ export default function AboutEn() {
             <SidesCard number={2} title="CARE" icon="/hugging.svg">
               We <PrimarySpan>provide daily updates</PrimarySpan>, discuss every
               stage, and <PrimarySpan>respond to your input</PrimarySpan> . We
-              don't just complete tasks -we genuinely care about your
+              don&apos;t just complete tasks -we genuinely care about your
               satisfaction with the <PrimarySpan>final result</PrimarySpan>.
             </SidesCard>
 
             <SidesCard number={1} title="HONESTY" icon="/file-protection.svg">
-              <PrimarySpan>We don’t hide details</PrimarySpan> or drag out
+              <PrimarySpan>We do&apos;t hide details</PrimarySpan> or drag out
               deadlines. We <PrimarySpan>always </PrimarySpan>
               give an <PrimarySpan>honest estimate</PrimarySpan> of the time
               required-and often deliver <PrimarySpan>even faster</PrimarySpan>.

@@ -176,7 +176,7 @@ export default function ContactsEn() {
               fontWeight={700}
               maxWidth={"220px"}
             >
-              We're{" "}
+              We&apos;re{" "}
               <Typography
                 component="span"
                 fontSize="inherit"

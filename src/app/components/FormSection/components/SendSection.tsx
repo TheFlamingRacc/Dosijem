@@ -5,7 +5,7 @@ import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 type Props = {
-  onSubmit: any;
+  onSubmit: () => void;
 };
 
 export default function SendSection({ onSubmit }: Props) {

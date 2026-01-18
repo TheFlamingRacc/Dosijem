@@ -13,7 +13,7 @@ type Props = StackProps & {
 
 export default function OurTeamBlock({ en = false, ...props }: Props) {
   return (
-    //@ts-ignore
+    //@ts-expect-error cant make types of variants
     <MotionStack
       initial="hidden"
       whileInView="visible"

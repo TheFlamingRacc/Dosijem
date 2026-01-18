@@ -1,6 +1,6 @@
 "use client";
 
-import { Stack, Typography, Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import AdditionalNavigationLink from "./AdditionalNavigationLink";
 
 export default function AdditionalNavigationBlock() {

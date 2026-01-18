@@ -68,7 +68,7 @@ export default function SplitText({
       if (el._rbsplitInstance) {
         try {
           el._rbsplitInstance.revert();
-        } catch (_) {}
+        } catch {}
         el._rbsplitInstance = undefined;
       }
 
@@ -80,8 +80,8 @@ export default function SplitText({
         marginValue === 0
           ? ""
           : marginValue < 0
-          ? `-=${Math.abs(marginValue)}${marginUnit}`
-          : `+=${marginValue}${marginUnit}`;
+            ? `-=${Math.abs(marginValue)}${marginUnit}`
+            : `+=${marginValue}${marginUnit}`;
       const start = `top ${startPct}%${sign}`;
       let targets: Element[] = [];
       const assignTargets = (self: GSAPSplitText) => {
@@ -118,10 +118,10 @@ export default function SplitText({
                 fastScrollEnd: true,
                 anticipatePin: 0.4,
               },
-              
+
               willChange: "transform, opacity",
               force3D: true,
-            }
+            },
           );
         },
       });
@@ -132,7 +132,7 @@ export default function SplitText({
         });
         try {
           splitInstance.revert();
-        } catch (_) {}
+        } catch {}
         el._rbsplitInstance = undefined;
       };
     },
@@ -150,7 +150,7 @@ export default function SplitText({
         fontsLoaded,
       ],
       scope: ref,
-    }
+    },
   );
 
   return (

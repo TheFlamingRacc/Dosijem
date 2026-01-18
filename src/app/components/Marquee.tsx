@@ -5,7 +5,7 @@ import { PropsWithChildren, useEffect, useRef } from "react";
 
 type MarqueeProps = PropsWithChildren & {
   gap?: number;
-  addStyles?: {};
+  addStyles?: object;
 };
 
 const SPEED = 60;

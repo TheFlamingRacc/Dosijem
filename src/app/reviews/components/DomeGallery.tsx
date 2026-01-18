@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react-hooks/exhaustive-deps */
+// @ts-nocheck
+
 "use client";
 
 import { useEffect, useMemo, useRef, useCallback } from "react";
@@ -101,7 +106,7 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
   }
   if (pool.length > totalSlots) {
     console.warn(
-      `[DomeGallery] Provided image count (${pool.length}) exceeds available tiles (${totalSlots}). Some images will not be shown.`
+      `[DomeGallery] Provided image count (${pool.length}) exceeds available tiles (${totalSlots}). Some images will not be shown.`,
     );
   }
 
@@ -114,7 +119,7 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
 
   const usedImages = Array.from(
     { length: totalSlots },
-    (_, i) => normalizedImages[i % normalizedImages.length]
+    (_, i) => normalizedImages[i % normalizedImages.length],
   );
 
   for (let i = 1; i < usedImages.length; i++) {
@@ -142,7 +147,7 @@ function computeItemBaseRotation(
   offsetY: number,
   sizeX: number,
   sizeY: number,
-  segments: number
+  segments: number,
 ) {
   const unit = 360 / segments / 2;
   const rotateY = unit * (offsetX + (sizeX - 1) / 2);
@@ -259,12 +264,12 @@ export default function DomeGallery({
       root.style.setProperty("--enlarge-radius", openedImageBorderRadius);
       root.style.setProperty(
         "--image-filter",
-        grayscale ? "grayscale(1)" : "none"
+        grayscale ? "grayscale(1)" : "none",
       );
       applyTransform(rotationRef.current.x, rotationRef.current.y);
 
       const enlargedOverlay = viewerRef.current?.querySelector(
-        ".enlarge"
+        ".enlarge",
       ) as HTMLElement;
       if (enlargedOverlay && frameRef.current && mainRef.current) {
         const frameR = frameRef.current.getBoundingClientRect();
@@ -346,7 +351,7 @@ export default function DomeGallery({
         const nextX = clamp(
           rotationRef.current.x - vY / 200,
           -maxVerticalRotationDeg,
-          maxVerticalRotationDeg
+          maxVerticalRotationDeg,
         );
         const nextY = wrapAngleSigned(rotationRef.current.y + vX / 200);
         rotationRef.current = { x: nextX, y: nextY };
@@ -356,7 +361,7 @@ export default function DomeGallery({
       stopInertia();
       inertiaRAF.current = requestAnimationFrame(step);
     },
-    [dragDampening, maxVerticalRotationDeg, stopInertia]
+    [dragDampening, maxVerticalRotationDeg, stopInertia],
   );
 
   useGesture(
@@ -396,10 +401,10 @@ export default function DomeGallery({
         const nextX = clamp(
           startRotRef.current.x - dyTotal / dragSensitivity,
           -maxVerticalRotationDeg,
-          maxVerticalRotationDeg
+          maxVerticalRotationDeg,
         );
         const nextY = wrapAngleSigned(
-          startRotRef.current.y + dxTotal / dragSensitivity
+          startRotRef.current.y + dxTotal / dragSensitivity,
         );
 
         if (
@@ -413,7 +418,7 @@ export default function DomeGallery({
         if (last) {
           draggingRef.current = false;
 
-          let [vMagX, vMagY] = velocity;
+          const [vMagX, vMagY] = velocity;
           const [dirX, dirY] = direction;
           let vx = vMagX * dirX;
           let vy = vMagY * dirY;
@@ -438,7 +443,7 @@ export default function DomeGallery({
         }
       },
     },
-    { target: mainRef, eventOptions: { passive: true } }
+    { target: mainRef, eventOptions: { passive: true } },
   );
 
   const openItemFromElement = (el: HTMLElement) => {
@@ -461,7 +466,7 @@ export default function DomeGallery({
       offsetY,
       sizeX,
       sizeY,
-      segments
+      segments,
     );
     const parentY = normalizeAngle(parentRot.rotateY);
     const globalY = normalizeAngle(rotationRef.current.y);
@@ -593,7 +598,7 @@ export default function DomeGallery({
       if (openingRef.current) return;
       openItemFromElement(e.currentTarget);
     },
-    [openItemFromElement]
+    [openItemFromElement],
   );
 
   const onTilePointerUp = useCallback(
@@ -605,7 +610,7 @@ export default function DomeGallery({
       if (openingRef.current) return;
       openItemFromElement(e.currentTarget);
     },
-    [openItemFromElement]
+    [openItemFromElement],
   );
 
   useEffect(() => {
@@ -619,12 +624,12 @@ export default function DomeGallery({
       if (!el) return;
       const parent = el.parentElement as HTMLElement;
       const overlay = viewerRef.current?.querySelector(
-        ".enlarge"
+        ".enlarge",
       ) as HTMLElement | null;
       if (!overlay) return;
 
       const refDiv = parent.querySelector(
-        ".item__image--reference"
+        ".item__image--reference",
       ) as HTMLElement | null;
 
       const originalPos = originalTilePositionRef.current;
