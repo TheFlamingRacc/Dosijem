@@ -8,9 +8,7 @@ type ReviewImg = {
 };
 
 async function getReviews(): Promise<ReviewImg[]> {
-  const res = await fetch("http://45.13.236.245:25591/api/reviews", {
-    next: { revalidate: 300 },
-  });
+  const res = await fetch("http://45.13.236.245:25591/api/reviews");
 
   if (!res.ok) {
     throw new Error("Failed to fetch reviews");

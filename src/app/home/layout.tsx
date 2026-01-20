@@ -10,7 +10,7 @@ export default function HomeLayout({ children }: PropsWithChildren) {
         height={{ xs: "100vh", md: "100vh", lg: "100%" }}
         minWidth="100%"
         position="relative"
-        pt={{ xs: 0, md: "min(130px, 13.5vw)", lg: "min(120px, 6vw)" }}
+        pt={{ xs: 0, md: "min(50px, 5vw)", lg: "min(120px, 6vw)" }}
         pl={{
           xs: 2,
           md: "min(4vw, 8vh)",

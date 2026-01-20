@@ -429,6 +429,10 @@ export default function AboutEn() {
               gap: 1,
               mb: 0,
             },
+            "@media (max-height: 800px) and (min-width: 1400px)": {
+              mt: 10,
+              mb: -10,
+            },
           }}
         >
           <Stack
@@ -456,6 +460,11 @@ export default function AboutEn() {
                 flexDirection: "column",
                 height: 360,
                 ml: 7,
+                gap: "153px",
+              },
+              "@media (max-height: 800px) and (min-width: 751px)": {
+                flexDirection: "column",
+                height: 360,
                 gap: "153px",
               },
             }}
@@ -488,6 +497,7 @@ export default function AboutEn() {
                 "@media (min-width: 601px) and (max-width: 1400px)": {
                   display: "none",
                 },
+                "@media (max-height: 800px)": { display: "none" },
               }}
             >
               <StagesDivider number={3} />

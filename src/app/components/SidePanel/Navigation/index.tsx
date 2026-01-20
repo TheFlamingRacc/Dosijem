@@ -13,7 +13,7 @@ export default function Navigation() {
       alignItems="center"
       justifyContent="center"
       p="min(0.5vw, 1vh)"
-      gap="min(0.5vw, 1vh)"
+      gap="min(0.8vw, 1.6vh)"
     >
       <CustomIconButton variant="plugins" />
       <CustomIconButton variant="mods" />

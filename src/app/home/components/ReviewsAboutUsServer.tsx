@@ -7,9 +7,7 @@ type ReviewData = {
 };
 
 async function getReviews(): Promise<ReviewData[]> {
-  const res = await fetch("http://45.13.236.245:25591/api/reviews/random", {
-    next: { revalidate: 60 },
-  });
+  const res = await fetch("http://45.13.236.245:25591/api/reviews/random");
 
   if (!res.ok) {
     throw new Error("Failed to fetch reviews");

@@ -1,9 +1,9 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
-import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
+import { Box, Stack, Typography } from "@mui/material";
 import ShowMoreButton from "./components/ShowMoreButton";
 import ReviewsAboutUs from "./components/ReviewsAboutUsServer";
 import CountUp from "./components/CountUp";
 import SplitText from "../components/SplitText";
+import RealizeIdeaButton from "./components/RealizeIdeaButton";
 
 export default function Home() {
   return (
@@ -85,41 +85,7 @@ export default function Home() {
               }}
             />
           </Box>
-          <Button
-            color="primary"
-            variant="contained"
-            sx={{
-              borderRadius: "100px",
-              fontSize: { xs: "1rem", md: "1.25rem", lg: 25 },
-              height: { xs: 32, md: 44, lg: 60 },
-              width: { xs: 207, md: 258, lg: 355 },
-              display: "flex",
-              alignItems: "center",
-              padding: { xs: 0, lg: "15px 21px" },
-              transition: "all 0.4s ease",
-              "&:hover": {
-                transform: "scale(1.05)",
-                backgroundColor: "primary.main",
-              },
-              opacity: 0,
-              animation: "FadeIn 1s ease forwards",
-              animationDelay: "0.7s",
-            }}
-            startIcon={
-              <Box
-                height={29}
-                width={29}
-                borderRadius={50}
-                padding={0.7}
-                display={{ xs: "none", lg: "flex" }}
-                sx={{ backgroundColor: "black", color: "white" }}
-              >
-                <RocketLaunchIcon sx={{ width: "100%", height: "100%" }} />
-              </Box>
-            }
-          >
-            Реалізувати ідею
-          </Button>
+          <RealizeIdeaButton />
         </Stack>
         <Box flexWrap="wrap" display="flex" gap={2.7} mt="auto">
           <ReviewsAboutUs />

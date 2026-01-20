@@ -1,9 +1,19 @@
+"use client";
+
 import { Box } from "@mui/material";
 import AuroraBackground from "../AuroraBackground";
 import { PropsWithChildren } from "react";
 import SidePanel from "../SidePanel";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 export default function MainLayout({ children }: PropsWithChildren) {
+  const pathname = usePathname();
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: 0 });
+  }, [pathname]);
   return (
     <Box
       width="100%"
@@ -31,6 +41,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
       >
         <SidePanel />
         <Box
+          ref={scrollRef}
           width="100%"
           sx={{
             overflowY: "scroll",

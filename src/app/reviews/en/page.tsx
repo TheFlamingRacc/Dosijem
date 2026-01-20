@@ -2,10 +2,13 @@ import { Box, Typography } from "@mui/material";
 import DomeGallery from "../components/DomeGallery";
 import TelegramLink from "../components/TelegramLink";
 
-async function getReviews(): Promise<string[]> {
-  const res = await fetch("http://45.13.236.245:25591/api/reviews", {
-    next: { revalidate: 300 },
-  });
+type ReviewImg = {
+  id: number;
+  reviewImageUrl: string;
+};
+
+async function getReviews(): Promise<ReviewImg[]> {
+  const res = await fetch("http://45.13.236.245:25591/api/reviews");
 
   if (!res.ok) {
     throw new Error("Failed to fetch reviews");
@@ -23,7 +26,10 @@ export default async function ReviewsEn() {
         maxVerticalRotationDeg={0}
         fit={0.6}
         grayscale={false}
-        images={["/dosijem-logo.svg", ...images]}
+        images={[
+          "/dosijem-logo.svg",
+          ...images.map((img) => img.reviewImageUrl),
+        ]}
         minRadius={400}
         maxRadius={600}
       />
