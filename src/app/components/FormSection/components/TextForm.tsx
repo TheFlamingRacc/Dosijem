@@ -43,21 +43,22 @@ export default function TextForm({ value, setValue }: Props) {
         minRows={7}
         variant="outlined"
         sx={{
-          height: "100%",
+          flex: 1,
           "& .MuiOutlinedInput-root": {
-            overflow: "auto !important",
             height: "100%",
             alignItems: "flex-start",
+            borderRadius: "25px",
+
+            "& textarea": {
+              height: "100% !important",
+              overflow: "auto",
+            },
+
             "& fieldset": {
               borderColor: "background.paper",
               borderWidth: "3px",
-              transition: "border-color ease 0.2s",
             },
-            borderRadius: "25px",
           },
-          opacity: 0,
-          animation: "FadeIn 1s ease forwards",
-          animationDelay: "0.6s",
         }}
       />
     </Stack>

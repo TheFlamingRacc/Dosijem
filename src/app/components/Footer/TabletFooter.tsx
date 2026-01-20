@@ -35,10 +35,10 @@ export default function TabletFooter() {
           <CustomLink url="https://send.monobank.ua/jar/4KSgHrLD2f" newTab>
             {isEnglish ? "CHARITYBOX" : "БЛАГОБАНКА"}
           </CustomLink>
-          <CustomLink url="/contacts">
+          <CustomLink url={`/contacts${isEnglish ? "/en" : ""}`}>
             {isEnglish ? "CONTACTS" : "КОНТАКТИ"}
           </CustomLink>
-          <CustomLink url="/privacy-policy">
+          <CustomLink url={`/privacy-policy${isEnglish ? "/en" : ""}`}>
             {isEnglish ? "PRIVACY POLICY" : "ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ"}
           </CustomLink>
         </Stack>

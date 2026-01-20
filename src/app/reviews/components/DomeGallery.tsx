@@ -6,6 +6,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { useGesture } from "@use-gesture/react";
 
 type ImageItem = string | { src: string; alt?: string };
@@ -211,6 +212,8 @@ export default function DomeGallery({
     scrollLockedRef.current = false;
     document.body.classList.remove("dg-scroll-lock");
   }, []);
+
+  const pathname = usePathname();
 
   const items = useMemo(() => buildItems(images, segments), [images, segments]);
 
@@ -520,7 +523,7 @@ export default function DomeGallery({
     overlay.style.transition = `transform ${enlargeTransitionMs}ms ease, opacity ${enlargeTransitionMs}ms ease`;
 
     const DEFAULT_TILE = "/dosijem-logo.svg";
-    const DEFAULT_OPENED = "/default-feedback.svg";
+    const DEFAULT_OPENED = `/default-feedback${pathname.includes("/en") ? "-en" : ""}.svg`;
 
     let rawSrc =
       parent.dataset.src ||

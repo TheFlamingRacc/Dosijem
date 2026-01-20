@@ -46,7 +46,6 @@ export default function SendSection({ onSubmit }: Props) {
               : ", та підтверджую свою повну добровільну згоду на обробку моїх персональних даних у порядку, згідно з метою та протягом періоду, що визначені в Політиці."}
           </Typography>
           <Box
-            mx={1}
             display="flex"
             alignItems="center"
             justifyContent="center"

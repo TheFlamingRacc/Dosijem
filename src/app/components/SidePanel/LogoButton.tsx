@@ -6,7 +6,11 @@ export default function LogoButton() {
   const router = useRouter();
   return (
     <IconButton
-      onClick={() => router.push(`/home${pathname.includes("/en") ? "/en" : ""}`)}
+      onClick={() =>
+        router.push(`/home${pathname.includes("/en") ? "/en" : ""}`, {
+          scroll: true,
+        })
+      }
       sx={{
         backgroundColor: "background.default",
         border: "solid 1px #3D3A44",
