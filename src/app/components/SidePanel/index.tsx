@@ -8,7 +8,9 @@ import Navigation from "./Navigation";
 export default function SidePanel() {
   const pathname = usePathname();
   const router = useRouter();
+
   const { lang } = useParams();
+  const language = lang && lang !== "undefined" ? lang : "uk";
 
   const handleLanguage = () => {
     const parts = pathname.split("/").filter(Boolean);
@@ -45,7 +47,7 @@ export default function SidePanel() {
           >
             <IconButton
               sx={{ aspectRatio: "1/1", padding: "0", width: "90%" }}
-              onClick={() => router.push(`/${lang}/contacts`)}
+              onClick={() => router.push(`/${language}/contacts`)}
             >
               <Box
                 height="60%"

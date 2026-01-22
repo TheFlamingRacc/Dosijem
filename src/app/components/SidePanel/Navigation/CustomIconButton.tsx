@@ -59,6 +59,7 @@ export default function CustomIconButton({ variant }: Props) {
   const router = useRouter();
 
   const { lang } = useParams();
+  const language = lang && lang !== "undefined" ? lang : "uk";
 
   const iconData = variantsData[variant];
 
@@ -66,7 +67,7 @@ export default function CustomIconButton({ variant }: Props) {
 
   return (
     <IconButton
-      onClick={() => router.push(`/${lang}/services/${iconData.url}`)}
+      onClick={() => router.push(`/${language}/services/${iconData.url}`)}
       sx={{
         position: "relative",
         aspectRatio: "1/1",

@@ -11,6 +11,8 @@ type Props = {
 
 export default function MobileFooter({ dict }: Props) {
   const { lang } = useParams();
+  const language = lang && lang !== "undefined" ? lang : "uk";
+
   return (
     <Box
       px={2}
@@ -80,10 +82,10 @@ export default function MobileFooter({ dict }: Props) {
         direction={"row"}
         justifyContent="space-between"
       >
-        <CustomLink url={`/${lang}/contacts`}>
+        <CustomLink url={`/${language}/contacts`}>
           {dict.footer.links.contacts}
         </CustomLink>
-        <CustomLink url={`/${lang}/privacy-policy`}>
+        <CustomLink url={`/${language}/privacy-policy`}>
           {dict.footer.links.privacy}
         </CustomLink>
         <CustomLink url="https://send.monobank.ua/jar/4KSgHrLD2f" newTab>

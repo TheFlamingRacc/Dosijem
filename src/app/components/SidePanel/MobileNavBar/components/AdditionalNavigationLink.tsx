@@ -27,6 +27,8 @@ export default function AdditionalNavigationLink({ component }: Props) {
   const pathname = usePathname();
 
   const { lang } = useParams();
+  const language = lang && lang !== "undefined" ? lang : "uk";
+
   const isCurrentLocation = pathname.includes(`/${component}`);
   const isCharity = component === "charitybox";
 
@@ -49,7 +51,7 @@ export default function AdditionalNavigationLink({ component }: Props) {
               "_blank",
               "noopener,noreferrer",
             )
-          : router.push(`/${lang}/${component}`)
+          : router.push(`/${language}/${component}`)
       }
     >
       {titles[lang as "uk" | "en"][component]}

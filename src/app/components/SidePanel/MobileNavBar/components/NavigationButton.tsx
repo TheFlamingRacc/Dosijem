@@ -48,7 +48,10 @@ type Props = {
 export default function NavigationButton({ location }: Props) {
   const pathname = usePathname();
   const router = useRouter();
+
   const { lang } = useParams();
+  const language = lang && lang !== "undefined" ? lang : "uk";
+
   const isCurrentLocation = pathname.includes(`/${location}`);
 
   return (
@@ -72,7 +75,7 @@ export default function NavigationButton({ location }: Props) {
         fontFamily="e-UkraineHead"
         fontSize={12}
         fontWeight={500}
-        onClick={() => router.push(`/${lang}/sevices/${location}`)}
+        onClick={() => router.push(`/${language}/sevices/${location}`)}
       >
         {textMap[lang as "uk" | "en"][location]}
       </Typography>
