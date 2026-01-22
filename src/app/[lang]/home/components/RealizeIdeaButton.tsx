@@ -12,7 +12,7 @@ export default function RealizeIdeaButton({ children }: PropsWithChildren) {
   const { lang } = useParams();
   return (
     <Button
-      onClick={() => router.push(`/${lang}/plugins`)}
+      onClick={() => router.push(`/${lang}/services/plugins`)}
       color="primary"
       variant="contained"
       sx={{
