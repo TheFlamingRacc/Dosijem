@@ -17,7 +17,6 @@ export default function RealizeIdeaButton({ children }: PropsWithChildren) {
       variant="contained"
       sx={{
         borderRadius: "100px",
-        fontWeight: 700,
         fontSize: { xs: "1rem", md: "1.25rem", lg: 25 },
         height: { xs: 32, md: 44, lg: 60 },
         width: { xs: 207, md: 258, lg: 355 },
