@@ -23,7 +23,7 @@ export default function FormSection() {
   const [emailError, setEmailError] = useState(false);
 
   const onSubmit = async () => {
-    const isNicknameValid = nicknameField.trim().length > 6;
+    const isNicknameValid = nicknameField.trim().length > 1;
     const isEmailValid = emailRegex.test(emailField);
 
     setNicknameError(!isNicknameValid);
