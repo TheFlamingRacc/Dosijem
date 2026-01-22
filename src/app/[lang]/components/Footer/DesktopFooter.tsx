@@ -43,7 +43,7 @@ export default function DesktopFooter({ dict }: Props) {
             <CustomLink url={`/${language}/contacts`}>
               {dict.footer.links.contacts}
             </CustomLink>
-            <CustomLink url={`/${language}/privacy-policy`}>
+            <CustomLink url={`/${language}/policies/privacy-policy`}>
               {dict.footer.links.privacy}
             </CustomLink>
           </Stack>
