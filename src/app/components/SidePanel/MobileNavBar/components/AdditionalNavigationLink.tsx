@@ -1,14 +1,14 @@
 "use client";
 
 import { Box, Typography } from "@mui/material";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useParams } from "next/navigation";
 
 type Props = {
   component: "about" | "reviews" | "contacts" | "charitybox";
 };
 
 const titles = {
-  ua: {
+  uk: {
     about: "ПРО НАС",
     reviews: "ВІДГУКИ",
     contacts: "КОНТАКТИ",
@@ -26,7 +26,7 @@ export default function AdditionalNavigationLink({ component }: Props) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const lang = pathname.includes("/en") ? "en" : "ua";
+  const { lang } = useParams();
   const isCurrentLocation = pathname.includes(`/${component}`);
   const isCharity = component === "charitybox";
 
@@ -47,12 +47,12 @@ export default function AdditionalNavigationLink({ component }: Props) {
           ? window.open(
               "https://send.monobank.ua/jar/4KSgHrLD2f",
               "_blank",
-              "noopener,noreferrer"
+              "noopener,noreferrer",
             )
-          : router.push(`/${component}${lang === "en" ? "/en" : ""}`)
+          : router.push(`/${lang}/${component}`)
       }
     >
-      {titles[lang][component]}
+      {titles[lang as "uk" | "en"][component]}
       {isCharity && <Box component="img" src="/ua-icon.svg" width="1rem" />}
     </Typography>
   );

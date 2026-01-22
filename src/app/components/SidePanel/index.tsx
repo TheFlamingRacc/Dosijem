@@ -2,29 +2,23 @@
 
 import { Box, Stack, Divider, IconButton, Typography } from "@mui/material";
 import LogoButton from "./LogoButton";
-import { useRouter, usePathname } from "next/navigation";
-import dynamic from "next/dynamic";
-
-const Navigation = dynamic(() => import("./Navigation"), {
-  ssr: false,
-});
+import { useRouter, usePathname, useParams } from "next/navigation";
+import Navigation from "./Navigation";
 
 export default function SidePanel() {
   const pathname = usePathname();
   const router = useRouter();
+  const { lang } = useParams();
 
   const handleLanguage = () => {
     const parts = pathname.split("/").filter(Boolean);
-    const enIndex = parts.indexOf("en");
+    const currentLang = parts[0];
 
-    if (enIndex !== -1) {
-      parts.splice(enIndex, 1);
-    } else {
-      parts.push("en");
-    }
+    const nextLang = currentLang === "en" ? "uk" : "en";
 
-    const newPath = "/" + parts.join("/");
-    router.push(newPath);
+    parts[0] = nextLang;
+
+    router.push("/" + parts.join("/"));
   };
   return (
     <Box display={{ xs: "none", md: "flex" }} maxHeight="100%" width="9.5%">
@@ -51,9 +45,7 @@ export default function SidePanel() {
           >
             <IconButton
               sx={{ aspectRatio: "1/1", padding: "0", width: "90%" }}
-              onClick={() =>
-                router.push(`/contacts${pathname.includes("/en") ? "/en" : ""}`)
-              }
+              onClick={() => router.push(`/${lang}/contacts`)}
             >
               <Box
                 height="60%"

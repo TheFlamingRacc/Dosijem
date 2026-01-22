@@ -1,13 +1,16 @@
+"use client";
+
 import { Box, IconButton } from "@mui/material";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 
 export default function LogoButton() {
-  const pathname = usePathname();
   const router = useRouter();
+  const { lang } = useParams();
   return (
     <IconButton
       onClick={() =>
-        router.push(`/home${pathname.includes("/en") ? "/en" : ""}`, {
+        router.push(`/${lang}/home`, {
           scroll: true,
         })
       }

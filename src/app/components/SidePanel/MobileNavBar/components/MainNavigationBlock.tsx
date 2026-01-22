@@ -33,14 +33,14 @@ export default function MainNavigationBlock() {
       <Stack
         direction="row"
         alignItems="center"
-        justifyContent={"center"}
+        justifyContent="center"
         zIndex={1002}
         width="500px"
         height={30}
         m={0}
         p={1}
         position="absolute"
-        top={"38%"}
+        top="38%"
         right="-185px"
         divider={
           <Box
@@ -110,7 +110,7 @@ export default function MainNavigationBlock() {
           <Typography
             key={i}
             fontWeight={500}
-            fontSize={"1rem"}
+            fontSize="1rem"
             color="#09021C"
           >
             DOSIJEM
