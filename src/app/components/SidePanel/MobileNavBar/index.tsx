@@ -23,6 +23,7 @@ export default function MobileNavBar() {
   const pathname = usePathname();
 
   const { lang } = useParams();
+  const language = lang && lang !== "undefined" ? lang : "uk";
 
   const handleLanguage = () => {
     const parts = pathname.split("/").filter(Boolean);
@@ -78,7 +79,7 @@ export default function MobileNavBar() {
         >
           <Box display="flex" gap={1.5} alignItems="center">
             <Box
-              onClick={() => router.push(`/${lang}/home`)}
+              onClick={() => router.push(`/${language}/home`)}
               component="img"
               src="/DOSIJEM.svg"
               height="13px"
@@ -126,7 +127,7 @@ export default function MobileNavBar() {
           <Box gap={1.5} display="flex" alignItems="center">
             <IconButton
               sx={{ aspectRatio: "1/1", padding: "0", width: "auto" }}
-              onClick={() => router.push(`/${lang}/contacts`)}
+              onClick={() => router.push(`/${language}/contacts`)}
             >
               <Box
                 height="100%"

@@ -7,10 +7,12 @@ import { useParams } from "next/navigation";
 export default function LogoButton() {
   const router = useRouter();
   const { lang } = useParams();
+  const language = lang && lang !== "undefined" ? lang : "uk";
+
   return (
     <IconButton
       onClick={() =>
-        router.push(`/${lang}/home`, {
+        router.push(`/${language}/home`, {
           scroll: true,
         })
       }

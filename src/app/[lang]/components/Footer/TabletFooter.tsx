@@ -11,6 +11,7 @@ type Props = {
 
 export default function TabletFooter({ dict }: Props) {
   const { lang } = useParams();
+  const language = lang && lang !== "undefined" ? lang : "uk";
 
   return (
     <Box
@@ -41,10 +42,10 @@ export default function TabletFooter({ dict }: Props) {
           <CustomLink url="https://send.monobank.ua/jar/4KSgHrLD2f" newTab>
             {dict.footer.links.charitybox}
           </CustomLink>
-          <CustomLink url={`/${lang}/contacts`}>
+          <CustomLink url={`/${language}/contacts`}>
             {dict.footer.links.contacts}
           </CustomLink>
-          <CustomLink url={`/${lang}/privacy-policy`}>
+          <CustomLink url={`/${language}/privacy-policy`}>
             {dict.footer.links.privacy}
           </CustomLink>
         </Stack>
