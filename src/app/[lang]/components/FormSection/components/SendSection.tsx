@@ -6,9 +6,10 @@ import { usePathname, useRouter, useParams } from "next/navigation";
 
 type Props = {
   onSubmit: () => void;
+  loading: boolean;
 };
 
-export default function SendSection({ onSubmit }: Props) {
+export default function SendSection({ onSubmit, loading }: Props) {
   const pathname = usePathname();
   const isEnglish = pathname.includes("/en");
   const { lang } = useParams();
@@ -35,7 +36,7 @@ export default function SendSection({ onSubmit }: Props) {
               component="span"
               fontWeight="inherit"
               color="primary.dark"
-              onClick={() => router.push(`/${lang}/privacy-policy`)}
+              onClick={() => router.push(`/${lang}/policies/privacy-policy`)}
               sx={{ cursor: "pointer" }}
             >
               {isEnglish ? "Privacy Policy" : "Політикою конфіденційності"}
@@ -74,6 +75,8 @@ export default function SendSection({ onSubmit }: Props) {
         <Button
           onClick={() => onSubmit()}
           fullWidth
+          loading={loading}
+          loadingPosition="start"
           disabled={!toggled}
           color="primary"
           variant="contained"

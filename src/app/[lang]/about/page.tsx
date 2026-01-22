@@ -50,7 +50,7 @@ export default async function About({ params }: PageProps<"/[lang]/about">) {
           sx={{
             transform: "translateX(-50%)",
             opacity: 0,
-            animation: "FadeIn 1s ease forwards",
+            animation: "FadeIn 0.5s ease forwards",
             animationDelay: "0.3s",
           }}
         />

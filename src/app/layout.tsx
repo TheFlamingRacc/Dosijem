@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   description:
     "DOSIJEM - цифрова студія повного циклу, що створює технологічні та ігрові рішення для онлайн-проєктів Minecraft ком’юніті і не тільки. Ми перетворюємо ідеї на стабільні, масштабовані продукти - від концепції до запуску та розвитку...",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "./favicon.ico",
+    shortcut: "./favicon.ico",
   },
 };
 
