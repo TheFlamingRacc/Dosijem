@@ -1,0 +1,265 @@
+{
+  "home": {
+    "main_title": {
+      "part1": "Your idea comes to",
+      "part2": "life",
+      "part3": "with",
+      "part4": "US"
+    },
+    "realize_idea": "Realize idea",
+    "reviews_about_us": "REVIEWS ABOUT US",
+    "about_us": {
+      "title": "ABOUT US",
+      "realized_ideas": "REALIZED IDEAS",
+      "in_the_team": "IN THE TEAM"
+    },
+    "see_more_button": "See more"
+  },
+  "contacts": {
+    "contact_us": "Contact Us",
+    "want_to_talk": "Do you want to talk?",
+    "info": "If you need help, have any questions, want a consultation about your idea, or just want to write to us, use the contact information below to get in touch with",
+    "title": "Contacts",
+    "heading_block": {
+      "1": {
+        "title": "Support",
+        "sub_title": "Customer Support",
+        "description": "or via email"
+      },
+      "2": {
+        "title": "Careers",
+        "sub_title": "Join our team!",
+        "description": "or via email"
+      },
+      "3": {
+        "title": "For Partners",
+        "sub_title": "Let's Work Together)",
+        "description": {
+          "part1": "We're",
+          "part2": "always",
+          "part3": "looking for bloggers and partners to collaborate and grow together."
+        }
+      }
+    }
+  },
+  "reviews": {
+    "heading_title": "Reviews",
+    "title": {
+      "1": "This is our",
+      "2": "review",
+      "3": "section"
+    },
+    "description": {
+      "1": "All reviews are taken from the",
+      "2": " channel with customer reviews."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "links": {
+      "contacts": "CONTACTS",
+      "privacy": "PRIVACY POLICY",
+      "charitybox": "CHARITYBOX"
+    }
+  },
+  "sites": {
+    "title": "We will bring your website idea to life",
+    "description": [
+      "Websites are our true expertise. ",
+      "At DOSIJEM, we transform every concept into a site that is ",
+      "more polished and contemporary ",
+      "than anything else in its niche."
+    ]
+  },
+  "design": {
+    "title": "We will create a unique design for your server",
+    "description": [
+      "DOSIJEM ",
+      "constantly creates designs, drawing on extensive experience and a creative vision. We will develop ",
+      "a unique and recognizable style specifically for your server ",
+      "because we understand how much ",
+      "the visual appearance influences the perception of a project."
+    ]
+  },
+  "building": {
+    "title": "We will bring your ambitious projects to life",
+    "description": [
+      "",
+      "While working on diverse projects, our builders always give their all",
+      ", fueled by their passion for transforming ideas into stunning builds and maps. When you collaborate with our build team, you can be certain of one thing: ",
+      "your project is in the hands of true professionals."
+    ]
+  },
+  "mods": {
+    "title": "We will bring your mod to reality",
+    "description": [
+      "In our team of mod developers most have ",
+      "over 9k ",
+      "hours in Minecraft. We don’t just play we create favorite mods and ",
+      "deeply understand ",
+      "how to bring your idea to life so that the result ",
+      "fully ",
+      "matches your ",
+      "vision"
+    ]
+  },
+  "plugins": {
+    "title": "We will bring your plugin to reality",
+    "description": [
+      "When you submit your application, we carefully review your idea to fully understand its concept. Throughout the entire ",
+      "development process",
+      ", we ensure that the result not only accurately reflects your idea but also makes it even more ",
+      "vibrant and expressive",
+      "."
+    ]
+  },
+  "servers": {
+    "title": "We will launch your exclusive server",
+    "description": [
+      "Server creation is the work our team is most passionate about. ",
+      "With every project we undertake, we reach new heights and push our own boundaries. We have already launched ",
+      "numerous successful servers",
+      ", driven by dedication and infectious enthusiasm - and we are ready to bring that same energy and momentum to your server."
+    ]
+  },
+  "skins": {
+    "title": "Намалюємо для вас ваш власний скін",
+    "description": [
+      "",
+      "All the skins entrusted to us ",
+      "are handled by the best designers and artists at DOSIJEM. They are uniquely skilled at bringing your ideas and wishes to life in the form of ",
+      "unique, tailor-made skins created just for you"
+    ]
+  },
+  "about": {
+    "join_our_team_button_title": "JOIN OUR TEAM",
+    "our_team_block": {
+      "section_title": "Our team",
+      "exp_title": "SHARED EXP",
+      "years": "years",
+      "in_team_title": "IN TEAM"
+    },
+    "in_short_block": {
+      "section_title": "In Short:",
+      "description": [
+        " is a Minecraft content studio that brings the community’s boldest ideas to life.",
+        "Founded in early autumn ",
+        ", it has already completed dozens of projects and isn’t planning to stop!"
+      ]
+    },
+    "a_little_stats": {
+      "rate_title": "AVERAGE RATING",
+      "section_title": "A Little Statistics",
+      "deadline_title": "AVG. DEADLINE",
+      "days": "days",
+      "java_devs_title": "JAVA DEVELOPERS"
+    },
+    "sides_title": ["Our tools that we use in working on ", "your ideas"],
+    "charity_title": "БЛАГОДІЙНІСТЬ",
+    "sides_description": {
+      "paragraphs": [
+        [
+          "We would also like to emphasize that for each order, we donate a percentage of the funds to support ",
+          "Armed Forces of Ukraine",
+          ". We consider this an important aspect not only for us but also for others."
+        ],
+        [
+          "So, if you want to support this initiative, you can donate to the Red Cross or any fund of your choice, or use our ",
+          "charitybox",
+          "."
+        ],
+        [
+          "We publish reports on donations to support the country in our ",
+          " channel"
+        ],
+        "Thank you for helping our homeland. "
+      ]
+    },
+    "sides_cards": [
+      {
+        "title": "CONNECTION",
+        "desc": [
+          "",
+          "Analyzing your ideas",
+          ", understanding the audience's needs, and helping to make the product ",
+          "convenient and well thought-out",
+          "."
+        ]
+      },
+      {
+        "title": "SPEED",
+        "desc": [
+          "We ",
+          "work fast",
+          ", but ",
+          "never ",
+          "at the expense of ",
+          "quality",
+          ". Every project is handled with ",
+          "dedication",
+          ", because we become truly ",
+          "passionate about your idea",
+          ", just like you are."
+        ]
+      },
+      {
+        "title": "CARE",
+        "desc": [
+          "",
+          "We ",
+          "provide daily updates",
+          ", discuss every stage, and ",
+          "respond to your input",
+          " . We don't just complete tasks -we genuinely care about your satisfaction with the ",
+          "final result",
+          "."
+        ]
+      },
+      {
+        "title": "HONESTY",
+        "desc": [
+          "We do't hide details ",
+          "or drag out deadlines. We ",
+          "always ",
+          "give an ",
+          "honest estimate ",
+          "of the time required-and often deliver ",
+          "even faster",
+          ". We are a team that ",
+          "keeps its word."
+        ]
+      }
+    ],
+    "how_we_work": {
+      "title": "How we work",
+      "sub_title": "Basic roadmap of the stages for implementing ideas",
+      "stages": {
+        "1": {
+          "title": "Application",
+          "description": "We have received your application"
+        },
+        "2": {
+          "title": "Valuation",
+          "description": "We evaluate your idea"
+        },
+        "3": {
+          "title": "Agreement",
+          "description": "We agree on the cost and deadline"
+        },
+        "4": {
+          "title": "Payment",
+          "description": "We receive the payment"
+        },
+        "5": {
+          "title": "Start of work",
+          "description": "We begin implementation"
+        },
+        "6": {
+          "title": "Finish",
+          "description": "We test and finalize"
+        },
+        "summary": ["We deliver the ", "finished ", "product!"]
+      }
+    }
+  }
+}

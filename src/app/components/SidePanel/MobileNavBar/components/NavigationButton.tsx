@@ -1,7 +1,7 @@
 "use client";
 
 import { Typography, Box, Stack } from "@mui/material";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useParams } from "next/navigation";
 
 const colorMap = {
   servers: "#D9937A",
@@ -14,7 +14,7 @@ const colorMap = {
 };
 
 const textMap = {
-  ua: {
+  uk: {
     servers: "СЕРВЕРА",
     plugins: "ПЛАГІНИ",
     design: "ДИЗАЙН",
@@ -48,7 +48,7 @@ type Props = {
 export default function NavigationButton({ location }: Props) {
   const pathname = usePathname();
   const router = useRouter();
-  const lang = pathname.includes("/en") ? "en" : "ua";
+  const { lang } = useParams();
   const isCurrentLocation = pathname.includes(`/${location}`);
 
   return (
@@ -69,12 +69,12 @@ export default function NavigationButton({ location }: Props) {
       />
       <Typography
         color={isCurrentLocation ? "white" : "#D0CBDD"}
-        fontFamily={"e-UkraineHead"}
+        fontFamily="e-UkraineHead"
         fontSize={12}
-        fontWeight={isCurrentLocation ? 550 : 500}
-        onClick={() => router.push(`/${location}${lang === "en" ? "/en" : ""}`)}
+        fontWeight={500}
+        onClick={() => router.push(`/${lang}/sevices/${location}`)}
       >
-        {textMap[lang][location]}
+        {textMap[lang as "uk" | "en"][location]}
       </Typography>
     </Stack>
   );

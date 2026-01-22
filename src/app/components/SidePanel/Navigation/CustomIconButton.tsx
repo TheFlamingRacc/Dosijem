@@ -1,7 +1,7 @@
 "use client";
 
 import { IconButton, Box } from "@mui/material";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useParams } from "next/navigation";
 
 const variantsData = {
   plugins: {
@@ -58,7 +58,7 @@ export default function CustomIconButton({ variant }: Props) {
   const pathname = usePathname();
   const router = useRouter();
 
-  const isEn = pathname.includes("/en");
+  const { lang } = useParams();
 
   const iconData = variantsData[variant];
 
@@ -66,7 +66,7 @@ export default function CustomIconButton({ variant }: Props) {
 
   return (
     <IconButton
-      onClick={() => router.push(`${iconData.url}${isEn ? "/en" : ""}`)}
+      onClick={() => router.push(`/${lang}/services/${iconData.url}`)}
       sx={{
         position: "relative",
         aspectRatio: "1/1",

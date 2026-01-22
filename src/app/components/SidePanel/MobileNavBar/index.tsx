@@ -1,54 +1,57 @@
 "use client";
 
 import { Box, Stack, Typography, IconButton } from "@mui/material";
-import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import MainNavigationBlock from "./components/MainNavigationBlock";
 import AdditionalNavigationBlock from "./components/AdditionalNavigationBlock";
 
-type Props = {
-  colors:
-    | "default"
-    | "mods"
-    | "plugins"
-    | "design"
-    | "skins"
-    | "buildings"
-    | "servers"
-    | "websites";
+const routeColorMap: Record<string, string> = {
+  servers: "#D9937A",
+  plugins: "#D99592",
+  design: "#EADDD4",
+  building: "#E1AAA2",
+  sites: "#B18C72",
+  mods: "primary.main",
+  skins: "#B6865E",
 };
-export default function MobileNavBar({ colors }: Props) {
+
+export default function MobileNavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const router = useRouter();
   const pathname = usePathname();
 
-  const colorMap = {
-    default: "primary.main",
-    servers: "#D9937A",
-    plugins: "#D99592",
-    design: "#EADDD4",
-    buildings: "#E1AAA2",
-    websites: "#B18C72",
-    mods: "primary.main",
-    skins: "#B6865E",
-  };
+  const { lang } = useParams();
 
   const handleLanguage = () => {
     const parts = pathname.split("/").filter(Boolean);
-    const enIndex = parts.indexOf("en");
+    const currentLang = parts[0];
 
-    if (enIndex !== -1) {
-      parts.splice(enIndex, 1);
-    } else {
-      parts.push("en");
-    }
+    const nextLang = currentLang === "en" ? "uk" : "en";
 
-    const newPath = "/" + parts.join("/");
-    router.push(newPath);
+    parts[0] = nextLang;
+
+    router.push("/" + parts.join("/"));
   };
 
-  const specialElementsColor = colorMap[colors];
+  const parts = pathname.split("/").filter(Boolean);
+
+  const section = parts[2]; // [lang]/services/[target]
+
+  const specialElementsColor = routeColorMap[section] ?? "primary.main";
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -75,9 +78,7 @@ export default function MobileNavBar({ colors }: Props) {
         >
           <Box display="flex" gap={1.5} alignItems="center">
             <Box
-              onClick={() =>
-                router.push(`/home${pathname.includes("/en") ? "/en" : ""}`)
-              }
+              onClick={() => router.push(`/${lang}/home`)}
               component="img"
               src="/DOSIJEM.svg"
               height="13px"
@@ -125,9 +126,7 @@ export default function MobileNavBar({ colors }: Props) {
           <Box gap={1.5} display="flex" alignItems="center">
             <IconButton
               sx={{ aspectRatio: "1/1", padding: "0", width: "auto" }}
-              onClick={() =>
-                router.push(`/contacts${pathname.includes("/en") ? "/en" : ""}`)
-              }
+              onClick={() => router.push(`/${lang}/contacts`)}
             >
               <Box
                 height="100%"

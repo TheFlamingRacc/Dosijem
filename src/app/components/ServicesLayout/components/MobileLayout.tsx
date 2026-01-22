@@ -72,6 +72,8 @@ export default function MobileLayout({
           left="50%"
           sx={{
             transform: "translate(-50%, -50%)",
+            opacity: 0,
+            animation: "FadeIn 1s ease forwards",
           }}
         />
         <Box
