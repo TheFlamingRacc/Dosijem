@@ -4,10 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./Theme/theme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import MainLayout from "./components/Layouts/MainLayout";
-import TabletLayout from "./components/Layouts/TabletLayout";
-import MobileLayout from "./components/Layouts/MobileLayout";
-// import AdaptiveLayout from "./components/Layouts/AdaptiveLayout";
+import AdaptiveLayout from "./components/Layouts/AdaptiveLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,10 +43,7 @@ export default function RootLayout({
       >
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <MainLayout>{children}</MainLayout>
-            <TabletLayout>{children}</TabletLayout>
-            <MobileLayout>{children}</MobileLayout>
-            {/* <AdaptiveLayout>{children}</AdaptiveLayout> */}
+            <AdaptiveLayout>{children}</AdaptiveLayout>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
