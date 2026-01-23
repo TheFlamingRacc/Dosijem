@@ -75,7 +75,7 @@ export default function NavigationButton({ location }: Props) {
         fontFamily="e-UkraineHead"
         fontSize={12}
         fontWeight={500}
-        onClick={() => router.push(`/${language}/sevices/${location}`)}
+        onClick={() => router.push(`/${language}/services/${location}`)}
       >
         {textMap[lang as "uk" | "en"][location]}
       </Typography>
