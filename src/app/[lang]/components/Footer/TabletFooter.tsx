@@ -39,7 +39,7 @@ export default function TabletFooter({ dict }: Props) {
           </Typography>
         </Stack>
         <Stack>
-          <CustomLink url="https://send.monobank.ua/jar/4KSgHrLD2f" newTab>
+          <CustomLink url="https://send.monobank.ua/jar/3w2wqkKxtd" newTab>
             {dict.footer.links.charitybox}
           </CustomLink>
           <CustomLink url={`/${language}/contacts`}>
@@ -89,7 +89,7 @@ export default function TabletFooter({ dict }: Props) {
         height={110}
         position="absolute"
         src="/footer-bg.svg"
-        bottom="-55px"
+        bottom="-60px"
         left="-2%"
         aria-hidden
         draggable={false}

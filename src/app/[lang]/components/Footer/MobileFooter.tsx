@@ -88,7 +88,7 @@ export default function MobileFooter({ dict }: Props) {
         <CustomLink url={`/${language}/policies/privacy-policy`}>
           {dict.footer.links.privacy}
         </CustomLink>
-        <CustomLink url="https://send.monobank.ua/jar/4KSgHrLD2f" newTab>
+        <CustomLink url="https://send.monobank.ua/jar/3w2wqkKxtd" newTab>
           {dict.footer.links.charitybox}
         </CustomLink>
       </Stack>

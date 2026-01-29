@@ -47,7 +47,7 @@ export default function AdditionalNavigationLink({ component }: Props) {
       onClick={() =>
         isCharity
           ? window.open(
-              "https://send.monobank.ua/jar/4KSgHrLD2f",
+              "https://send.monobank.ua/jar/3w2wqkKxtd",
               "_blank",
               "noopener,noreferrer",
             )
