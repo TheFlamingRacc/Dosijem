@@ -4,8 +4,17 @@ import SpanLink from "../../components/SpanLink";
 import Text from "../../components/Text";
 import SectionHeader from "../../components/SectionHeader";
 import UlText from "../../components/UlText";
+import { getDictionary, hasLocale } from "@/app/[lang]/dictionaries";
+import { notFound } from "next/navigation";
 
-export default function UkPage() {
+export default async function UkPage({
+  params,
+}: PageProps<"/[lang]/policies/privacy-policy">) {
+  const { lang } = await params;
+
+  if (!hasLocale(lang)) notFound();
+
+  const dict = await getDictionary(lang);
   return (
     <Stack
       spacing={{ xs: 2, md: 3, lg: 4 }}
@@ -28,7 +37,7 @@ export default function UkPage() {
         />
       </Stack>
       <Text>
-        <Box component="img" src="DOSIJEM.svg" height="1.25rem" width="auto" />{" "}
+        <Box component="img" src="/DOSIJEM.svg" height="1.25rem" width="auto" />{" "}
         (надалі іменується як «
         <Span>DOSIJEM</Span>
         » або «

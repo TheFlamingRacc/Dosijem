@@ -251,7 +251,7 @@ export default function PageContent({ dict }: Props) {
                 ({ children }) => (
                   <CustomLink
                     blank
-                    url="https://send.monobank.ua/jar/4KSgHrLD2f"
+                    url="https://send.monobank.ua/jar/3w2wqkKxtd"
                   >
                     {children}
                   </CustomLink>

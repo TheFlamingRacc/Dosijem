@@ -37,7 +37,7 @@ export default function DesktopFooter({ dict }: Props) {
             </Typography>
           </Stack>
           <Stack>
-            <CustomLink url="https://send.monobank.ua/jar/4KSgHrLD2f" newTab>
+            <CustomLink url="https://send.monobank.ua/jar/3w2wqkKxtd" newTab>
               {dict.footer.links.charitybox}
             </CustomLink>
             <CustomLink url={`/${language}/contacts`}>
