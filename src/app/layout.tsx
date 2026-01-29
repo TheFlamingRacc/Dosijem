@@ -38,6 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ua">
+      <head>
+        <link rel="icon" href="./favicon.ico"></link>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable}`}
       >
