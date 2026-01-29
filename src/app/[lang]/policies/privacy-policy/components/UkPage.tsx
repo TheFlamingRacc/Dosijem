@@ -4,17 +4,18 @@ import SpanLink from "../../components/SpanLink";
 import Text from "../../components/Text";
 import SectionHeader from "../../components/SectionHeader";
 import UlText from "../../components/UlText";
-import { getDictionary, hasLocale } from "@/app/[lang]/dictionaries";
-import { notFound } from "next/navigation";
+// import { getDictionary, hasLocale } from "@/app/[lang]/dictionaries";
+// import { notFound } from "next/navigation";
 
-export default async function UkPage({
-  params,
-}: PageProps<"/[lang]/policies/privacy-policy">) {
-  const { lang } = await params;
+// export default async function UkPage({
+//   params,
+// }: PageProps<"/[lang]/policies/privacy-policy">) {
+// const { lang } = await params;
 
-  if (!hasLocale(lang)) notFound();
+// if (!hasLocale(lang)) notFound();
 
-  const dict = await getDictionary(lang);
+// const dict = await getDictionary(lang);
+export default function UkPage() {
   return (
     <Stack
       spacing={{ xs: 2, md: 3, lg: 4 }}
