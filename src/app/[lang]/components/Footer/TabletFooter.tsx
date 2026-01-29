@@ -89,7 +89,7 @@ export default function TabletFooter({ dict }: Props) {
         height={110}
         position="absolute"
         src="/footer-bg.svg"
-        bottom="-55px"
+        bottom="-60px"
         left="-2%"
         aria-hidden
         draggable={false}

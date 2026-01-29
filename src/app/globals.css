@@ -19,6 +19,15 @@ img {
   --bg-main: #09021c;
 }
 
+::selection {
+  background-color: #7B54B6; 
+  color: inherit;
+}
+::-moz-selection {
+  background-color: #7B54B6;
+  color: inherit;
+}
+
 @font-face {
   font-family: "e-Ukraine";
   src: url("/Fonts/e-Ukraine-Regular.otf") format("opentype");
