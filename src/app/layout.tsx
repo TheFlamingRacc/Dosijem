@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   description:
     "DOSIJEM - цифрова студія повного циклу, що створює технологічні та ігрові рішення для онлайн-проєктів Minecraft ком’юніті і не тільки. Ми перетворюємо ідеї на стабільні, масштабовані продукти - від концепції до запуску та розвитку...",
   icons: {
-    icon: "./favicon.ico",
-    shortcut: "./favicon.ico",
+    icon: "./favicon.png",
+    shortcut: "./favicon.png",
   },
 };
 
@@ -39,7 +39,12 @@ export default function RootLayout({
   return (
     <html lang="ua">
       <head>
-        <link rel="icon" sizes="512x512" href="./favicon.ico"></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="./favicon.png"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable}`}
