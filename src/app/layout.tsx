@@ -39,12 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ua">
       <head>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="512x512"
-          href="./favicon.png"
-        />
+        <link rel="icon" sizes="512x512" href="./favicon.ico" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable}`}
