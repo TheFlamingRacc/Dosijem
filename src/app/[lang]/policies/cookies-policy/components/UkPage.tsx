@@ -426,7 +426,7 @@ export default function CookiesPolicy() {
       <SectionHeader>ДОПОМОГА ТА ОСКАРЖЕННЯ</SectionHeader>
       <Text>
         Якщо у вас виникли запитання щодо цієї Політики або інформації, яку ми
-        збираємо про вас, зв’яжіться з нами по імейлу dosijemhelp@gmail.com
+        збираємо про вас, зв’яжіться з нами по імейлу support@dosijem.com
       </Text>
       <SectionHeader>ОНОВЛЕННЯ ПОЛІТИКИ</SectionHeader>
       <Text>

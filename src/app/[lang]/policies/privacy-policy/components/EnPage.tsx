@@ -448,7 +448,7 @@ export default function EnPage() {
       <Text>
         If you are a parents of a child below the age limit and you learn that
         your child has provided Company with personal information, please
-        contact us at dosijemhelp@gmail.com and insist on exercising your rights
+        contact us at support@dosijem.com and insist on exercising your rights
         of access, correction, cancellation and / or opposition. 
       </Text>
       <Text>
@@ -626,7 +626,7 @@ export default function EnPage() {
       <Text>
         You can access your personal data, delete, restricte its use, porte its,
         or withdrawe consent for its use by contacting us via email
-        dosijemhelp@gmail.com
+        support@dosijem.com
       </Text>
       <Text>
         We retain your personal data only for as long as is necessary for our

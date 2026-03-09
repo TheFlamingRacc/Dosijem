@@ -409,7 +409,7 @@ export default function EnPage() {
       <SectionHeader>HELP AND COMPLAINTS</SectionHeader>
       <Text>
         If you have any questions about this notice or the information we hold
-        about you, please contact us by sending an email to HRdosijem@gmail.com
+        about you, please contact us by sending an email to support@dosijem.com
       </Text>
       <SectionHeader>POLICY UPDATES</SectionHeader>
       <Text>

@@ -141,7 +141,7 @@ export default async function Contacts({
                 height="1rem"
                 sx={{ backgroundColor: "primary.main" }}
               />
-              <Typography fontSize="0.875rem">dosijemhelp@gmail.com</Typography>
+              <Typography fontSize="0.875rem">support@dosijem.com</Typography>
             </Box>
           </HeadingBlock>
           <HeadingBlock
@@ -205,7 +205,7 @@ export default async function Contacts({
                   height: "1rem",
                 }}
               />
-              <Typography fontSize="0.875rem">dosijemhelp@gmail.com</Typography>
+              <Typography fontSize="0.875rem">support@dosijem.com</Typography>
             </Box>
           </HeadingBlock>
         </Box>
