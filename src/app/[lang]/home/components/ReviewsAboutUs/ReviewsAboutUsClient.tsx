@@ -7,12 +7,7 @@ import Rate from "../Rate";
 import ShowMoreButton from "../ShowMoreButton";
 import SplitText from "@/app/components/SplitText";
 import { Dictionary } from "@/app/[lang]/dictionaries";
-
-type ReviewData = {
-  username: string;
-  rate: 5 | 4 | 3 | 2 | 1;
-  reviewText: string;
-};
+import type { ReviewData } from ".";
 
 const AUTO_DELAY = 10000;
 
@@ -138,7 +133,7 @@ export default function ReviewsAboutUsClient({ reviews, dict }: Props) {
                   overflow: "hidden",
                 }}
               >
-                {review.reviewText}
+                {review.review_text}
               </Typography>
             </motion.div>
           </AnimatePresence>

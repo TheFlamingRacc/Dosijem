@@ -154,7 +154,10 @@
       "days": "days",
       "java_devs_title": "JAVA DEVELOPERS"
     },
-    "sides_title": ["Our tools that we use in working on ", "your ideas"],
+    "sides_title": [
+      "Our tools that we use in working on ",
+      "your ideas"
+    ],
     "charity_title": "БЛАГОДІЙНІСТЬ",
     "sides_description": {
       "paragraphs": [
@@ -258,7 +261,11 @@
           "title": "Finish",
           "description": "We test and finalize"
         },
-        "summary": ["We deliver the ", "finished ", "product!"]
+        "summary": [
+          "We deliver the ",
+          "finished ",
+          "product!"
+        ]
       }
     }
   },
@@ -270,10 +277,1607 @@
       "we are already working on a solution to it"
     ],
     "addition": "But if needed, you can always contact technical support by clicking the button or following these links.",
-    "support": ["Support", "Customer Support"],
+    "support": [
+      "Support",
+      "Customer Support"
+    ],
     "or_via_email": "or via email"
   },
-  "privacy_policy": {
-    
+  "policies": {
+    "privacy": {
+      "title": "PRIVACY POLICY",
+      "blocks": [
+        {
+          "type": "text",
+          "content": [
+            {
+              "img": "/DOSIJEM.svg"
+            },
+            " ",
+            "(hereinafter referred to as the “",
+            {
+              "b": "DOSIJEM"
+            },
+            "» or «",
+            {
+              "b": " Company"
+            },
+            ", as well as “",
+            {
+              "b": "we"
+            },
+            "» or «",
+            {
+              "b": "us"
+            },
+            "»), acting as a controller for personal information processing, designed this Privacy Policy (hereinafter also referred to as the “",
+            {
+              "b": "Policy"
+            },
+            "”) to provide you with information in accordance with the requirements of the",
+            " ",
+            {
+              "a": "General Data Protection Regulation (EU) 2016/679",
+              "href": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32016R0679&%3Btid=%5Badsimpletextid%5d",
+              "blank": true
+            },
+            " ",
+            "as well as to provide clear, detailed, and easy-to-read information about Company’s privacy practices and to explain what information we collect, how we collect, store, transfer and use information, as well as which rights and options you have in this respect."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "First of all we want to certify that no matter where you are in the world, where you reside, where your citizenship lies, or where your data comes from, we offer the same high standards of privacy protection to all our visitors, employee applicants and employees, as well as customers and contractors."
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "THE DEFINITION OF THE MAIN TERMS WE USED HEREIN"
+        },
+        {
+          "type": "text",
+          "content": [
+            "«",
+            {
+              "b": "Personal data"
+            },
+            "» or «",
+            {
+              "b": "personal information"
+            },
+            "» means any information which are related to an identified or identifiable natural person (data subject). "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "The data subjects are identifiable if they can be directly or indirectly identified, especially by reference to an identifier such as a name, an identification number, location data, an online identifier or one of several special characteristics, which expresses the physical, physiological, genetic, mental, commercial, cultural or social identity of these natural persons. In practice, these also include all data which are or can be assigned to a person in any kind of way. For example, the telephone, personnel number of a person, account data, appearance, address are all personal data."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "«",
+            {
+              "b": "Controller"
+            },
+            "» means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "«",
+            {
+              "b": "Processing"
+            },
+            "» means any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means, such as collection, recording, organization, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "«",
+            {
+              "a": "General Data Protection Regulation (EU) 2016/679",
+              "href": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32016R0679&%3Btid=%5Badsimpletextid%5d",
+              "blank": true
+            },
+            "» – the Regulation (EE) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (GDPR), which applies as of 25 May 2018."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "TYPES OF PERSONAL DATA WE PROCESS, WAYS, PURPOSES AND DURATION OF PERSONAL DATA PROCESSING"
+        },
+        {
+          "type": "text",
+          "content": [
+            "The scope and type of personal data we process, the ways how we process data, term of storage as well as purposes of processing depends on the level of your interaction with us. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "The processing of personal data takes place regularly only with consent. An exception applies to cases in which prior consent can not be obtained for reasons of fact and the processing of the data is permitted by law."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "In any case, be sure we’ll process any types of personal information with the same care and respect."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "If you are a visitor to our website"
+            },
+            " we collect a minimal amount of data about you (depending on how much you’ve chosen to share with us) as it described hereunder:"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Each time you browse our website, our system automatically collects data and information from the system of the calling device, namely:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "information about the type and version of your internet browser,"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "information about the operating system of your device (computer, smartphone or other)"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "information about your internet service provider,"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "your IP address,"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "date and time of your access,"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "geographic location,"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "websites from which you came to us,"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "websites that you visit from our website,"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "other information about how you interacted with our website."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We process such technical information in so-called “log files”. Such collection of data and the storage of the data in log files is essential for the operation of the website. Any of the technical information we collect from you may be used for the following purposes:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "to display our website correctly;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "to manage and protect our website and our business, including identification of the causes of any technical problems, for the technical optimization of our website, for improving data security, troubleshooting data and systems, system maintenance and testing, data hosting and reporting;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "to personalize your experience (the information will help DOSIJEM better respond to your individual needs to deliver relevant website content to you and measure or understand the effectiveness of the content we serve to you);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "to improve our website (DOSIJEM continually strives to improve our website offerings based on the information and feedback we receive from you);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "to detect, prevent or investigate security incidents, fraud, or abuse and misuse of our website and services."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "The data will be deleted as soon as it is no longer necessary for the purpose of its collection. Typically, this technical information will be erased or rendered unrecognizable at the latest after seven days."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We may collect this information as a part of log files as well as through the use of cookies or other tracking technologies."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "For more details on our use of cookies and other tracking technologies, please read our ",
+            {
+              "a": "Cookies Policy",
+              "href": "/en/policies/cookies-policy"
+            },
+            "."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "If you are an applicant to a job at DOSIJEM and you fill out and submit an application form directly on our website or send us an email with your CV as well as communicate with us during the interview we collect the following your personal information:"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "identification data – such as your name, gender, photograph, date of birth, employee identification number, languages;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "contact details – such as home address, telephone number, email addresses, and emergency contact details"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "employment details – such as job title/position, office location, hire dates, employment contracts, performance and disciplinary records, grievance procedures, sickness/holiday records;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "educational and professional background – such as academic/professional qualifications, education, CV, reference letters and interview notes, criminal records data (for vetting purposes, where permissible and in accordance with applicable law)."
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "national identifier – such as national ID/passport, immigration status and documentation, visas, national insurance numbers;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "marital status – spouse, beneficiary and dependents information;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "other information you choose to share with us – such as hobbies, social preferences, etc."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Most often, the personal data we collect from employee applicants is collected from them directly. In some cases, Company may collect personal data about employee applicants from third parties, for example, when we perform background checks that are necessary for the role to be performed by the employee. In most circumstances, DOSIJEM will get your permission before the collection of personal data about you from a third party."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If we ask you to provide any other personal data not described above, then the personal data we will ask you to provide, and the reasons why we ask you to provide it, will be made clear to you at the point we collect it."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM uses and discloses the personal data that we collect primarily for the purposes of managing our employment relationship with you, along with other business purposes. Such uses include:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "determining eligibility for hiring, including the verification of references and qualifications and, where permitted by law, administering background checks;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "establishing training and/or development requirements;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "complying with laws and regulations (e.g. labor and employment laws, health and safety, tax, anti-discrimination laws), under judicial authorization, or to exercise or defend legal rights;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "compiling internal directories, such as employee directories;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "to detect fraud or other types of wrongdoing."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We may also use your personal data for other lawful purposes which we will tell you about, and provided that we get your consent to that use, if required by law to do so."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If you have submitted an application but did not become our employee we reserve the right to store the data for three years to be in contact with you in a future (to send other Company’s vacancies and news). Otherwise, we will delete the data as soon as it is no longer necessary to achieve the purpose of its collection. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "In any case you have the possibility at any time to revoke your consent to the processing of the personal data as it determined herein."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "If you are an employee at DOSIJEM"
+            },
+            " we collect the personal information to the scope determined for the applicant, as well as the additional personal information, such as:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "health information – such as information about short- or long-term disabilities or illnesses that you might share with the employee or manager of HR department, or your manager, particularly in relation to any leave of absence you may need to take;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "financial information – such as banking details, tax information, payroll information, withholdings, benefits, expenses, company allowances;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "IT information – information required to provide access to Company’s IT systems and networks such as IP addresses, log files, login information, software/hardware inventories. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM uses and discloses the personal data that we collect primarily for the purposes of managing our employment relationship with you, along with other business purposes. Such uses include:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "administering payroll and benefits as well as processing employee work-related claims (e.g., worker compensation, insurance claims, etc.) and leave of absence requests;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "establishing training and/or development requirements;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "reviewing work performance and determining performance requirements;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "disciplinary actions or termination;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "establishing emergency contacts and responding to emergencies;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "complying with laws and regulations (e.g. labor and employment laws, health and safety, tax, anti-discrimination laws), under judicial authorization, or to exercise or defend legal rights;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "compiling internal directories, such as employee directories;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "to detect fraud or other types of wrongdoing;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "IT security and administration;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "for other legitimate purposes reasonably required for day-to-day operations, such as accounting, financial reporting and business planning."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We may also use your personal data for other lawful purposes which we will tell you about, and provided that we get your consent to that use, if required by law to do so."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Company may also collect certain demographic data that qualifies as sensitive personal data, such as racial or ethnic origin, religion, sexual orientation, and disability to help us understand the diversity of our workforce. We collect such sensitive personal data for internal use only (for example: to greet you with important holidays, schedule extra weekends or vacations, improve the workspace according to your beliefs or preferences). Sensitive personal data is not and will not be the subject of transfer to any third parties, even those defined in the sections “SHARING OF PERSONAL DATA” and “INTERNATIONAL TRANSFER OF PERSONAL DATA” of this Policy. This information, when collected, is generally done so on a voluntary consensual basis, and employee are not required to provide this information, unless it is necessary for us to collect such information to comply with our legal obligations."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We will store your personal data for as long as is needed to carry out the purposes we’ve described above, or as otherwise required by law. Generally, this means we will keep your personal data until the end of your employment with us, plus a reasonable period of time after that where necessary to respond to any employment inquiries, deal with legal, tax, accounting or administrative matters, or to provide you with ongoing pensions or other benefits. In such cases premature deletion of the data is only possible, unless contractual, tax and legal obligations preclude deletion."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "If you are Dosijem’s customers or contractors"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "First of all be aware, any reference in this Policy to our “customers” or “contractors” includes their employees or other staff whose personal details we collect."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Within cooperation with customers and contractor we collect the following personal information:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "identification data – such as your name, gender, date of birth, languages, job title/position;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "contact details – such as office location, telephone number, email addresses;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "national identifier – such as national ID/passport, immigration status and documentation;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "financial information – such as banking details, tax information;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "other contractual information – any information which is or will be necessary for the conclusion and fulfillment of the contract."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM uses and discloses the personal data that we collect primarily for the purposes of performance of a contract: where we need to perform a contract which we are about to enter into or have entered into with you as a party or to take steps at your request before entering into such a contract, along with other business purposes, such as:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "complying with laws and regulations (e.g., tax, anti-corruption laws), under judicial authorization, or to exercise or defend legal rights;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "compiling internal directories;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "to detect fraud or other types of wrongdoing;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "IT security and administration;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "for other legitimate purposes reasonably required for day-to-day operations, such as accounting, financial reporting and business planning."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We may also use your personal data for other lawful purposes which we will tell you about, and provided that we get your consent to that use, if required by law to do so."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We will store your personal data for as long as is needed to carry out the purposes we’ve described above, or as otherwise required by law. Generally, this means we will keep your personal data until the end of your business relations with us, plus a reasonable period of time after that where necessary to respond to any business inquiries, deal with legal, tax, accounting or administrative matters. In such cases premature deletion of the data is only possible, unless contractual, tax and legal obligations preclude deletion."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "PERSONAL DATA FROM MINORS"
+        },
+        {
+          "type": "text",
+          "content": [
+            "Our website as well as our services are not aimed at children under 16 years. We do not knowingly collect information from children under the age of 16. If you have not reached the age limit, do not use the website and do not provide us with your personal information. ",
+            {
+              "b": "In case of the detection of personal data from minors provided via our website, we promptly delete such data."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If you are a parents of a child below the age limit and you learn that your child has provided Company with personal information, please contact us at dosijemhelp@gmail.com and insist on exercising your rights of access, correction, cancellation and / or opposition. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "DOSIJEM appeals to parents, adoptive parents, guardians and other legal representatives to explain to their children the safety issues on the Internet, about their specific purpose and the need to use the website."
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "SHARING OF PERSONAL DATA"
+        },
+        {
+          "type": "text",
+          "content": [
+            "We do not sell or otherwise transfer to outside parties any personally identifiable information and we do not share any personally identifiable information with third parties for those third parties’ own business interests or marketing purposes (except in cases where you explicitly request or provide consent for us to do so)."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "However, we do need to share your data with some third parties in some circumstances, as it listed hereunder. "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Data processing functions on our behalf:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Company engages certain third-party vendors and service providers to carry out certain data processing functions on our behalf. These may include, in particular, data centers that store our website and databases, IT service providers that maintain our systems, and consulting companies. If we pass on data to processors, they may only use the data to fulfill their tasks. The processors have been carefully selected by us. They are contractually bound to our instructions, have suitable technical and organizational measures in place to protect the rights of the data subjects and are regularly monitored by us."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Services provision for us or on our behalf:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Company may pass on your data to trusted third parties who assist us in operating our website, conducting our business, or servicing you. We only pass on the data we have collected if this is necessary for the fulfillment of the contract or for the provision of the technical functionality of the website, or if there is another necessity or legal basis for passing on the data. Such trusted parties may have access to personally identifiable information on a need-to-know basis and will be contractually obliged to keep your information confidential."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We may also release your information when we believe release is appropriate to comply with the law, enforce our website policies, or protect our rights or the rights of others, property, or safety. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Compliance with legal obligations:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Company may disclose your personal information to a third party if"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "(1) we reasonably believe that disclosure is compelled by applicable law, regulation, legal process, or a government request (including to meet national security, emergency services, or law enforcement requirements), "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "(2) to enforce our agreements and policies,"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "(3) to protect the security or integrity of our services and products,"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "(4) to protect ourselves, our other customers, or the public from harm or illegal activities, or"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "(5) to respond to an emergency which we believe in good faith requires us to disclose data to assist in preventing a death or serious bodily injury."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If DOSIJEM is required by law to disclose any personal information of you, we will notify you of the disclosure requirement, unless we are prohibited by law. Further, we object to requests we do not believe were issued properly."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Sharing of personal information among DOSIJEM Group Members: "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Company may share your personal information among DOSIJEM Group Members. These Members will only use the information as described in this Policy. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Business transfers:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If Company goes through a corporate sale, merger, reorganization, dissolution or similar event, data we gather from you may be part of the assets transferred or shared in connection with the due diligence for any such transaction. In that situation, and that situation only, we might transfer your data in a way that constitutes a sale under applicable law. If we do, we’ll let you know ahead of time, and we will require any acquirer or successor of DOSIJEM to continue to process data consistent with this Privacy Policy."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Transfering of aggregated or de-identified data:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We might also share data about our visitors with third parties if the data has been de-identified or aggregated in a way so it cannot be used to identify you. We do this for marketing, advertising, or other uses."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "INTERNATIONAL TRANSFERS OF PERSONAL DATA"
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM uses services whose providers are partly located in so-called third countries (outside the European Union or the European Economic Area) or process personal data there, i.e. countries whose level of data protection does not correspond to that of the European Union. Where this is the case and the European Commission has not issued an adequacy decision (Art. 45 GDPR) for these countries, we have taken appropriate precautions to ensure an adequate level of data protection for any data transfers. These include, among others, the standard contractual clauses of the European Union or binding internal data protection regulations."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Moreover, where this is the case we will only share the minimal amount of personal data necessary for the purpose of processing and, where possible, we will share the personal data in an anonymised form."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "SECURITY AND INTEGRITY OF PERSONAL DATA"
+        },
+        {
+          "type": "text",
+          "content": [
+            "Protecting the information you give us or that we receive about you is our priority. Company takes appropriate security measures to protect your information from loss, misuse, and unauthorized access, alteration, disclosure, or destruction. DOSIJEM has taken measures to ensure the ongoing confidentiality, integrity, availability and resiliency of systems and services that process personal information and will restore the availability and access to information in the event of a physical or technical incident in a timely manner. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Please note that no service is completely secure. While we strive to protect your data, we cannot guarantee that unauthorized access, hacking, data loss or a data breach will never occur."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "YOUR RIGHTS IN ACCORDANCE WITH THE GDPR"
+        },
+        {
+          "type": "text",
+          "content": [
+            "You are granted the following rights in accordance with the provisions of the GDPR (General Data Protection Regulation):"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right to information (article 15 GDPR);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right to rectification (article 16 GDPR);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right to deletion (“right to be forgotten“) (article 17 GDPR);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right to restriction of processing (article 18 GDPR);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right to notification – notification obligation regarding rectification or erasure of personal data or restriction of processing (article 19 GDPR);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right to data portability (article 20 GDPR);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right to object (article 21 GDPR);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right not to be subject to a decision based solely on automated processing – including profiling – (article 22 GDPR);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "right to withdraw consent (Article 7(3) GDPR)."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "You can access your personal data, delete, restricte its use, porte its, or withdrawe consent for its use by contacting us via email dosijemhelp@gmail.com"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We retain your personal data only for as long as is necessary for our relationship with you, in accordance with our retention policies, and in accordance with applicable laws. We do not process more personal data than we need to fulfil our purposes stated in this Privacy Policy, and we will not retain it for longer than is necessary."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If you later instruct us to delete your personal data, we will do so (please note that it may take up to thirty days for the data to be completely removed from all systems)."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "An exception applies to cases when premature deletion of the data is only possible, unless contractual, tax and legal obligations preclude deletion."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If you think that the processing of your data violates the GDPR, or that your data protection rights have been infringed in any other way, you can lodge a complaint with your respective regulatory authority."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "PRIVACY COMPLIANCE AT DOSIJEM"
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM complies with the principles established by the",
+            " ",
+            {
+              "a": "General Data Protection Regulation (EU) 2016/679",
+              "href": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32016R0679&%3Btid=%5Badsimpletextid%5d",
+              "blank": true
+            },
+            "(GDPR)."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We as a “data controllers” guaranty hereby that your personal information:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "is processed legally, honestly and transparently;"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "is collected for certain, explicit and legitimate purposes and is not processed further in a way that is incompatible with these purposes (“purposes limitation”);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "is adequate, appropriate and limited to what is necessary for the purposes for which it is processed (“data minimization”);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "is accurate and, if necessary, updated. Every reasonable step is taken to ensure that personal data which was inaccurate, considering the purposes for which it has been processed, was erased or corrected without delay (“accuracy”);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "is stored in a form that allows your identification no longer than it is necessary for the purposes for which personal data is processed (“limitation of storage”);"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            "is processed in a way that provides proper protection of personal data, including protection from unauthorized or illegal processing, as well as from accidental loss, destruction or damage using appropriate technical and/or organizational measures (“integrity and confidentiality”)."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "PRIVACY POLICY UPDATES"
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM reserves the right to update this Privacy Policy from time to time by posting a revised Policy on the website and indicating on the Privacy Policy the date it was last updated. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We encourage you to review this Policy whenever you use our website to determine if any changes have been made and to make sure that you understand how any personal data you provide will be processed."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "This Privacy Policy was last modified on the 17th of July, 2023."
+            }
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "title": "COOKIES POLICY",
+      "blocks": [
+        {
+          "type": "text",
+          "content": [
+            {
+              "img": "/DOSIJEM.svg"
+            },
+            " ",
+            "(hereinafter referred to as the «",
+            {
+              "b": "DOSIJEM"
+            },
+            "» or «",
+            {
+              "b": " Company"
+            },
+            "», as well as «",
+            {
+              "b": "we"
+            },
+            "» or «",
+            {
+              "b": "us"
+            },
+            "»), acting as a controller for personal information processing, designed this Cookies Policy (hereinafter referred to as the «",
+            {
+              "b": "Policy"
+            },
+            "») to provide you with information under the requirements of the ",
+            {
+              "a": "General Data Protection Regulation (EU) 2016/679",
+              "href": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32016R0679&%3Btid=%5Badsimpletextid%5d",
+              "blank": true
+            },
+            " ",
+            "as well as to provide clear, detailed, and easy-to-read information about Company’s practices with regards to cookies and other tracking technologies usage, and which rights and options you have in this respect."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Please, be aware: "
+            },
+            "This Policy should be read alongside our",
+            " ",
+            {
+              "a": "Privacy Policy",
+              "href": "/en/policies/privacy-policy"
+            },
+            " ",
+            "which gives full details of how and why we use your personal information when you are using this website and provides details about your legal rights concerning your personal information and how to contact us if you have a complaint."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "GENERAL INFORMATION AND DEFINITIONS"
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM uses common information-gathering tools such as cookies, web beacons and other similar tracking technologies. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Cookies"
+            },
+            " are text files containing small amounts of information downloaded to your device (e.g. computer, smartphone, or electronic device which accesses the Internet) when you visit a website. Cookies allow a website to recognize a user’s device and preferences and generally help to improve your online experience. You can find more information about cookies at:",
+            " ",
+            {
+              "a": "www.allaboutcookies.org",
+              "href": "https://www.allaboutcookies.org",
+              "blank": true
+            },
+            " ",
+            "and",
+            " ",
+            {
+              "a": "www.youronlinechoices.com",
+              "href": "https://www.youronlinechoices.com",
+              "blank": true
+            },
+            "."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Web beacons"
+            },
+            " (sometimes called transparent GIFs, clear GIFs, or web bugs) are small strings of code that provide a way for us to deliver a small graphic image (usually invisible) on a web page or in an email. Web beacons can recognise certain types of information on your computer, such as cookies, the time and date a page is viewed, and a description of the page where the web beacon is placed."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Other technologies, including web storage and identifiers associated with your device, may be used for similar purposes."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "In this Policy, we use “cookies” to discuss all of these technologies."
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "PURPOSES OF COOKIES COLLECTION AND USE"
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM uses cookies and similar technologies to automatically collect information as you navigate our website, personalise content and ads, provide social media features and analyse our traffic."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We also share information about your use of our website with our social media, advertising, and analytics partners, who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Cookies themselves do not identify you specifically. Instead, they recognise your web browser. So, unless you identify yourself specifically to DOSIJEM, like submitting your application, we don’t know who you are just because you visited our website."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Information about visitors obtained by the website using cookies or other similar technologies is not sold or distributed in open access."
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "CATEGORIES AND TYPES OF COOKIES"
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Cookies fall into the following categories:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "permanent"
+            },
+            " – they are stored on the device until you delete them (they are called ",
+            {
+              "b": " «persistent cookies»"
+            },
+            "),"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "temporary"
+            },
+            " – they are stored until you close the browser (they are called ",
+            {
+              "b": "«session cookies»"
+            },
+            ")."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We use both ",
+            {
+              "b": "«persistent cookies»"
+            },
+            " and",
+            " ",
+            {
+              "b": "«session cookies»"
+            },
+            "."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "In addition, there are different types of cookies."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "DOSIJEM uses the following types of cookies: Essential or Necessary Cookies, Functional cookies, Analytics cookies, and Advertising or Targeting Cookies."
+            },
+            " ",
+            "For more information about these types, please read hereunder."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Essential or Necessary Cookies"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you that amount to a request for services, such as setting your privacy preferences, entrance to a website and moving around it, as well as using its features, or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the website will not then work. These cookies do not store any personally identifiable information."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We do not require your consent to use these cookies."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Functional cookies"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third-party providers whose services we have added to our pages."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We will only set these types of cookies where you have provided us with your consent to do so. If you do not allow these cookies, then some or all of these services may not function properly."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Analytics cookies"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our website. They help us to know which pages are the most and least popular and see how visitors move around the website. All information these cookies collect is aggregated and therefore anonymous. They may be set by us or by third-party providers whose services we have added to our pages."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We will only set these types of cookies where you have provided us with your consent to do so. If you do not allow these cookies, we will not be able to monitor how effective our website is and improve it, tailoring it to our visitors."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Advertising or Targeting Cookies"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "These cookies may be set through our website by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other websites. They do not directly store personal information but are based on uniquely identifying your browser and internet device."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We will only set these types of cookies where you have provided us with your consent to do so. If you do not allow these cookies, you will experience less targeted advertising."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "As we mentioned above, Company uses both first-party and third-party cookies. First-party cookies are set by the website you are visiting. Third-party cookies are set by a domain which is different to the website you are visiting."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "CONSENT"
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "The law states that we can store cookies on your device if they are strictly necessary for the operation of this website (Essential cookies)."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "For all other types of cookies (Functional, Analitycs and Advertising) we need your permission."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            " ",
+            "You enable us to set these types of cookies by either choosing to “ALLOW ALL COOKIES”."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If at any time you want to change your cookie settings, including withdrawing your consent to this processing, we would encourage you to do this as described below. You may need to refresh the page before the changes to the settings take effect."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "COOKIES MANAGEMENT:"
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Using Consent Tool. "
+            },
+            "When you visit our website for the first time, a cookie consent banner will pop up and ask you to customize your cookie preferences. "
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Please note that Essential Cookies cannot be disabled and if you decide to opt out of Functional Cookies, certain functionality of our website may be impacted."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If you would like to delete cookies in your browser, please do so in your browser settings or preferences sections. The steps below outline the general procedure for some of the most popular browsers."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Using your Browser. "
+            },
+            "You can use your browser settings to opt out of Functional Cookies, Analytics Cookies and Advertising Cookies."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Major web browsers (listed below) are set to automatically accept cookies. To disable them, use the help function in your browser. For more information on cookie preferences refer to:"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "a": "Google Chrome Help",
+              "href": "https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop",
+              "blank": true
+            },
+            " ",
+            "– for ",
+            {
+              "b": "CHROME"
+            },
+            ";"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "a": "Mozilla Firefox Help",
+              "href": "https://support.mozilla.org/uk/kb/rozshirenij-zahist-vid-stezhennya-u-firefox-dlya-k?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US",
+              "blank": true
+            },
+            " ",
+            "– for ",
+            {
+              "b": "MOZILLA FIREFOX"
+            },
+            ";"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "a": "Internet Explorer Help",
+              "href": "https://support.microsoft.com/uk-ua/windows/%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%D0%BC%D0%B8-cookie-%D0%B2-microsoft-edge-%D0%BF%D0%B5%D1%80%D0%B5%D0%B3%D0%BB%D1%8F%D0%B4-%D0%B4%D0%BE%D0%B7%D0%B2%D1%96%D0%BB-%D0%B1%D0%BB%D0%BE%D0%BA%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D0%B8%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D1%82%D0%B0-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%BD%D1%8F-168dab11-0753-043d-7c16-ede5947fc64d",
+              "blank": true
+            },
+            " ",
+            "– for ",
+            {
+              "b": "INTERNET EXPLORER"
+            },
+            ";"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "a": "Safari Help",
+              "href": "https://support.apple.com/uk-ua/guide/safari/sfri11471/mac",
+              "blank": true
+            },
+            " ",
+            "– for ",
+            {
+              "b": "SAFARI"
+            },
+            "."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Importantly:"
+            },
+            " cookie setting configurations for web browsers of mobile devices may differ."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Using “Do Not Track” settings. "
+            },
+            "Some browsers allow a “do not track” (DNT) setting that requests that a web application disable its tracking of an individual user. When you choose to turn on the DNT setting in your browser, your browser sends a special signal to websites, analytics companies, ad networks, plug-in providers, and other web services you encounter while browsing and stops tracking your activity. To set up DNT, you can visit the",
+            " ",
+            {
+              "a": "All About DNT",
+              "href": "https://fpf.org/thank-you-for-visiting-allaboutdnt-com/",
+              "blank": true
+            },
+            " ",
+            "page. If you choose to set up DNT, we will automatically turn off all non-required cookies on our website for you. Please note that this may impact the functionality of our website."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Using “Global Privacy Control”."
+            },
+            " “Global Privacy Control” (GPC) is a technical specification that you can use to inform websites of your privacy preferences regarding ad trackers. To set up GPC, you can visit the",
+            " ",
+            {
+              "a": "Global Privacy Control",
+              "href": "https://globalprivacycontrol.org/#about",
+              "blank": true
+            },
+            " ",
+            "page. If you choose to set up GPC, we will automatically turn off all non-required cookies on our website for you. Please note that this may impact the functionality of the website."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "Opting out of Advertising Cookies."
+            },
+            " To learn more about how to opt out of targeting and advertising cookies, you can use one of the following instruments:"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            {
+              "a": "Your Online Choices",
+              "href": "https://www.youronlinechoices.com/uk/your-ad-choices",
+              "blank": true
+            },
+            ";"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            {
+              "a": "Network Advertising Initiative",
+              "href": "https://thenai.org/how-to-opt-out/",
+              "blank": true
+            },
+            ";"
+          ]
+        },
+        {
+          "type": "list",
+          "content": [
+            {
+              "a": "Digital Advertising Alliance’s Consumer Choice",
+              "href": "https://optout.aboutads.info/?locale=en-US",
+              "blank": true
+            },
+            "."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "These opt-out tools are provided by third parties. We do not control or operate these tools or the choices that advertisers and others provide through these tools."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Also, you can refuse the display of targeted advertising using the settings on the device. For more information on how to do this refer to:"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "a": "https://support.apple.com/en-us/HT202074",
+              "href": "https://support.apple.com/en-us/HT202074",
+              "blank": true
+            },
+            " ",
+            "- ",
+            {
+              "b": "for iOS and macOS devices users"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "a": "https://support.google.com/android/answer/3467281?hl=en",
+              "href": "https://support.google.com/android/answer/3467281?hl=en",
+              "blank": true
+            },
+            " ",
+            "- ",
+            {
+              "b": "for Android devices users"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "You also can control the ads you see on",
+            " ",
+            {
+              "b": "Google services, websites, and apps from Google partners"
+            },
+            ". For more information refer to: ",
+            {
+              "a": "https://support.google.com/My-Ad-Center-Help/answer/12155451?hl=en&co=GENIE.Platform&visit_id=638041440404128276-2248717258&rd=1",
+              "href": "https://support.google.com/My-Ad-Center-Help/answer/12155451?hl=en&co=GENIE.Platform&visit_id=638041440404128276-2248717258&rd=1",
+              "blank": true
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "INTERACTION OF THE WEBSITE WITH OTHER RESOURCES"
+        },
+        {
+          "type": "text",
+          "content": [
+            "The website may contain links to other websites (for informational purposes only). If you link to other websites, this Policy will not apply to such websites. In this regard, the Company recommends reviewing the privacy and cookies policy of each website before transmitting any personal data that can identify you."
+          ]
+        },
+        {
+          "type": "header",
+          "content": "HELP AND COMPLAINTS"
+        },
+        {
+          "type": "text",
+          "content": [
+            "If you have any questions about this notice or the information we hold about you, please contact us by sending an email to HRdosijem@gmail.com"
+          ]
+        },
+        {
+          "type": "header",
+          "content": "POLICY UPDATES"
+        },
+        {
+          "type": "text",
+          "content": [
+            "DOSIJEM reserves the right to update this Policy from time to time by posting a revised Policy on the website and indicating on the Policy the date it was last updated."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "We encourage you to review this Policy as well as ",
+            {
+              "a": "Privacy Policy",
+              "href": "/en/policies/privacy-policy"
+            },
+            " whenever you use our website to determine if any changes have been made and to make sure that you understand how any personal data you provide will be processed."
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            {
+              "b": "This Cookies Policy was last modified on the 18th of October, 2023."
+            }
+          ]
+        }
+      ]
+    }
   }
 }

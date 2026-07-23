@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 
 type ReviewImg = {
   id: number;
-  reviewImageUrl: string;
+  review_image_url: string;
 };
 
 async function getReviews(): Promise<ReviewImg[]> {
@@ -41,7 +41,7 @@ export default async function Reviews({
         grayscale={false}
         images={[
           "/dosijem-logo.svg",
-          ...images.map((img) => img.reviewImageUrl),
+          ...images.map((img) => img.review_image_url),
         ]}
         minRadius={400}
         maxRadius={600}

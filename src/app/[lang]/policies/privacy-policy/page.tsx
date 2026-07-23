@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
-import { hasLocale } from "../../dictionaries";
-import EnPage from "./components/EnPage";
-import UkPage from "./components/UkPage";
+import { hasLocale, getDictionary } from "../../dictionaries";
+import PolicyContent from "../components/PolicyContent";
 
 export default async function PrivacyPolicy({
   params,
@@ -10,6 +9,7 @@ export default async function PrivacyPolicy({
 
   if (!hasLocale(lang)) return notFound();
 
-  if (lang === "uk") return <UkPage />;
-  if (lang === "en") return <EnPage />;
+  const dict = await getDictionary(lang);
+
+  return <PolicyContent data={dict.policies.privacy} />;
 }
