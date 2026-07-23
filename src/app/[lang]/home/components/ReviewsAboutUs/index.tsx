@@ -1,10 +1,10 @@
 import { Dictionary } from "@/app/[lang]/dictionaries";
 import ReviewsAboutUsClient from "./ReviewsAboutUsClient";
 
-type ReviewData = {
+export type ReviewData = {
   username: string;
   rate: 5 | 4 | 3 | 2 | 1;
-  reviewText: string;
+  review_text: string;
 };
 
 async function getReviews(): Promise<ReviewData[]> {
@@ -27,6 +27,7 @@ type Props = {
 
 export default async function ReviewsAboutUs({ dict }: Props) {
   const reviewsData = await getReviews();
+  console.log(reviewsData);
 
   return (
     <ReviewsAboutUsClient
