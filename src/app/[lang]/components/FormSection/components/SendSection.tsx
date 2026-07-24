@@ -2,7 +2,8 @@
 
 import { Stack, Typography, Box, Button } from "@mui/material";
 import { useState } from "react";
-import { usePathname, useRouter, useParams } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
+import NextLink from "next/link";
 
 type Props = {
   onSubmit: () => void;
@@ -14,7 +15,6 @@ export default function SendSection({ onSubmit, loading }: Props) {
   const isEnglish = pathname.includes("/en");
   const { lang } = useParams();
   const [toggled, setToggled] = useState(false);
-  const router = useRouter();
   return (
     <Box display="flex" flex={1} gap={1} pt="35px">
       <Stack spacing={2.8}>
@@ -32,12 +32,12 @@ export default function SendSection({ onSubmit, loading }: Props) {
               ? "I aknowledge that I have read the "
               : "Я засвідчую, що ознайомлений(-а) з "}
             <Typography
+              component={NextLink}
+              href={`/${lang}/policies/privacy-policy`}
               fontSize="inherit"
-              component="span"
               fontWeight="inherit"
               color="primary.dark"
-              onClick={() => router.push(`/${lang}/policies/privacy-policy`)}
-              sx={{ cursor: "pointer" }}
+              sx={{ cursor: "pointer", textDecoration: "none" }}
             >
               {isEnglish ? "Privacy Policy" : "Політикою конфіденційності"}
             </Typography>

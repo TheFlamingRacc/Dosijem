@@ -1,7 +1,8 @@
 "use client";
 
 import { Typography, Box, Stack } from "@mui/material";
-import { usePathname, useRouter, useParams } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
+import NextLink from "next/link";
 
 const colorMap = {
   servers: "#D9937A",
@@ -47,7 +48,6 @@ type Props = {
 
 export default function NavigationButton({ location }: Props) {
   const pathname = usePathname();
-  const router = useRouter();
 
   const { lang } = useParams();
   const language = lang && lang !== "undefined" ? lang : "uk";
@@ -71,11 +71,13 @@ export default function NavigationButton({ location }: Props) {
         }}
       />
       <Typography
+        component={NextLink}
+        href={`/${language}/services/${location}`}
         color={isCurrentLocation ? "white" : "#D0CBDD"}
         fontFamily="e-UkraineHead"
         fontSize={12}
         fontWeight={500}
-        onClick={() => router.push(`/${language}/services/${location}`)}
+        sx={{ textDecoration: "none" }}
       >
         {textMap[language as "uk" | "en"][location]}
       </Typography>

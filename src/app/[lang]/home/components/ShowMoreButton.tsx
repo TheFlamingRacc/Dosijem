@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@mui/material";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
+import NextLink from "next/link";
 import { PropsWithChildren } from "react";
 
 type Props =
@@ -9,17 +10,16 @@ type Props =
   | { about: true; reviews?: never };
 
 export default function ShowMoreButton(props: Props & PropsWithChildren) {
-  const router = useRouter();
   const { lang } = useParams();
   const isReviews = "reviews" in props;
 
   return (
     <Button
-      onClick={() =>
-        router.push(`/${lang}${isReviews ? "/reviews" : "/about"}`)
-      }
+      component={NextLink}
+      href={`/${lang}${isReviews ? "/reviews" : "/about"}`}
       fullWidth
       sx={{
+        textDecoration: "none",
         height: "43px",
         fontFamily: "e-Ukraine",
         fontSize: "1rem",

@@ -2,7 +2,7 @@
 
 import { Typography } from "@mui/material";
 import { PropsWithChildren } from "react";
-import { useRouter } from "next/navigation";
+import NextLink from "next/link";
 
 type Props = PropsWithChildren & {
   url: string;
@@ -10,18 +10,21 @@ type Props = PropsWithChildren & {
 };
 
 export default function SpanLink({ url, children, newTab = false }: Props) {
-  const router = useRouter();
+  const linkProps = newTab
+    ? {
+        component: "a" as const,
+        href: url,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      }
+    : { component: NextLink, href: url };
+
   return (
     <Typography
-      component="span"
+      {...linkProps}
       color="primary.main"
       fontSize="inherit"
-      onClick={() =>
-        newTab
-          ? window.open(url, "_blank", "noopener,noreferrer")
-          : router.push(url)
-      }
-      sx={{ cursor: "pointer" }}
+      sx={{ cursor: "pointer", textDecoration: "none" }}
     >
       {children}
     </Typography>

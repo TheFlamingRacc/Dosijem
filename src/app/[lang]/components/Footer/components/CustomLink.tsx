@@ -2,7 +2,7 @@
 
 import { Typography, TypographyProps } from "@mui/material";
 import { PropsWithChildren } from "react";
-import { useRouter } from "next/navigation";
+import NextLink from "next/link";
 
 type Props = PropsWithChildren &
   TypographyProps & {
@@ -16,24 +16,24 @@ export default function CustomLink({
   children,
   ...props
 }: Props) {
-  const router = useRouter();
-
-  const handleClick = () => {
-    if (newTab) {
-      window.open(url, "_blank", "noopener,noreferrer");
-    } else {
-      router.push(url);
-    }
-  };
+  const linkProps = newTab
+    ? {
+        component: "a" as const,
+        href: url,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      }
+    : { component: NextLink, href: url };
 
   return (
     <Typography
       {...props}
-      onClick={handleClick}
+      {...linkProps}
       fontSize={{ xs: "0.625rem", md: "1rem" }}
       fontFamily="e-UkraineHead"
       color="text.secondary"
       sx={{
+        textDecoration: "none",
         cursor: "pointer",
         transition: "0.5s ease color",
         "&:hover": {

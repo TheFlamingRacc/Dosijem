@@ -5,14 +5,10 @@ import { Typography } from "@mui/material";
 export default function TelegramLink() {
   return (
     <Typography
-      component="span"
-      onClick={() =>
-        window.open(
-          "https://t.me/DOSIJEM_Reviews",
-          "_blank",
-          "noopener,noreferrer",
-        )
-      }
+      component="a"
+      href="https://t.me/DOSIJEM_Reviews"
+      target="_blank"
+      rel="noopener noreferrer"
       color="primary.main"
       fontSize="inherit"
       fontWeight="inherit"

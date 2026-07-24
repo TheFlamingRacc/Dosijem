@@ -1,21 +1,18 @@
 "use client";
 
 import { Box, IconButton } from "@mui/material";
-import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
+import NextLink from "next/link";
 
 export default function LogoButton() {
-  const router = useRouter();
   const { lang } = useParams();
   const language = lang && lang !== "undefined" ? lang : "uk";
 
   return (
     <IconButton
-      onClick={() =>
-        router.push(`/${language}/home`, {
-          scroll: true,
-        })
-      }
+      component={NextLink}
+      href={`/${language}/home`}
+      aria-label="DOSIJEM — home"
       sx={{
         backgroundColor: "background.default",
         border: "solid 1px #3D3A44",

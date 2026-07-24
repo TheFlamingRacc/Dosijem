@@ -2,20 +2,20 @@
 
 import { Button, Box } from "@mui/material";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
+import NextLink from "next/link";
 import { PropsWithChildren } from "react";
 
-
-
 export default function RealizeIdeaButton({ children }: PropsWithChildren) {
-  const router = useRouter();
   const { lang } = useParams();
   return (
     <Button
-      onClick={() => router.push(`/${lang}/services/plugins`)}
+      component={NextLink}
+      href={`/${lang}/services/plugins`}
       color="primary"
       variant="contained"
       sx={{
+        textDecoration: "none",
         borderRadius: "100px",
         fontSize: { xs: "1rem", md: "1.25rem", lg: 25 },
         height: { xs: 32, md: 44, lg: 60 },
