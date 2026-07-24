@@ -50,7 +50,7 @@ export default async function Home({ params }: PageProps<"/[lang]/home">) {
           <Box overflow="hidden">
             <Box
               display={{ xs: "block", md: "none" }}
-              component="img"
+              component="img" alt=""
               src="/dosijem-icon.svg"
               width={51}
               height={51}
@@ -103,7 +103,7 @@ export default async function Home({ params }: PageProps<"/[lang]/home">) {
           </Box>
           <Box overflow="hidden">
             <Box
-              component="img"
+              component="img" alt=""
               src="/DOSIJEM.svg"
               display={{ xs: "none", md: "block" }}
               width={{ md: 391, lg: "min(570px, 40vw)" }}
@@ -169,7 +169,7 @@ export default async function Home({ params }: PageProps<"/[lang]/home">) {
                     <Box
                       height={30}
                       width={30}
-                      component="img"
+                      component="img" alt=""
                       src="/wrenchs.svg"
                     />
                   </Box>
@@ -217,7 +217,7 @@ export default async function Home({ params }: PageProps<"/[lang]/home">) {
                     <Box
                       height={30}
                       width={30}
-                      component="img"
+                      component="img" alt=""
                       src="/streamline.svg"
                     />
                   </Box>

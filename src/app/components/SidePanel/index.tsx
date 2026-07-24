@@ -48,7 +48,7 @@ export default function SidePanel() {
               <Box
                 height="60%"
                 sx={{ aspectRatio: 1 }}
-                component="img"
+                component="img" alt=""
                 src={
                   pathname.includes("/contacts")
                     ? "/contacts-icon-t.svg"

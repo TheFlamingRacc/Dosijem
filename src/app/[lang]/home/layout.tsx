@@ -32,7 +32,7 @@ export default async function HomeLayout({
         <MobileNavBar />
         {children}
         <Box
-          component="img"
+          component="img" alt=""
           src="/MarqueeHome.svg"
           position="absolute"
           height={{ xs: "calc(100vh - 60px - 218px)", md: "100%" }}
@@ -46,8 +46,8 @@ export default async function HomeLayout({
           }}
         />
         <Box
-          component="img"
-          src="/Akrop.svg"
+          component="img" alt=""
+          src="/Akrop.webp"
           position="absolute"
           display={{ xs: "none", lg: "block" }}
           height="100%"

@@ -42,7 +42,7 @@ export default async function Skins({
 
   return (
     <>
-      <ServicesLayout color={color} img="/skins-img.svg" title={title}>
+      <ServicesLayout color={color} img="/skins-img.webp" title={title}>
         {renderWithAccent(description, Accent)}.
       </ServicesLayout>
       <StyledMarquee color={color} text="SKINS" />

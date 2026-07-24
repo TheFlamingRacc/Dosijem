@@ -294,7 +294,7 @@ export default function PageContent({ dict }: Props) {
             >
               {sides_description.paragraphs[3]}
               <PrimarySpan>DOSIJEM</PrimarySpan>{" "}
-              <Box component="img" src="/ua-icon.svg" />
+              <Box component="img" alt="" src="/ua-icon.svg" />
             </Typography>
           </Box>
         </Stack>

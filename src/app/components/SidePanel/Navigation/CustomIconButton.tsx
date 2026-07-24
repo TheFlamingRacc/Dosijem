@@ -98,7 +98,7 @@ export default function CustomIconButton({ variant }: Props) {
         zIndex={1}
         width="60%"
         sx={{ aspectRatio: 1 }}
-        component="img"
+        component="img" alt=""
         src={`/${iconData.img}${isCurrentLocation ? "-t" : ""}.svg`}
       />
       {/* <Box

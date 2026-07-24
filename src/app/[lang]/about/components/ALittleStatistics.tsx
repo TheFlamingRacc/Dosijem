@@ -68,7 +68,7 @@ export default function ALittleStatictics({
           >
             <CountUp from={0} to={4.7} />
             <Box
-              component="img"
+              component="img" alt=""
               src="/rating-star.svg"
               height={35}
               width={35}
@@ -101,7 +101,7 @@ export default function ALittleStatictics({
             >
               <CountUp from={0} to={4.7} />
               <Box
-                component="img"
+                component="img" alt=""
                 src="/rating-star.svg"
                 height={35}
                 width={35}
@@ -151,7 +151,7 @@ export default function ALittleStatictics({
               fontWeight={500}
             >
               <CountUp from={0} to={7} />
-              <Box component="img" src="/java.svg" height={35} width={35} />
+              <Box component="img" alt="" src="/java.svg" height={35} width={35} />
             </Typography>
           </StatsBlock>
         </MotionBox>

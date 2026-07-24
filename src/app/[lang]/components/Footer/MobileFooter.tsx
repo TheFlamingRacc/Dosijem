@@ -62,7 +62,7 @@ export default function MobileFooter({ dict }: Props) {
             gap={"0.1rem"}
             noWrap
           >
-            <Box height="0.4375rem" component="img" src="/dosijem-logo.svg" />
+            <Box height="0.4375rem" component="img" alt="" src="/dosijem-logo.svg" />
             made in
             <Typography
               fontSize="0.4375rem"
@@ -94,7 +94,7 @@ export default function MobileFooter({ dict }: Props) {
       </Stack>
       <Box
         zIndex={1}
-        component="img"
+        component="img" alt=""
         height={69}
         position="absolute"
         src="/footer-bg.svg"

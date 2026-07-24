@@ -30,7 +30,7 @@ img {
 
 @font-face {
   font-family: "e-Ukraine";
-  src: url("/Fonts/e-Ukraine-Regular.otf") format("opentype");
+  src: url("/Fonts/e-Ukraine-Regular.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@ img {
 
 @font-face {
   font-family: "e-UkraineThin";
-  src: url("/Fonts/e-Ukraine-Thin.otf") format("opentype");
+  src: url("/Fonts/e-Ukraine-Thin.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@ img {
 
 @font-face {
   font-family: "e-UkraineHead";
-  src: url("/Fonts/e-UkraineHead-Regular.otf") format("opentype");
+  src: url("/Fonts/e-UkraineHead-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

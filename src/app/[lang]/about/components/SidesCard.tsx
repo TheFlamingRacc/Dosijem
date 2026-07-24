@@ -77,7 +77,7 @@ export default function SidesCard({
         transition={{ duration: 0.5, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        <Box component="img" src={icon} width={45} height={45} />
+        <Box component="img" alt="" src={icon} width={45} height={45} />
 
         <Typography
           pt={3}

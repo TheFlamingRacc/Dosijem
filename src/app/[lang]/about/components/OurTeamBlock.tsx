@@ -101,7 +101,7 @@ export default function OurTeamBlock({
                 <Box
                   height={30}
                   width={30}
-                  component="img"
+                  component="img" alt=""
                   src="/streamline.svg"
                 />
               </Typography>

@@ -42,7 +42,7 @@ export default async function Plugins({
 
   return (
     <>
-      <ServicesLayout color={color} img="/plugin-img.svg" title={title}>
+      <ServicesLayout color={color} img="/plugin-img.webp" title={title}>
         {renderWithAccent(description, Accent)}
       </ServicesLayout>
       <StyledMarquee color={color} text="PLUGINS" />

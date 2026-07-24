@@ -41,7 +41,7 @@ export default async function Design({
   const { title, description } = (await getDictionary(lang)).design;
   return (
     <>
-      <ServicesLayout title={title} color="#B39E8D" img="/design-img.svg">
+      <ServicesLayout title={title} color="#B39E8D" img="/design-img.webp">
         {renderWithAccent(description, Accent, false)}
       </ServicesLayout>
       <StyledMarquee color={color} text="DESIGN" />

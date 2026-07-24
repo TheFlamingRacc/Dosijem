@@ -40,7 +40,7 @@ export default async function About({ params }: PageProps<"/[lang]/about">) {
         position="relative"
       >
         <Box
-          component="img"
+          component="img" alt=""
           src="/DOSIJEM.svg"
           width="100%"
           sx={{
@@ -50,6 +50,7 @@ export default async function About({ params }: PageProps<"/[lang]/about">) {
         />
         <Box
           component="img"
+          alt={lang === "en" ? "About us" : "Про нас"}
           src={lang === "en" ? "/about-title-en.svg" : "/about-title.svg"}
           width="100%"
           sx={{
@@ -59,8 +60,8 @@ export default async function About({ params }: PageProps<"/[lang]/about">) {
           }}
         />
         <Box
-          component="img"
-          src="/Woman.svg"
+          component="img" alt=""
+          src="/Woman.webp"
           height="100%"
           position="absolute"
           zIndex={1}

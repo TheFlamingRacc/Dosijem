@@ -69,7 +69,7 @@ export default function DesktopFooter({ dict }: Props) {
             noWrap
             fontWeight={500}
           >
-            <Box height="1rem" component="img" src="/dosijem-logo.svg" />
+            <Box height="1rem" component="img" alt="" src="/dosijem-logo.svg" />
             made in
             <Typography
               fontWeight={500}
@@ -84,7 +84,7 @@ export default function DesktopFooter({ dict }: Props) {
       </Box>
       <Box
         zIndex={0}
-        component="img"
+        component="img" alt=""
         height={110}
         position="absolute"
         src="/footer-bg.svg"

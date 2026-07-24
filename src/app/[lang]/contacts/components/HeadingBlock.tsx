@@ -45,7 +45,7 @@ export default function HeadingBlock({
         >
           <Box
             height="80%"
-            component="img"
+            component="img" alt=""
             src={img}
             sx={{
               aspectRatio: 1,
@@ -71,7 +71,7 @@ export default function HeadingBlock({
           </Typography>
         </Typography>
         <Box
-          component="img"
+          component="img" alt=""
           src="/dosijem-logo.svg"
           width="1.5rem"
           height="1.5rem"
