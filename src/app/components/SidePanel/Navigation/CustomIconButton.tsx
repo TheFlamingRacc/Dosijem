@@ -1,7 +1,8 @@
 "use client";
 
 import { IconButton, Box } from "@mui/material";
-import { useRouter, usePathname, useParams } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
+import NextLink from "next/link";
 
 const variantsData = {
   plugins: {
@@ -56,7 +57,6 @@ type Props = {
 
 export default function CustomIconButton({ variant }: Props) {
   const pathname = usePathname();
-  const router = useRouter();
 
   const { lang } = useParams();
   const language = lang && lang !== "undefined" ? lang : "uk";
@@ -67,7 +67,9 @@ export default function CustomIconButton({ variant }: Props) {
 
   return (
     <IconButton
-      onClick={() => router.push(`/${language}/services${iconData.url}`)}
+      component={NextLink}
+      href={`/${language}/services${iconData.url}`}
+      aria-label={iconData.title}
       sx={{
         position: "relative",
         aspectRatio: "1/1",

@@ -1,7 +1,8 @@
 "use client";
 
 import { Box, Typography } from "@mui/material";
-import { useRouter, usePathname, useParams } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
+import NextLink from "next/link";
 
 type Props = {
   component: "about" | "reviews" | "contacts" | "charitybox";
@@ -22,8 +23,9 @@ const titles = {
   },
 };
 
+const CHARITY_URL = "https://send.monobank.ua/jar/3w2wqkKxtd";
+
 export default function AdditionalNavigationLink({ component }: Props) {
-  const router = useRouter();
   const pathname = usePathname();
 
   const { lang } = useParams();
@@ -32,8 +34,18 @@ export default function AdditionalNavigationLink({ component }: Props) {
   const isCurrentLocation = pathname.includes(`/${component}`);
   const isCharity = component === "charitybox";
 
+  const linkProps = isCharity
+    ? {
+        component: "a" as const,
+        href: CHARITY_URL,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      }
+    : { component: NextLink, href: `/${language}/${component}` };
+
   return (
     <Typography
+      {...linkProps}
       fontFamily="e-UkraineHead"
       fontWeight={500}
       color={
@@ -43,16 +55,7 @@ export default function AdditionalNavigationLink({ component }: Props) {
       display="flex"
       alignItems="center"
       gap={1}
-      sx={{ cursor: "pointer" }}
-      onClick={() =>
-        isCharity
-          ? window.open(
-              "https://send.monobank.ua/jar/3w2wqkKxtd",
-              "_blank",
-              "noopener,noreferrer",
-            )
-          : router.push(`/${language}/${component}`)
-      }
+      sx={{ textDecoration: "none" }}
     >
       {titles[language as "uk" | "en"][component]}
       {isCharity && <Box component="img" src="/ua-icon.svg" width="1rem" />}

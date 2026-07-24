@@ -1,6 +1,7 @@
 "use client";
 
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
+import NextLink from "next/link";
 import { Button } from "@mui/material";
 
 type Props = {
@@ -8,15 +9,15 @@ type Props = {
 };
 
 export default function JoinOurTeamButton({ button_title }: Props) {
-  const router = useRouter();
-
   const { lang } = useParams();
 
   return (
     <Button
       fullWidth
-      onClick={() => router.push(`/${lang}/contacts`)}
+      component={NextLink}
+      href={`/${lang}/contacts`}
       sx={{
+        textDecoration: "none",
         height: "43px",
         fontFamily: "e-Ukraine",
         fontWeight: 500,

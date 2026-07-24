@@ -2,7 +2,8 @@
 
 import { Box, Stack, Typography, IconButton } from "@mui/material";
 import { useState, useEffect } from "react";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
+import NextLink from "next/link";
 import MainNavigationBlock from "./components/MainNavigationBlock";
 import AdditionalNavigationBlock from "./components/AdditionalNavigationBlock";
 
@@ -19,22 +20,14 @@ const routeColorMap: Record<string, string> = {
 export default function MobileNavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const router = useRouter();
   const pathname = usePathname();
 
   const { lang } = useParams();
   const language = lang && lang !== "undefined" ? lang : "uk";
 
-  const handleLanguage = () => {
-    const parts = pathname.split("/").filter(Boolean);
-    const currentLang = parts[0];
-
-    const nextLang = currentLang === "en" ? "uk" : "en";
-
-    parts[0] = nextLang;
-
-    router.push("/" + parts.join("/"));
-  };
+  const langParts = pathname.split("/").filter(Boolean);
+  langParts[0] = langParts[0] === "en" ? "uk" : "en";
+  const languageHref = "/" + langParts.join("/");
 
   const parts = pathname.split("/").filter(Boolean);
 
@@ -79,12 +72,13 @@ export default function MobileNavBar() {
         >
           <Box display="flex" gap={1.5} alignItems="center">
             <Box
-              onClick={() => router.push(`/${language}/home`)}
-              component="img"
-              src="/DOSIJEM.svg"
-              height="13px"
-              sx={{ cursor: "pointer" }}
-            />
+              component={NextLink}
+              href={`/${language}/home`}
+              aria-label="DOSIJEM — home"
+              sx={{ display: "flex", textDecoration: "none" }}
+            >
+              <Box component="img" src="/DOSIJEM.svg" height="13px" />
+            </Box>
             <Box
               width={17}
               position="relative"
@@ -126,8 +120,10 @@ export default function MobileNavBar() {
           </Box>
           <Box gap={1.5} display="flex" alignItems="center">
             <IconButton
+              component={NextLink}
+              href={`/${language}/contacts`}
+              aria-label="Contacts"
               sx={{ aspectRatio: "1/1", padding: "0", width: "auto" }}
-              onClick={() => router.push(`/${language}/contacts`)}
             >
               <Box
                 height="100%"
@@ -141,8 +137,11 @@ export default function MobileNavBar() {
               />
             </IconButton>
             <IconButton
-              onClick={() => handleLanguage()}
+              component={NextLink}
+              href={languageHref}
+              aria-label="Change language"
               sx={{
+                textDecoration: "none",
                 position: "relative",
                 aspectRatio: "1/1",
                 padding: "0",

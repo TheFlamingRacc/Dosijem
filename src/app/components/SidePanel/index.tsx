@@ -2,26 +2,20 @@
 
 import { Box, Stack, Divider, IconButton, Typography } from "@mui/material";
 import LogoButton from "./LogoButton";
-import { useRouter, usePathname, useParams } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
+import NextLink from "next/link";
 import Navigation from "./Navigation";
 
 export default function SidePanel() {
   const pathname = usePathname();
-  const router = useRouter();
 
   const { lang } = useParams();
   const language = lang && lang !== "undefined" ? lang : "uk";
 
-  const handleLanguage = () => {
-    const parts = pathname.split("/").filter(Boolean);
-    const currentLang = parts[0];
+  const langParts = pathname.split("/").filter(Boolean);
+  langParts[0] = langParts[0] === "en" ? "uk" : "en";
+  const languageHref = "/" + langParts.join("/");
 
-    const nextLang = currentLang === "en" ? "uk" : "en";
-
-    parts[0] = nextLang;
-
-    router.push("/" + parts.join("/"));
-  };
   return (
     <Box display={{ xs: "none", md: "flex" }} maxHeight="100%" width="9.5%">
       <Stack
@@ -46,8 +40,10 @@ export default function SidePanel() {
             gap="min(0.5vw, 1vh)"
           >
             <IconButton
+              component={NextLink}
+              href={`/${language}/contacts`}
+              aria-label="Contacts"
               sx={{ aspectRatio: "1/1", padding: "0", width: "90%" }}
-              onClick={() => router.push(`/${language}/contacts`)}
             >
               <Box
                 height="60%"
@@ -61,8 +57,11 @@ export default function SidePanel() {
               />
             </IconButton>
             <IconButton
-              onClick={() => handleLanguage()}
+              component={NextLink}
+              href={languageHref}
+              aria-label="Change language"
               sx={{
+                textDecoration: "none",
                 position: "relative",
                 aspectRatio: "1/1",
                 padding: "0",

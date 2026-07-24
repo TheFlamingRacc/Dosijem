@@ -2,7 +2,7 @@
 
 import { Typography } from "@mui/material";
 import { PropsWithChildren } from "react";
-import { useRouter } from "next/navigation";
+import NextLink from "next/link";
 
 type Props = PropsWithChildren & {
   url: string;
@@ -10,20 +10,24 @@ type Props = PropsWithChildren & {
 };
 
 export default function CustomLink({ url, children, blank = false }: Props) {
-  const router = useRouter();
+  const linkProps = blank
+    ? {
+        component: "a" as const,
+        href: url,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      }
+    : { component: NextLink, href: url };
+
   return (
     <Typography
-      component="span"
-      onClick={() =>
-        blank
-          ? window.open(url, "_blank", "noopener,noreferrer")
-          : router.push(url)
-      }
+      {...linkProps}
       fontFamily="inherit"
       fontSize="inherit"
       fontWeight="inherit"
       color="primary.main"
       sx={{
+        textDecoration: "none",
         transition: "color 0.5s ease",
         cursor: "pointer",
         position: "relative",
