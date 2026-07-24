@@ -54,7 +54,7 @@ export default function AdditionalNavigationLink({ component }: Props) {
           : router.push(`/${language}/${component}`)
       }
     >
-      {titles[lang as "uk" | "en"][component]}
+      {titles[language as "uk" | "en"][component]}
       {isCharity && <Box component="img" src="/ua-icon.svg" width="1rem" />}
     </Typography>
   );

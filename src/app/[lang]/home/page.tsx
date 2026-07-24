@@ -1,11 +1,31 @@
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "../dictionaries";
+import type { Metadata } from "next";
+import { buildMetadata } from "../seo";
 import { Box, Typography, Stack } from "@mui/material";
 import SplitText from "../../components/SplitText";
 import CountUp from "../../components/CountUp";
 import RealizeIdeaButton from "./components/RealizeIdeaButton";
 import ReviewsAboutUs from "./components/ReviewsAboutUs";
 import ShowMoreButton from "./components/ShowMoreButton";
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/home">): Promise<Metadata> {
+  const { lang } = await params;
+
+  if (!hasLocale(lang)) return {};
+
+  const { seo } = await getDictionary(lang);
+
+  return buildMetadata({
+    lang,
+    path: "/home",
+    title: seo.home.title,
+    description: seo.home.description,
+    absoluteTitle: true,
+  });
+}
 
 export default async function Home({ params }: PageProps<"/[lang]/home">) {
   const { lang } = await params;
@@ -42,6 +62,7 @@ export default async function Home({ params }: PageProps<"/[lang]/home">) {
           </Box>
           <Box overflow="hidden">
             <Typography
+              component="h1"
               fontFamily="e-UkraineHead"
               fontSize="1.25rem"
               color="white"

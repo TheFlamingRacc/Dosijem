@@ -20,6 +20,9 @@ export default function SocialsLink({
   return (
     <Typography
       component="a"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       color={
         telegram
           ? "rgba(106, 171, 255, 1)"
@@ -43,7 +46,6 @@ export default function SocialsLink({
           }`,
         },
       }}
-      onClick={() => window.open(url, "_blank", "noopener,noreferrer")}
     >
       {children}
     </Typography>

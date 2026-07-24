@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Manrope } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./Theme/theme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import AdaptiveLayout from "./components/Layouts/AdaptiveLayout";
+import { SITE_URL, SITE_NAME, OG_IMAGE } from "./[lang]/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,26 +23,41 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
+const description =
+  "DOSIJEM - цифрова студія повного циклу, що створює технологічні та ігрові рішення для онлайн-проєктів Minecraft ком’юніті і не тільки. Ми перетворюємо ідеї на стабільні, масштабовані продукти - від концепції до запуску та розвитку...";
+
 export const metadata: Metadata = {
-  title: "DOSIJEM",
-  description:
-    "DOSIJEM - цифрова студія повного циклу, що створює технологічні та ігрові рішення для онлайн-проєктів Minecraft ком’юніті і не тільки. Ми перетворюємо ідеї на стабільні, масштабовані продукти - від концепції до запуску та розвитку...",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "DOSIJEM — цифрова студія розробки для Minecraft",
+    template: "%s | DOSIJEM",
+  },
+  description,
   icons: {
-    icon: "./favicon.png",
-    shortcut: "./favicon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+  },
+  openGraph: {
+    siteName: SITE_NAME,
+    type: "website",
+    locale: "uk_UA",
+    images: [{ url: OG_IMAGE, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [OG_IMAGE],
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = (await headers()).get("x-locale") ?? "uk";
+
   return (
-    <html lang="ua">
-      <head>
-        <link rel="icon" sizes="512x512" href="./favicon.ico" />
-      </head>
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable}`}
       >

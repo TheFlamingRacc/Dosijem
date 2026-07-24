@@ -2,6 +2,8 @@ import { Box, Typography } from "@mui/material";
 import DomeGallery from "./components/DomeGallery";
 import TelegramLink from "./components/TelegramLink";
 import { getDictionary, hasLocale } from "../dictionaries";
+import type { Metadata } from "next";
+import { buildMetadata } from "../seo";
 import { notFound } from "next/navigation";
 
 type ReviewImg = {
@@ -21,6 +23,23 @@ async function getReviews(): Promise<ReviewImg[]> {
   }
 
   return res.json();
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/reviews">): Promise<Metadata> {
+  const { lang } = await params;
+
+  if (!hasLocale(lang)) return {};
+
+  const { seo } = await getDictionary(lang);
+
+  return buildMetadata({
+    lang,
+    path: "/reviews",
+    title: seo.reviews.title,
+    description: seo.reviews.description,
+  });
 }
 
 export default async function Reviews({

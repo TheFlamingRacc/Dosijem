@@ -1879,5 +1879,59 @@
         }
       ]
     }
+  },
+  "seo": {
+    "home": {
+      "title": "DOSIJEM — digital development studio for Minecraft",
+      "description": "DOSIJEM is a full-cycle studio for Minecraft projects: servers, plugins, mods, websites, building, design and skins. We turn your ideas into a quality product."
+    },
+    "about": {
+      "title": "About us",
+      "description": "DOSIJEM is a content development studio for Minecraft. Meet our team, combined experience, workflow and our support for Ukraine."
+    },
+    "contacts": {
+      "title": "Contacts",
+      "description": "Get in touch with DOSIJEM: support, careers and partnership. Reach us on Telegram, Discord or by email."
+    },
+    "reviews": {
+      "title": "Reviews",
+      "description": "Real client reviews of DOSIJEM — development of servers, plugins, mods, websites, builds and design for Minecraft."
+    },
+    "sites": {
+      "title": "Website development",
+      "description": "We build modern websites for your Minecraft project — better and more up to date than any other in the niche."
+    },
+    "design": {
+      "title": "Server design",
+      "description": "A unique and recognizable design for your Minecraft server by the experienced DOSIJEM team."
+    },
+    "building": {
+      "title": "Building",
+      "description": "We build your ambitious projects — beautiful builds and maps by professional DOSIJEM builders."
+    },
+    "mods": {
+      "title": "Mod development",
+      "description": "We bring your mod to life. An experienced Minecraft mod development team at DOSIJEM."
+    },
+    "plugins": {
+      "title": "Plugin development",
+      "description": "We bring your plugin to life — carefully and true to your idea."
+    },
+    "servers": {
+      "title": "Server development",
+      "description": "We launch your exclusive Minecraft server — with dedication, enthusiasm and experience."
+    },
+    "skins": {
+      "title": "Skins",
+      "description": "We draw your own unique skin — the best designers and artists at DOSIJEM."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "DOSIJEM Privacy Policy: how we collect, store and use personal data in accordance with the GDPR."
+    },
+    "cookies": {
+      "title": "Cookies Policy",
+      "description": "DOSIJEM Cookies Policy: which cookies we use, why, and how to manage them."
+    }
   }
 }

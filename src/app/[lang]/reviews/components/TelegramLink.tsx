@@ -10,7 +10,7 @@ export default function TelegramLink() {
         window.open(
           "https://t.me/DOSIJEM_Reviews",
           "_blank",
-          "noopener,norefferer",
+          "noopener,noreferrer",
         )
       }
       color="primary.main"
