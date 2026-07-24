@@ -36,6 +36,7 @@ export default function FormSection() {
     setEmailError(!isEmailValid);
 
     if (!isNicknameValid || !isEmailValid) {
+      setLoading(false);
       return;
     }
     try {

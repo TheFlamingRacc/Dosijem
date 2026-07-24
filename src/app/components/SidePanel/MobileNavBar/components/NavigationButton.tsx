@@ -77,7 +77,7 @@ export default function NavigationButton({ location }: Props) {
         fontWeight={500}
         onClick={() => router.push(`/${language}/services/${location}`)}
       >
-        {textMap[lang as "uk" | "en"][location]}
+        {textMap[language as "uk" | "en"][location]}
       </Typography>
     </Stack>
   );

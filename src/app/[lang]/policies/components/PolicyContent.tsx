@@ -54,6 +54,7 @@ export default function PolicyContent({ data }: { data: PolicyData }) {
     >
       <Stack pb={{ xs: 4, md: 0 }} spacing={{ md: 2, lg: 0 }}>
         <Typography
+          component="h1"
           fontFamily="e-UkraineHead"
           fontSize={{ xs: "2rem", md: "2.5rem", lg: "3.125rem" }}
           fontWeight={700}

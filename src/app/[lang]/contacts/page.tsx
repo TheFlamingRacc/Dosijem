@@ -3,7 +3,26 @@ import HeadingBlock from "./components/HeadingBlock";
 import SocialsLink from "./components/SocialsLink";
 import CustomDivider from "./components/CustomDivider";
 import { getDictionary, hasLocale } from "../dictionaries";
+import type { Metadata } from "next";
+import { buildMetadata } from "../seo";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/contacts">): Promise<Metadata> {
+  const { lang } = await params;
+
+  if (!hasLocale(lang)) return {};
+
+  const { seo } = await getDictionary(lang);
+
+  return buildMetadata({
+    lang,
+    path: "/contacts",
+    title: seo.contacts.title,
+    description: seo.contacts.description,
+  });
+}
 
 export default async function Contacts({
   params,

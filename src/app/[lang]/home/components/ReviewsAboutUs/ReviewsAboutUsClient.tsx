@@ -66,6 +66,8 @@ export default function ReviewsAboutUsClient({ reviews, dict }: Props) {
     return clearTimer;
   }, [index, reviews.length]);
 
+  if (!reviews.length) return null;
+
   const review = reviews[index];
 
   return (

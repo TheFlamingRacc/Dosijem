@@ -1,5 +1,7 @@
 import ServicesLayout from "@/app/components/ServicesLayout";
 import { hasLocale, getDictionary } from "../../dictionaries";
+import type { Metadata } from "next";
+import { buildMetadata } from "../../seo";
 import { notFound } from "next/navigation";
 import StyledMarquee from "@/app/components/StyledMarquee";
 import Span from "../components/Span";
@@ -11,6 +13,23 @@ const color = "#D99592";
 const Accent = ({ children }: PropsWithChildren) => (
   <Span color={color}>{children}</Span>
 );
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/services/plugins">): Promise<Metadata> {
+  const { lang } = await params;
+
+  if (!hasLocale(lang)) return {};
+
+  const { seo } = await getDictionary(lang);
+
+  return buildMetadata({
+    lang,
+    path: "/services/plugins",
+    title: seo.plugins.title,
+    description: seo.plugins.description,
+  });
+}
 
 export default async function Plugins({
   params,

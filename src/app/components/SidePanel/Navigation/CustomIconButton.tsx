@@ -5,43 +5,43 @@ import { useRouter, usePathname, useParams } from "next/navigation";
 
 const variantsData = {
   plugins: {
-    img: "./plugins-icon",
+    img: "plugins-icon",
     title: "Плагіни",
     titleEn: "Plugins",
     url: "/plugins",
   },
   mods: {
-    img: "./mods-icon",
+    img: "mods-icon",
     title: "Моди",
     titleEn: "Mods",
     url: "/mods",
   },
   design: {
-    img: "./design-icon",
+    img: "design-icon",
     title: "Дизайн",
     titleEn: "Design",
     url: "/design",
   },
   skins: {
-    img: "./skins-icon",
+    img: "skins-icon",
     title: "Скіни",
     titleEn: "Skins",
     url: "/skins",
   },
   building: {
-    img: "./building-icon",
+    img: "building-icon",
     title: "Білдинг",
     titleEn: "Building",
     url: "/building",
   },
   servers: {
-    img: "./servers-icon",
+    img: "servers-icon",
     title: "Сервери",
     titleEn: "Servers",
     url: "/servers",
   },
   sites: {
-    img: "./sites-icon",
+    img: "sites-icon",
     title: "Сайти",
     titleEn: "Websites",
     url: "/sites",
@@ -67,7 +67,7 @@ export default function CustomIconButton({ variant }: Props) {
 
   return (
     <IconButton
-      onClick={() => router.push(`/${language}/services/${iconData.url}`)}
+      onClick={() => router.push(`/${language}/services${iconData.url}`)}
       sx={{
         position: "relative",
         aspectRatio: "1/1",
