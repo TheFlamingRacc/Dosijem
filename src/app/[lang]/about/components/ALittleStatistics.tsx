@@ -4,6 +4,7 @@ import { Typography, Stack, Box, StackProps } from "@mui/material";
 import StatsBlock from "./StatsBlock";
 import CountUp from "@/app/components/CountUp";
 import { motion } from "framer-motion";
+import { usePageRevealed } from "@/app/components/PageTransition/pageReveal";
 
 type Props = StackProps & {
   rate_title: string;
@@ -23,11 +24,12 @@ export default function ALittleStatictics({
   java_devs_title,
   ...props
 }: Props) {
+  const revealed = usePageRevealed();
   return (
     <Stack spacing={1.6} {...props}>
       <MotionBox
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        whileInView={revealed ? { opacity: 1 } : undefined}
         transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.01 }}
       >
@@ -46,7 +48,7 @@ export default function ALittleStatictics({
       </MotionBox>
       <MotionBox
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        whileInView={revealed ? { opacity: 1 } : undefined}
         transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.01 }}
         display="none"
@@ -79,7 +81,7 @@ export default function ALittleStatictics({
       <Box display="flex" gap={1.2}>
         <MotionBox
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={revealed ? { opacity: 1 } : undefined}
           transition={{ duration: 0.3, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.01 }}
           display="block"
@@ -111,7 +113,7 @@ export default function ALittleStatictics({
         </MotionBox>
         <MotionBox
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={revealed ? { opacity: 1 } : undefined}
           transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.01 }}
         >
@@ -136,7 +138,7 @@ export default function ALittleStatictics({
         </MotionBox>
         <MotionBox
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={revealed ? { opacity: 1 } : undefined}
           transition={{ duration: 0.3, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true, amount: 0.01 }}
         >

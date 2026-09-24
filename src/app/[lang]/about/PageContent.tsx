@@ -11,6 +11,7 @@ import PrimarySpan from "./components/PrimarySpan";
 import StageComponent from "./components/StageComponent";
 import StagesDivider from "./components/StagesDivider";
 import { motion } from "framer-motion";
+import { usePageRevealed } from "@/app/components/PageTransition/pageReveal";
 import DeliverFinishedProduct from "./components/DeliverFinishedProduct";
 
 import { Dictionary } from "../dictionaries";
@@ -33,6 +34,7 @@ export default function PageContent({ dict }: Props) {
     sides_cards,
     how_we_work,
   } = dict;
+  const revealed = usePageRevealed();
   return (
     <Stack
       mt={8}
@@ -143,7 +145,7 @@ export default function PageContent({ dict }: Props) {
       <Box
         component={motion.div}
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        whileInView={revealed ? { opacity: 1 } : undefined}
         transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.01 }}
         position="relative"
@@ -174,7 +176,7 @@ export default function PageContent({ dict }: Props) {
           <Box
             component={motion.div}
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            whileInView={revealed ? { opacity: 1, x: 0 } : undefined}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.01 }}
           >
@@ -195,7 +197,7 @@ export default function PageContent({ dict }: Props) {
           <Box
             component={motion.div}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            whileInView={revealed ? { opacity: 1 } : undefined}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
           >
@@ -217,7 +219,7 @@ export default function PageContent({ dict }: Props) {
           <Box
             component={motion.div}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            whileInView={revealed ? { opacity: 1 } : undefined}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
           >
@@ -236,7 +238,7 @@ export default function PageContent({ dict }: Props) {
           <Box
             component={motion.div}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            whileInView={revealed ? { opacity: 1 } : undefined}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
           >
@@ -262,7 +264,7 @@ export default function PageContent({ dict }: Props) {
           <Box
             component={motion.div}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            whileInView={revealed ? { opacity: 1 } : undefined}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
           >
@@ -282,7 +284,7 @@ export default function PageContent({ dict }: Props) {
           <Box
             component={motion.div}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            whileInView={revealed ? { opacity: 1 } : undefined}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
           >
@@ -374,7 +376,7 @@ export default function PageContent({ dict }: Props) {
       >
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={revealed ? { opacity: 1 } : undefined}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.1 }}
         >
@@ -389,7 +391,7 @@ export default function PageContent({ dict }: Props) {
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={revealed ? { opacity: 1 } : undefined}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.1 }}
         >

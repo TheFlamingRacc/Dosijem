@@ -2,6 +2,7 @@
 
 import { Box } from "@mui/material";
 import { motion } from "framer-motion";
+import { usePageRevealed } from "@/app/components/PageTransition/pageReveal";
 import { useMediaQuery } from "@mui/material";
 
 const MotionBox = motion(Box);
@@ -13,10 +14,11 @@ type Props = {
 export default function StagesDivider({ number }: Props) {
   const isMobile = useMediaQuery("(max-width: 600px)");
   const isTabletMode = useMediaQuery("(max-width: 1400px)");
+  const revealed = usePageRevealed();
   return (
     <MotionBox
       initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
+      whileInView={revealed ? { scale: 1 } : undefined}
       transition={{
         duration: 0.16,
         delay:

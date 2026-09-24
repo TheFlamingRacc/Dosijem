@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText as GSAPSplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 import { Typography, TypographyProps } from "@mui/material";
+import { usePageRevealed } from "./PageTransition/pageReveal";
 
 gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
 
@@ -40,6 +41,8 @@ export default function SplitText({
   const ref = useRef<HTMLParagraphElement>(null);
   const onCompleteRef = useRef(onLetterAnimationComplete);
   const [fontsLoaded, setFontsLoaded] = useState<boolean>(false);
+  // Wait for the page transition curtain before splitting/animating.
+  const revealed = usePageRevealed();
 
   // Keep callback ref updated
   useEffect(() => {
@@ -58,7 +61,7 @@ export default function SplitText({
 
   useGSAP(
     () => {
-      if (!ref.current || !children || !fontsLoaded) return;
+      if (!ref.current || !children || !fontsLoaded || !revealed) return;
       // Prevent re-animation if already completed
 
       const el = ref.current as HTMLElement & {
@@ -148,6 +151,7 @@ export default function SplitText({
         threshold,
         rootMargin,
         fontsLoaded,
+        revealed,
       ],
       scope: ref,
     },
@@ -163,6 +167,8 @@ export default function SplitText({
       sx={{
         wordWrap: "break-word",
         willChange: "transform, opacity",
+        // Hidden until the animation takes over, so the text does not flash.
+        visibility: revealed ? undefined : "hidden",
       }}
       {...props}
     >
