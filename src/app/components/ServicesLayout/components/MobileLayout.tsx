@@ -63,7 +63,7 @@ export default function MobileLayout({
         }}
       >
         <Box
-          component="img"
+          component="img" alt=""
           src={img}
           position="absolute"
           height="70%"
@@ -71,6 +71,7 @@ export default function MobileLayout({
           top="50%"
           left="50%"
           sx={{
+            objectFit: "contain",
             transform: "translate(-50%, -50%)",
             opacity: 0,
             animation: "FadeIn 1s ease forwards",

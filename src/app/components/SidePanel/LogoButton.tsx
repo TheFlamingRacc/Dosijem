@@ -23,7 +23,7 @@ export default function LogoButton() {
         },
       }}
     >
-      <Box component="img" src="/dosijem-logo.svg" width="100%" height="100%" />
+      <Box component="img" alt="" src="/dosijem-logo.svg" width="100%" height="100%" />
     </IconButton>
   );
 }

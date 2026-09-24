@@ -3,6 +3,7 @@ import StatsBlock from "./StatsBlock";
 import CountUp from "@/app/components/CountUp";
 import JoinOurTeamButton from "./JoinOurTeamButton";
 import { motion } from "framer-motion";
+import { usePageRevealed } from "@/app/components/PageTransition/pageReveal";
 
 const MotionStack = motion(Stack);
 const MotionBox = motion(Box);
@@ -23,11 +24,12 @@ export default function OurTeamBlock({
   join_our_team_button_title,
   ...props
 }: Props) {
+  const revealed = usePageRevealed();
   return (
     //@ts-expect-error cant make types of variants
     <MotionStack
       initial="hidden"
-      whileInView="visible"
+      whileInView={revealed ? "visible" : undefined}
       viewport={{ once: true, amount: 0.01 }}
       variants={{
         hidden: { opacity: 0 },
@@ -46,7 +48,7 @@ export default function OurTeamBlock({
     >
       <MotionBox
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        whileInView={revealed ? { opacity: 1 } : undefined}
         transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.01 }}
       >
@@ -101,7 +103,7 @@ export default function OurTeamBlock({
                 <Box
                   height={30}
                   width={30}
-                  component="img"
+                  component="img" alt=""
                   src="/streamline.svg"
                 />
               </Typography>

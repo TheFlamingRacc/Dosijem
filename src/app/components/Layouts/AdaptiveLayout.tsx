@@ -4,6 +4,7 @@ import { PropsWithChildren } from "react";
 import { Box } from "@mui/material";
 import AuroraBackground from "../AuroraBackground";
 import SidePanel from "../SidePanel";
+import PageTransition from "../PageTransition";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
@@ -51,15 +52,23 @@ export default function AdaptiveLayout({ children }: PropsWithChildren) {
       >
         <SidePanel />
         <Box
-          ref={scrollRef}
+          position="relative"
           width={{ xs: "100vw", lg: "100%" }}
-          height={{ xs: "auto", md: "100vh", lg: "auto" }}
           maxWidth={{ xs: "100vw", lg: "100%" }}
-          sx={{
-            overflowY: { xs: "visible", md: "scroll" },
-          }}
+          overflow={{ xs: "visible", md: "hidden" }}
         >
-          {children}
+          <Box
+            ref={scrollRef}
+            data-page-content
+            width="100%"
+            height={{ xs: "auto", md: "100vh", lg: "100%" }}
+            sx={{
+              overflowY: { xs: "visible", md: "scroll" },
+            }}
+          >
+            {children}
+          </Box>
+          <PageTransition />
         </Box>
       </Box>
     </Box>

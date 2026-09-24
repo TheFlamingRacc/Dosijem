@@ -58,7 +58,7 @@ export default function AdditionalNavigationLink({ component }: Props) {
       sx={{ textDecoration: "none" }}
     >
       {titles[language as "uk" | "en"][component]}
-      {isCharity && <Box component="img" src="/ua-icon.svg" width="1rem" />}
+      {isCharity && <Box component="img" alt="" src="/ua-icon.svg" width="1rem" />}
     </Typography>
   );
 }

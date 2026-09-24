@@ -41,7 +41,7 @@ export default async function Building({
   const { title, description } = (await getDictionary(lang)).building;
   return (
     <>
-      <ServicesLayout title={title} img="/buildings-img.svg" color={color}>
+      <ServicesLayout title={title} img="/buildings-img.webp" color={color}>
         {renderWithAccent(description, Accent)}
       </ServicesLayout>
       <StyledMarquee color={color} text="BUILDINGS" />

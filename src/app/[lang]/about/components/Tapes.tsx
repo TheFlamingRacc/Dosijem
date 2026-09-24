@@ -60,7 +60,7 @@ export default function Tapes() {
           "/plugins-icon-t.svg",
         ].map((src, i) => (
           <Box
-            component="img"
+            component="img" alt=""
             key={i}
             height={{ xs: "1rem", md: "1.5rem", lg: "2rem" }}
             src={src}

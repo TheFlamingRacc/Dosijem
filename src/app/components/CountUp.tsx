@@ -1,7 +1,8 @@
 "use client";
 
-import { useInView, useMotionValue, useSpring } from "motion/react";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useCallback, useEffect, useRef } from "react";
+import { usePageRevealed } from "./PageTransition/pageReveal";
 
 interface CountUpProps {
   to: number;
@@ -38,6 +39,8 @@ export default function CountUp({
   });
 
   const isInView = useInView(ref, { once: true, margin: "0px" });
+  // Wait for the page transition curtain before counting.
+  const revealed = usePageRevealed();
 
   const getDecimalPlaces = (num: number): number => {
     const str = num.toString();
@@ -80,7 +83,7 @@ export default function CountUp({
   }, [from, to, direction, formatValue]);
 
   useEffect(() => {
-    if (isInView && startWhen) {
+    if (isInView && startWhen && revealed) {
       if (typeof onStart === "function") {
         onStart();
       }
@@ -103,6 +106,7 @@ export default function CountUp({
   }, [
     isInView,
     startWhen,
+    revealed,
     motionValue,
     direction,
     from,

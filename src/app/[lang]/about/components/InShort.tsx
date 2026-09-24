@@ -1,5 +1,6 @@
 import { Stack, Typography, Box, StackProps } from "@mui/material";
 import { motion } from "framer-motion";
+import { usePageRevealed } from "@/app/components/PageTransition/pageReveal";
 import PrimarySpan from "./PrimarySpan";
 
 type Props = StackProps & {
@@ -11,11 +12,12 @@ const MotionStack = motion(Stack);
 const MotionBox = motion(Box);
 
 export default function InShort({ section_title, desc, ...props }: Props) {
+  const revealed = usePageRevealed();
   return (
     <Stack spacing={1.6} {...props}>
       <MotionBox
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        whileInView={revealed ? { opacity: 1 } : undefined}
         transition={{ duration: 0.3, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.01 }}
       >
@@ -25,7 +27,7 @@ export default function InShort({ section_title, desc, ...props }: Props) {
       </MotionBox>
       <MotionBox
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        whileInView={revealed ? { opacity: 1 } : undefined}
         transition={{ duration: 0.3, ease: "easeOut", delay: 0.3 }}
         viewport={{ once: true, amount: 0.01 }}
         alignItems="stretch"
@@ -44,7 +46,7 @@ export default function InShort({ section_title, desc, ...props }: Props) {
       >
         <MotionBox
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={revealed ? { opacity: 1 } : undefined}
           transition={{ duration: 0.3, ease: "easeOut", delay: 0.6 }}
           viewport={{ once: true, amount: 0.01 }}
           width="6px"
@@ -56,7 +58,7 @@ export default function InShort({ section_title, desc, ...props }: Props) {
         />
         <MotionStack
           initial="hidden"
-          whileInView="visible"
+          whileInView={revealed ? "visible" : undefined}
           viewport={{ once: true, amount: 0.01 }}
           variants={{
             hidden: { opacity: 0 },

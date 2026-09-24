@@ -26,6 +26,7 @@ function renderSegment(seg: Segment, key: number) {
       <Box
         key={key}
         component="img"
+        alt="DOSIJEM"
         src={seg.img}
         height="1.25rem"
         width="auto"

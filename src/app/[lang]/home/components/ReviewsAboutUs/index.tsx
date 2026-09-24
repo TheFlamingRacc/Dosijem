@@ -23,10 +23,18 @@ async function getReviews(): Promise<ReviewData[]> {
 
 type Props = {
   dict: Dictionary;
+  /** When true, a failed fetch renders nothing instead of throwing. */
+  optional?: boolean;
 };
 
-export default async function ReviewsAboutUs({ dict }: Props) {
-  const reviewsData = await getReviews();
+export default async function ReviewsAboutUs({ dict, optional = false }: Props) {
+  let reviewsData: ReviewData[];
+  try {
+    reviewsData = await getReviews();
+  } catch (error) {
+    if (!optional) throw error;
+    return null;
+  }
   console.log(reviewsData);
 
   return (

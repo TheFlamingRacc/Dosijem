@@ -146,7 +146,7 @@ export default function FormSection() {
             <Box
               height={{ xs: 40, lg: 56 }}
               mb={1}
-              component="img"
+              component="img" alt=""
               src="/error.svg"
               sx={{ aspectRatio: 1 }}
             />
@@ -167,7 +167,7 @@ export default function FormSection() {
             >
               <Box
                 width={{ xs: 18, lg: 25 }}
-                component="img"
+                component="img" alt=""
                 src="/done-icon.svg"
               />
             </Box>

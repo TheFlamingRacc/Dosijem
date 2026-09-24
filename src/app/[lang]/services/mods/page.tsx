@@ -42,7 +42,7 @@ export default async function Mods({
 
   return (
     <>
-      <ServicesLayout img="/mods-img.svg" title={title} color={color}>
+      <ServicesLayout img="/mods-img.webp" title={title} color={color}>
         {renderWithAccent(description, Accent)}.
       </ServicesLayout>
       <StyledMarquee color={color} text="MODS" />

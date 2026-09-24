@@ -77,7 +77,7 @@ export default function MobileNavBar() {
               aria-label="DOSIJEM — home"
               sx={{ display: "flex", textDecoration: "none" }}
             >
-              <Box component="img" src="/DOSIJEM.svg" height="13px" />
+              <Box component="img" alt="" src="/DOSIJEM.svg" height="13px" />
             </Box>
             <Box
               width={17}
@@ -128,7 +128,7 @@ export default function MobileNavBar() {
               <Box
                 height="100%"
                 sx={{ aspectRatio: "1" }}
-                component={"img"}
+                component={"img"} alt=""
                 src={
                   pathname.includes("/contacts")
                     ? "/contacts-icon-t.svg"

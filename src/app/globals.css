@@ -30,7 +30,7 @@ img {
 
 @font-face {
   font-family: "e-Ukraine";
-  src: url("/Fonts/e-Ukraine-Regular.otf") format("opentype");
+  src: url("/Fonts/e-Ukraine-Regular.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@ img {
 
 @font-face {
   font-family: "e-UkraineThin";
-  src: url("/Fonts/e-Ukraine-Thin.otf") format("opentype");
+  src: url("/Fonts/e-Ukraine-Thin.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@ img {
 
 @font-face {
   font-family: "e-UkraineHead";
-  src: url("/Fonts/e-UkraineHead-Regular.otf") format("opentype");
+  src: url("/Fonts/e-UkraineHead-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -362,4 +362,31 @@ main.sphere-main {
   to {
     transform: translateY(0);
   }
+}
+
+@keyframes LogoSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes LogoSpinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes LogoPulse {
+  from {
+    transform: scale(0.85);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Page transition: CSS entrance animations of the page wait under the curtain
+   (set/removed by PageTransition). Only pauses — no layout changes. */
+[data-page-hold] * {
+  animation-play-state: paused !important;
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Manrope } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
 import { ThemeProvider } from "@mui/material";
@@ -7,16 +7,6 @@ import { theme } from "./Theme/theme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import AdaptiveLayout from "./components/Layouts/AdaptiveLayout";
 import { SITE_URL, SITE_NAME, OG_IMAGE } from "./[lang]/seo";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -58,9 +48,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable}`}
-      >
+      <body className={manrope.variable}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <AdaptiveLayout>{children}</AdaptiveLayout>

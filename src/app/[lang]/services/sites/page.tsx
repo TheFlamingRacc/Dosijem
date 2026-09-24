@@ -42,7 +42,7 @@ export default async function Sites({
 
   return (
     <>
-      <ServicesLayout color={color} img="/sites-img.svg" title={title}>
+      <ServicesLayout color={color} img="/sites-img.webp" title={title}>
         {renderWithAccent(description, Accent, false)}
       </ServicesLayout>
       <StyledMarquee color={color} text="WEBSITES" />

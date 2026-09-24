@@ -25,7 +25,7 @@ export default async function NotFound() {
         <MobileNavBar />
         <Box overflow="hidden" mb={{ xs: 4, md: 7, lg: "min(10vh, 5vw)" }}>
           <Box
-            component="img"
+            component="img" alt=""
             src="/DOSIJEM.svg"
             width={{ xs: 250, md: 441, lg: 600 }}
             mt={{ xs: 10, md: 0 }}
@@ -116,7 +116,7 @@ export default async function NotFound() {
               >
                 <Box
                   height="80%"
-                  component="img"
+                  component="img" alt=""
                   src="/contacts-icon-t.svg"
                   sx={{
                     aspectRatio: 1,
@@ -142,7 +142,7 @@ export default async function NotFound() {
                 </Typography>
               </Typography>
               <Box
-                component="img"
+                component="img" alt=""
                 src="/dosijem-logo.svg"
                 width="1.5rem"
                 height="1.5rem"
@@ -231,8 +231,8 @@ export default async function NotFound() {
           </Typography>
         </Stack>
         <Box
-          component="img"
-          src="/404.svg"
+          component="img" alt=""
+          src="/404.webp"
           height="100%"
           position="absolute"
           top={0}

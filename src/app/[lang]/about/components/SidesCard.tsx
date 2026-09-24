@@ -1,6 +1,7 @@
 import { Box, Typography, Stack } from "@mui/material";
 import { PropsWithChildren } from "react";
 import { motion } from "framer-motion";
+import { usePageRevealed } from "@/app/components/PageTransition/pageReveal";
 import { useMediaQuery } from "@mui/material";
 import { Variants } from "framer-motion";
 
@@ -48,12 +49,13 @@ export default function SidesCard({
   const isMore1300 = useMediaQuery("(min-width:1300px)");
   const isMobile = useMediaQuery("max-width:600px");
 
+  const revealed = usePageRevealed();
   return (
     <MotionStack
       custom={{ accent: accent && isMore1300, isMobile, number }}
       variants={cardVariants}
       initial="hidden"
-      whileInView="visible"
+      whileInView={revealed ? "visible" : undefined}
       viewport={{ once: true, amount: 0.2 }}
       sx={{
         backgroundColor: {
@@ -73,11 +75,11 @@ export default function SidesCard({
     >
       <MotionBox
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        whileInView={revealed ? { opacity: 1 } : undefined}
         transition={{ duration: 0.5, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        <Box component="img" src={icon} width={45} height={45} />
+        <Box component="img" alt="" src={icon} width={45} height={45} />
 
         <Typography
           pt={3}

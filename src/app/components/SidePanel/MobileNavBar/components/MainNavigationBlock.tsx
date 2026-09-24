@@ -69,7 +69,7 @@ export default function MainNavigationBlock() {
           "/plugins-icon-t.svg",
         ].map((src, i) => (
           <Box
-            component="img"
+            component="img" alt=""
             key={i}
             src={src}
             sx={{ height: "1rem", aspectRatio: 1 }}

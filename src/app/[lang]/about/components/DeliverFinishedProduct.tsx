@@ -2,6 +2,7 @@
 
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
+import { usePageRevealed } from "@/app/components/PageTransition/pageReveal";
 import { PropsWithChildren } from "react";
 
 const MotionTypography = motion(Typography);
@@ -20,11 +21,12 @@ const containerVariants = {
 export default function DeliverFinishedProduct({
   children,
 }: PropsWithChildren) {
+  const revealed = usePageRevealed();
   return (
     <MotionBox
       variants={containerVariants}
       initial="hidden"
-      whileInView="visible"
+      whileInView={revealed ? "visible" : undefined}
       viewport={{ once: true, amount: 0.2 }}
       display="flex"
       gap={3}
