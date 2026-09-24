@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import TransitionLogo, { TransitionLogoHandle } from "./TransitionLogo";
 import { setContentHeld } from "./pageReveal";
+import { tryInPageNavigation } from "./inPageNavigation";
 
 const COVER_DURATION = 0.6;
 const REVEAL_DURATION = 0.7;
@@ -192,6 +193,9 @@ export default function PageTransition() {
       if (!href) return;
       // Stops Next <Link> from navigating immediately; we push after the curtain closes.
       e.preventDefault();
+
+      const { pathname } = new URL(href, window.location.href);
+      if (phaseRef.current === "idle" && tryInPageNavigation(pathname)) return;
 
       if (phaseRef.current === "idle") cover(href);
       else if (phaseRef.current === "revealing") queuedHrefRef.current = href;
